@@ -5,5 +5,5 @@
 
 
 @section('content')
-    <p class="text-danger">This is the <strong>home</strong> page.</p>
+    <p class="text-danger">This is the <strong>home</strong> page. Edited</p>
 @endsection
