@@ -6,9 +6,8 @@
         <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     </head>
     <body>
+        @include('includes.navbar')
         <div class="container">
-
-            @include('includes.navbar')
 
               <!-- Main component for a primary marketing message or call to action -->
               <div class="jumbotron">
