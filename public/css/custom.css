@@ -1,5 +1,4 @@
 
-
 /* ----------------- STYLE HELP CLASSES ----------------- */
 
 /* contain img in div */
@@ -52,6 +51,11 @@
 .footer {
     padding: 38px 0;
 }
+/* alignment */
+.center {
+    text-align: center;
+}
+
 
 /* alignment */
 .center {
@@ -74,6 +78,7 @@
 
 
 /* ----------------- TEXT CLASSES -----------------*/
+
 
 .bold {
     font-weight: bold;
