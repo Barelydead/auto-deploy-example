@@ -259,9 +259,6 @@
             <p class="lightlightgray">
                 RDC coatings can be easily applied to just about any surface or substrate, including wood, steel, concrete, asphalt, stucco, fiberglass, carbon fiber, glass, plastics/PVC, most composites (you name it) with a standard brush, roller or sprayer like traditional paints, most often without the need of primers. Our coatings are “dry-to-touch” typically in only 15-20 minutes and the second coat can usually be applied within only 1 hour, depending on local weather conditions. Clean-up is fast and easy with simple soap and water.
             </p>
-            <div class="pillow-20">
-
-            </div>
         </div>
     </div>
 
