@@ -23,7 +23,6 @@ body {
     justify-content: flex-end;
 }
 
-<<<<<<< 6c50c8cdf38d4f38d50062a2e221cffe9a27e424
 /* ------- PILLOWS ------ */
 /* For vertical spacing */
 .pillow-20 {
@@ -35,16 +34,6 @@ body {
 .pillow-50 {
     height: 50px;
 }
-=======
-.center {
-    text-align: center;
-}
-
-/* pillows for vertical spacing */
-.pillow-20 {
-    height: 20px;
-}
->>>>>>> Organizing custom.css, About page colors to match footer
 
 /* ----------------- NAVBAR SPECIFIC STYLING ----------------- */
 
