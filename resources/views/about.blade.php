@@ -24,7 +24,6 @@
             <ul>
                 <li>
                     <a class='rdcred-link' href='#historyinfo'>Our History</a>
-<<<<<<< b20e9b5722a5f9afc73526899a7c830abfb8bb1e
                 </li>
                 <li>
                     <a class='rdcred-link' href='#purposeinfo'>Our Purpose</a>
@@ -33,16 +32,6 @@
                     <a class='rdcred-link' href='#peopleinfo'>Our People</a>
                 </li>
                 <li>
-=======
-                </li>
-                <li>
-                    <a class='rdcred-link' href='#purposeinfo'>Our Purpose</a>
-                </li>
-                <li>
-                    <a class='rdcred-link' href='#peopleinfo'>Our People</a>
-                </li>
-                <li>
->>>>>>> Style on about page. Experimenting with colors and borders
                     <a class='rdcred-link' href='#productinfo'>The Product</a>
                 </li>
             </ul>
