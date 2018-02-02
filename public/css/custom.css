@@ -116,7 +116,7 @@ body {
 /* ------------*/
 
 .rdcblack{
-    background-color: black;
+    background-color: #3e3e3e;
 }
 .lightlightgray {
     color: #c3c3c3;
@@ -167,4 +167,3 @@ body {
 .bold {
     font-weight: bold;
 }
->>>>>>> Organizing custom.css, About page colors to match footer
