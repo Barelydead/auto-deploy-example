@@ -64,8 +64,12 @@ body {
 .footer {
     padding: 38px 0;
 }
+/* alignment */
+.center {
+    text-align: center;
+}
 
-/* ----------------- COLOR CLASSES ----------------- */
+/* colors */
 .rdcred {
     background-color: #9c4a4a;
 }
@@ -125,7 +129,7 @@ body {
 /* ------------*/
 
 .rdcblack{
-    background-color: #3e3e3e;
+    background-color: black;
 }
 .lightlightgray {
     color: #c3c3c3;
@@ -235,4 +239,9 @@ body {
 /* ----------------- TEXT CLASSES -----------------*/
 .bold {
     font-weight: bold;
+}
+
+/* pillows */
+.pillow-20 {
+    height: 20px;
 }
