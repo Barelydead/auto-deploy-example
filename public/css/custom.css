@@ -21,14 +21,6 @@
     justify-content: flex-end;
 }
 
-.center {
-    text-align: center;
-}
-
-/* pillows for vertical spacing */
-.pillow-20 {
-    height: 20px;
-}
 
 /* ----------------- NAVBAR SPECIFIC STYLING ----------------- */
 
@@ -59,22 +51,31 @@
 .footer {
     padding: 38px 0;
 }
+/* alignment */
+.center {
+    text-align: center;
+}
 
-/* ----------------- COLOR CLASSES ----------------- */
+/* colors */
 .rdcred {
     background-color: #9c4a4a;
 }
 .rdcred-text {
-    color: #f67878;
+    color: #9c4a4a;
 }
 .rdcblack{
-    background-color: #3e3e3e;
+    background-color: black;
 }
 .lightlightgray {
     color: #c3c3c3;
 }
 
-/* ----------------- TEXT CLASSES -----------------*/
+/* font */
 .bold {
     font-weight: bold;
+}
+
+/* pillows */
+.pillow-20 {
+    height: 20px;
 }
