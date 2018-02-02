@@ -20,7 +20,7 @@
 
             </div> <!-- /container -->
 
-        <div class="container">
+        <div>
             @yield('content')
         </div>
 
