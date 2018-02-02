@@ -6,9 +6,8 @@
         <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     </head>
     <body>
+        @include('includes.navbar')
         <div class="container">
-
-            @include('includes.navbar')
 
               <!-- Main component for a primary marketing message or call to action -->
               <div class="jumbotron">
@@ -25,7 +24,9 @@
             @yield('content')
         </div>
 
+        @include('includes.footer')
+
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-        <script src="{{ asset('js/bootstrap.min.js') }}"></script>
+        <script src="{{ asset('js/app.js') }}"></script>
     </body>
 </html>
