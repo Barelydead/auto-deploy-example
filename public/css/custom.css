@@ -21,6 +21,14 @@
     justify-content: flex-end;
 }
 
+.center {
+    text-align: center;
+}
+
+/* pillows for vertical spacing */
+.pillow-20 {
+    height: 20px;
+}
 
 /* ----------------- NAVBAR SPECIFIC STYLING ----------------- */
 
@@ -52,8 +60,7 @@
     padding: 38px 0;
 }
 
-
-/* colors */
+/* ----------------- COLOR CLASSES ----------------- */
 .rdcred {
     background-color: #9c4a4a;
 }
@@ -67,12 +74,7 @@
     color: #c3c3c3;
 }
 
-/* font */
+/* ----------------- TEXT CLASSES -----------------*/
 .bold {
     font-weight: bold;
-}
-
-/* pillows */
-.pillow-20 {
-    height: 20px;
 }
