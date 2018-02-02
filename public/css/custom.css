@@ -1,3 +1,4 @@
+<<<<<<< 8c15b6531e3fdbef2fcb087cad70429faac3dd9f
 body {
     overflow-y: scroll;
     overflow-x: hidden;
@@ -69,6 +70,8 @@ body {
 .footer {
     padding: 38px 0;
 }
+=======
+>>>>>>> About - all screen, styling
 /* alignment */
 .center {
     text-align: center;
@@ -79,6 +82,7 @@ body {
     background-color: #9c4a4a;
 }
 .rdcred-text {
+<<<<<<< 8c15b6531e3fdbef2fcb087cad70429faac3dd9f
     /* color: #f67878; */
     color: #b06e6e;
 }
@@ -117,18 +121,29 @@ body {
 
 .rdcblack{
     background-color: #3e3e3e;
+=======
+    color: #9c4a4a;
+}
+.rdcblack{
+    background-color: black;
+>>>>>>> About - all screen, styling
 }
 .lightlightgray {
     color: #c3c3c3;
 }
 
+<<<<<<< 8c15b6531e3fdbef2fcb087cad70429faac3dd9f
 
 /* ----------------- TEXT CLASSES -----------------*/
 
+=======
+/* font */
+>>>>>>> About - all screen, styling
 .bold {
     font-weight: bold;
 }
 
+<<<<<<< 8c15b6531e3fdbef2fcb087cad70429faac3dd9f
 /* ----------------- LIST CLASSES -----------------*/
 .redbulletlist {
     list-style: none;
@@ -161,4 +176,9 @@ body {
 
 .flash-text p {
     font-size: 1.5em;
+=======
+/* pillows */
+.pillow-20 {
+    height: 20px;
+>>>>>>> About - all screen, styling
 }
