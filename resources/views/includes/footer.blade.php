@@ -1,5 +1,6 @@
 <footer class="footer dark">
     <div class="container">
+
         <div class="row">
             <div class="col-md-4">
                 <ul class="nav">
@@ -24,6 +25,9 @@
                     <li class=""><a href="{{ URL::to('/about') }}">About Us</a></li>
                 </ul>
             </div>
+        </div>
+        <div class="row">
+            <p>Copyright ©2018 Red Diamond Coatings. All Rights Reserved.</p>
         </div>
     </div>
 </footer>
