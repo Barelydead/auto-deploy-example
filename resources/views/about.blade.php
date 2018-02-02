@@ -41,11 +41,7 @@
         </div>
     </div>
     <div class="row">
-<<<<<<< 9071318101e0a624050602734cf730a18b06106a
         <div class="col-md-2 col-md-offset-2">
-=======
-        <div class="col-md-2">
->>>>>>> About page styling changes
 
         </div>
         <div class="col-md-6">

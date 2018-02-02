@@ -51,16 +51,7 @@
 .footer {
     padding: 38px 0;
 }
-/* alignment */
-.center {
-    text-align: center;
-}
 
-
-/* alignment */
-.center {
-    text-align: center;
-}
 
 /* colors */
 .rdcred {
@@ -76,10 +67,7 @@
     color: #c3c3c3;
 }
 
-
-/* ----------------- TEXT CLASSES -----------------*/
-
-
+/* font */
 .bold {
     font-weight: bold;
 }
