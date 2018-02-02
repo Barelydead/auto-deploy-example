@@ -5,7 +5,6 @@
 
 
 @section('content')
-<<<<<<< 8c15b6531e3fdbef2fcb087cad70429faac3dd9f
     <div class="row">
         <div class="col-md-12">
             <img width='100%' src="https://i.imgur.com/kzf70pR.png" title="rdc" alt='about rdc' />
@@ -17,20 +16,6 @@
         </div>
         <div class="col-md-8">
             <h2>About Us <small> - <span class='text-danger'>Who We Are</span></small></h2>
-=======
-    <div class="row">
-        <div class="col-md-12">
-            <img width='100%' src="https://i.imgur.com/kzf70pR.png" title="rdc" alt='about rdc' />
-        </div>
-
-    </div>
-    <div class="row">
-        <div class="col-md-2">
-
-        </div>
-        <div class="col-md-10">
-            <h1>About Us <small> - <span class='text-danger'>Who We Are</span></small></h1>
->>>>>>> About - all screen, styling
         </div>
     </div>
 
@@ -47,19 +32,12 @@
                     <a class='rdcred-link' href='#peopleinfo'>Our People</a>
                 </li>
                 <li>
-<<<<<<< 8c15b6531e3fdbef2fcb087cad70429faac3dd9f
                     <a class='rdcred-link' href='#productinfo'>The Product</a>
-=======
-                    <a href='#'>What We Do</a>
->>>>>>> About - all screen, styling
                 </li>
             </ul>
         </div>
         <div class="col-md-6">
-<<<<<<< 8c15b6531e3fdbef2fcb087cad70429faac3dd9f
 
-=======
->>>>>>> About - all screen, styling
             <p>
                 Welcome to Red Diamond Coatings, Inc. I am Bradley J. Kubela, the Founder, President & CEO. I truly appreciate you taking the time to visit our website. Please be advised that we are currently in the process of substantially overhauling our website platform. Accordingly, this is our temporary landing page which only contains some basic information, along with our contact info. Additional interim information will be added during our overhaul project. We apologize for any inconvenience and we thank you in advance for your patience and understanding.
             </p>
@@ -80,7 +58,6 @@
 
         </div>
     </div>
-<<<<<<< 8c15b6531e3fdbef2fcb087cad70429faac3dd9f
 
     <div class="row">
         <div class="col-md-12">
@@ -147,13 +124,6 @@
     <div class="row rdcblack rdcsandbordertop">
 
         <div class="col-md-5 col-md-offset-4">
-=======
-    <div class="row rdcblack">
-        <div class="col-md-2 col-md-offset-2">
-            <h4 class="rdcred-text bold">THE PRODUCT</h4>
-        </div>
-        <div class="col-md-6">
->>>>>>> About - all screen, styling
             <div class="pillow-20">
 
             </div>

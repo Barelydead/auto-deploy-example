@@ -1,4 +1,3 @@
-<<<<<<< 8c15b6531e3fdbef2fcb087cad70429faac3dd9f
 body {
     overflow-y: scroll;
     overflow-x: hidden;
@@ -29,6 +28,7 @@ body {
     justify-content: flex-end;
 }
 
+<<<<<<< 01b63ca7d679cbab557b92da761368ab5d1d8310
 /* ------- PILLOWS ------ */
 /* For vertical spacing */
 .pillow-20 {
@@ -70,14 +70,14 @@ body {
 .footer {
     padding: 38px 0;
 }
-=======
->>>>>>> About - all screen, styling
 /* alignment */
 .center {
     text-align: center;
+=======
+>>>>>>> Organizing custom.css, About page colors to match footer
 }
 
-/* colors */
+/* ----------------- COLOR CLASSES ----------------- */
 .rdcred {
     background-color: #9c4a4a;
 }
@@ -122,11 +122,11 @@ body {
 .rdcblack{
     background-color: #3e3e3e;
 =======
-    color: #9c4a4a;
+    color: #f67878;
 }
 .rdcblack{
-    background-color: black;
->>>>>>> About - all screen, styling
+    background-color: #3e3e3e;
+>>>>>>> Organizing custom.css, About page colors to match footer
 }
 .lightlightgray {
     color: #c3c3c3;
@@ -136,14 +136,10 @@ body {
 
 /* ----------------- TEXT CLASSES -----------------*/
 
-=======
-/* font */
->>>>>>> About - all screen, styling
 .bold {
     font-weight: bold;
 }
 
-<<<<<<< 8c15b6531e3fdbef2fcb087cad70429faac3dd9f
 /* ----------------- LIST CLASSES -----------------*/
 .redbulletlist {
     list-style: none;
@@ -176,9 +172,10 @@ body {
 
 .flash-text p {
     font-size: 1.5em;
-=======
-/* pillows */
-.pillow-20 {
-    height: 20px;
->>>>>>> About - all screen, styling
 }
+=======
+/* ----------------- TEXT CLASSES -----------------*/
+.bold {
+    font-weight: bold;
+}
+>>>>>>> Organizing custom.css, About page colors to match footer
