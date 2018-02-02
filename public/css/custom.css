@@ -72,7 +72,9 @@
     color: #c3c3c3;
 }
 
-/* font */
+
+/* ----------------- TEXT CLASSES -----------------*/
+
 .bold {
     font-weight: bold;
 }
