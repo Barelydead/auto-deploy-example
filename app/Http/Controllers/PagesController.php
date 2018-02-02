@@ -14,6 +14,10 @@ class PagesController extends Controller
         return view("about");
     }
 
+    public function getContact() {
+        return view("contact");
+    }
+
     public function getForm() {
         return view("home");
     }
