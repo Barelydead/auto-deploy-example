@@ -27,7 +27,7 @@
             </p>
         </div>
     </div>
-    <div class="row" style="background:#aa5e61; color:white;">
+    <div class="row">
         <div class="col-md-2">
 
         </div>
