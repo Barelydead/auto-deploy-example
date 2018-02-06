@@ -1,4 +1,7 @@
-
+body {
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
 /* ----------------- STYLE HELP CLASSES ----------------- */
 
 /* contain img in div */
@@ -21,6 +24,17 @@
     justify-content: flex-end;
 }
 
+/* ------- PILLOWS ------ */
+/* For vertical spacing */
+.pillow-20 {
+    height: 20px;
+}
+.pillow-30 {
+    height: 30px;
+}
+.pillow-50 {
+    height: 50px;
+}
 
 /* ----------------- NAVBAR SPECIFIC STYLING ----------------- */
 
@@ -51,18 +65,37 @@
 .footer {
     padding: 38px 0;
 }
-/* alignment */
-.center {
-    text-align: center;
-}
 
-/* colors */
+/* ----------------- COLOR CLASSES ----------------- */
 .rdcred {
     background-color: #9c4a4a;
 }
 .rdcred-text {
     color: #f67878;
 }
+
+.rdcdeepred {
+    background-color: #502d2d;
+}
+.rdcseablue {
+    background-color: #47575d;
+}
+.rdcsandbordertop {
+    border-top: 5px solid #b6ac90;
+}
+
+/* --- LINKS --- */
+.rdcred-link {
+    color: #9c4a4a;
+}
+.rdcred-link:focus {
+    color: #9c4a4a;
+}
+.rdcred-link:hover {
+    color: #702c2c;
+}
+/* ------------*/
+
 .rdcblack{
     background-color: #3e3e3e;
 }
@@ -70,12 +103,24 @@
     color: #c3c3c3;
 }
 
+<<<<<<< 5c99b9196925536d107cdf0b9c8f0d3bec0e1f90
 /* font */
+=======
+
+/* ----------------- TEXT CLASSES -----------------*/
+>>>>>>> Style on about page. Experimenting with colors and borders
 .bold {
     font-weight: bold;
 }
+/* ----------------- LIST CLASSES -----------------*/
+.redbulletlist {
+    list-style: none;
+}
 
-/* pillows */
-.pillow-20 {
-    height: 20px;
+.redbulletlist > li::before {
+    content: "\2022";
+    color: #9c4a4a;
+    display: inline-inline-block;
+    width: 1em;
+    margin-left: -1em;
 }
