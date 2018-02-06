@@ -173,6 +173,52 @@
             <p class="lightlightgray">
                 RDC coatings can be easily applied to just about any surface or substrate, including wood, steel, concrete, asphalt, stucco, fiberglass, carbon fiber, glass, plastics/PVC, most composites (you name it) with a standard brush, roller or sprayer like traditional paints, most often without the need of primers. Our coatings are “dry-to-touch” typically in only 15-20 minutes and the second coat can usually be applied within only 1 hour, depending on local weather conditions. Clean-up is fast and easy with simple soap and water.
             </p>
+            <div class="pillow-20">
+
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="pillow-20">
+
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-12">
+            <center>
+                <img width='80%' src="https://i.imgur.com/WarnQaT.png" title="rdc" alt='about rdc' />
+            </center>
+        </div>
+    </div>
+
+
+    <div class="row">
+        <div class="pillow-50">
+
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="pillow-20">
+
+        </div>
+        <div class="col-md-2 col-md-offset-4">
+            <h3 id='productinfo' class="bold text-danger">THE PRODUCT</h3>
+        </div>
+    </div>
+    <div class="row rdcblack">
+        <div class="col-md-5 col-md-offset-4">
+            <div class="pillow-20">
+
+            </div>
+            <p class="lightlightgray">
+                RDC coatings can be easily applied to just about any surface or substrate, including wood, steel, concrete, asphalt, stucco, fiberglass, carbon fiber, glass, plastics/PVC, most composites (you name it) with a standard brush, roller or sprayer like traditional paints, most often without the need of primers. Our coatings are “dry-to-touch” typically in only 15-20 minutes and the second coat can usually be applied within only 1 hour, depending on local weather conditions. Clean-up is fast and easy with simple soap and water.
+            </p>
+            <div class="pillow-20">
+
+            </div>
         </div>
     </div>
 
