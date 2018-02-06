@@ -103,6 +103,16 @@ body {
     border: 3px solid #b6ac90;
 }
 
+.rdcdeepred {
+    background-color: #502d2d;
+}
+.rdcseablue {
+    background-color: #47575d;
+}
+.rdcsandbordertop {
+    border-top: 5px solid #b6ac90;
+}
+
 /* --- LINKS --- */
 .rdcred-link {
     color: #9c4a4a;
@@ -122,12 +132,16 @@ body {
     color: #c3c3c3;
 }
 
-<<<<<<< 8c15b6531e3fdbef2fcb087cad70429faac3dd9f
 
 /* ----------------- TEXT CLASSES -----------------*/
 
+
 .bold {
     font-weight: bold;
+}
+/* ----------------- LIST CLASSES -----------------*/
+.redbulletlist {
+    list-style: none;
 }
 
 /* ----------------- LIST CLASSES -----------------*/
