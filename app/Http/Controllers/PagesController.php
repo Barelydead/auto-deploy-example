@@ -6,19 +6,26 @@ use Illuminate\Http\Request;
 
 class PagesController extends Controller
 {
-    public function getHome() {
+    public function getHome()
+    {
         return view("home");
     }
 
-    public function getAbout() {
+    public function getAbout()
+    {
         return view("about");
     }
 
-    public function getContact() {
-        return view("contact");
+    public function getContact()
+    {
+        $adress = (object)[
+            "street" => "New Street"
+        ];
+        return view("contact", compact('adress'));
     }
 
-    public function getForm() {
+    public function getForm()
+    {
         return view("home");
     }
 }

@@ -4,7 +4,7 @@
         <div class="row">
             <div class="top-nav flex-row space-end">
                 <ul class="nav navbar-nav">
-                    <li class="active"><a href="#">Contact</a></li>
+                    <li class="active"><a href="contact">Contact</a></li>
                     <li class="active"><a href="#">Location</a></li>
                 </ul>
                 <form class="form-inline">
@@ -44,6 +44,7 @@
                       </ul>
                     </li>
                     <li class=""><a href="{{ URL::to('/about') }}">About Us</a></li>
+                    <li class=""><a href="{{ URL::to('/contact') }}">Contact</a></li>
                 </ul>
             </div>
         </div>
