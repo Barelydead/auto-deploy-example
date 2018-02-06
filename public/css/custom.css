@@ -64,12 +64,8 @@ body {
 .footer {
     padding: 38px 0;
 }
-/* alignment */
-.center {
-    text-align: center;
-}
 
-/* colors */
+/* ----------------- COLOR CLASSES ----------------- */
 .rdcred {
     background-color: #9c4a4a;
 }
@@ -137,8 +133,6 @@ body {
 
 
 /* ----------------- TEXT CLASSES -----------------*/
-
-
 .bold {
     font-weight: bold;
 }
@@ -241,7 +235,10 @@ body {
     font-weight: bold;
 }
 
-/* pillows */
-.pillow-20 {
-    height: 20px;
+.redbulletlist > li::before {
+    content: "\2022";
+    color: #9c4a4a;
+    display: inline-inline-block;
+    width: 1em;
+    margin-left: -1em;
 }
