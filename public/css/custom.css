@@ -16,6 +16,10 @@ body {
     flex-wrap: nowrap;
 }
 
+.space-center {
+    justify-content: center;
+}
+
 .space-between {
     justify-content: space-between;
 }
@@ -120,4 +124,25 @@ body {
     display: inline-inline-block;
     width: 1em;
     margin-left: -1em;
+}
+
+/* ----------------- FLASH SPECIFIC STYLING ----------------- */
+
+.flash-image {
+    background-image: url('../img/paint-roller.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 400px;
+}
+
+.flash-text {
+    color: #222;
+    background-color: #eee;
+    background: rgba(255, 255, 255, 0.7);
+    padding: 48px;
+    width: 50%;
+}
+
+.flash-text p {
+    font-size: 1.5em;
 }
