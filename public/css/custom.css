@@ -79,7 +79,14 @@ body {
     background-color: #9c4a4a;
 }
 .rdcred-text {
-    color: #f67878;
+    /* color: #f67878; */
+    color: #b06e6e;
+}
+.rdcwhite-text {
+    color: #c3c3c3;
+}
+.rdcorange-text {
+    color: #cfa464;
 }
 
 .rdcdeepred {
@@ -90,6 +97,10 @@ body {
 }
 .rdcsandbordertop {
     border-top: 5px solid #b6ac90;
+}
+
+.rdcsandborder {
+    border: 3px solid #b6ac90;
 }
 
 /* --- LINKS --- */
@@ -117,6 +128,7 @@ body {
 .bold {
     font-weight: bold;
 }
+
 /* ----------------- LIST CLASSES -----------------*/
 .redbulletlist {
     list-style: none;

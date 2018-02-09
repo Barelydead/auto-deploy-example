@@ -23,10 +23,10 @@
                 <ul class="nav navbar-nav">
                     <li class="active"><a href="{{ URL::to('/') }}">Home</a></li>
                     <li class="dropdown">
-                      <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Prodcuts <span class="caret"></span></a>
+                      <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Products <span class="caret"></span></a>
                       <ul class="dropdown-menu" role="menu">
-                        <li><a href="#">drop link 1</a></li>
-                        <li><a href="#">drop link 2</a></li>
+                        <li><a href="{{ URL::to('/products-amu-coating') }}">Architectural & Multi-Use (AMU) Coating</a></li>
+                        <li><a href="{{ URL::to('/products-roof-coating') }}">Roof Coating</a></li>
                       </ul>
                     </li>
                     <li class="dropdown">

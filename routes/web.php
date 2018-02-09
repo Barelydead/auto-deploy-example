@@ -15,6 +15,12 @@ Route::get('/', 'PagesController@getHome');
 
 Route::get('/about', 'PagesController@getAbout');
 
+
 Route::get('/contact', 'PagesController@getContact');
+
+Route::get('/products-amu-coating', 'PagesController@getProductsAmu');
+
+Route::get('/products-roof-coating', 'PagesController@getProductsRoof');
+
 
 Route::get('/', 'PagesController@getHome');
