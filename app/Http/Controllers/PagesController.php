@@ -28,4 +28,9 @@ class PagesController extends Controller
 
         return view("home");
     }
+
+    public function getPerformanceTest()
+    {
+        return view("performance-test");
+    }
 }

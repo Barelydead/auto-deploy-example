@@ -26,4 +26,6 @@ Route::get('/products-amu-coating', 'PagesController@getProductsAmu');
 Route::get('/products-roof-coating', 'PagesController@getProductsRoof');
 
 
+Route::get('/performance-test', 'PagesController@getPerformanceTest');
+
 Route::get('/', 'PagesController@getHome');

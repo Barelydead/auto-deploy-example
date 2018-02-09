@@ -10,6 +10,10 @@ body {
     max-height: 100%;
 }
 
+.contained-img-width {
+    max-width: 100%;
+}
+
 .flex-row {
     display: flex;
     align-items: center;
