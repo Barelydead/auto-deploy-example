@@ -32,8 +32,6 @@ class PagesController extends Controller
         return view("future_products");
     }
 
-    public function getForm()
-    {
 
         return view("home");
     }
