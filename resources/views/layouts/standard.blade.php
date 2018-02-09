@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>App Name - @yield('title')</title>
+        <title>Red Diamond Coatins - @yield('title')</title>
         <link href="{{ asset('css/custom.css') }}" rel="stylesheet">
         <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     </head>
@@ -12,12 +12,8 @@
         {{-- flash area --}}
         @include('includes.flash')
 
-<<<<<<< HEAD
-        <div>
-=======
         {{-- Page content --}}
         <div class="container">
->>>>>>> a4a81e531ab2bb210d0cf8683b40a0af7c0eace2
             @yield('content')
         </div>
 
