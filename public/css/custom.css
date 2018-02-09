@@ -113,6 +113,10 @@ body {
     border-top: 5px solid #b6ac90;
 }
 
+.rdcsandborder {
+    border: 3px solid #b6ac90;
+}
+
 /* --- LINKS --- */
 .rdcred-link {
     color: #9c4a4a;
@@ -139,6 +143,7 @@ body {
 .bold {
     font-weight: bold;
 }
+
 /* ----------------- LIST CLASSES -----------------*/
 .redbulletlist {
     list-style: none;
