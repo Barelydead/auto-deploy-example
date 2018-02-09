@@ -13,7 +13,7 @@
         @include('includes.flash')
 
         {{-- Page content --}}
-        <div class="container">
+        <div>
             @yield('content')
         </div>
 
