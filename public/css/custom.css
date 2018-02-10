@@ -1,4 +1,7 @@
-
+body {
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
 /* ----------------- STYLE HELP CLASSES ----------------- */
 
 /* contain img in div */
@@ -13,6 +16,10 @@
     flex-wrap: nowrap;
 }
 
+.space-center {
+    justify-content: center;
+}
+
 .space-between {
     justify-content: space-between;
 }
@@ -21,6 +28,17 @@
     justify-content: flex-end;
 }
 
+/* ------- PILLOWS ------ */
+/* For vertical spacing */
+.pillow-20 {
+    height: 20px;
+}
+.pillow-30 {
+    height: 30px;
+}
+.pillow-50 {
+    height: 50px;
+}
 
 /* ----------------- NAVBAR SPECIFIC STYLING ----------------- */
 
@@ -61,21 +79,86 @@
     background-color: #9c4a4a;
 }
 .rdcred-text {
+    /* color: #f67878; */
+    color: #b06e6e;
+}
+.rdcwhite-text {
+    color: #c3c3c3;
+}
+.rdcorange-text {
+    color: #cfa464;
+}
+
+.rdcdeepred {
+    background-color: #502d2d;
+}
+.rdcseablue {
+    background-color: #47575d;
+}
+.rdcsandbordertop {
+    border-top: 5px solid #b6ac90;
+}
+
+.rdcsandborder {
+    border: 3px solid #b6ac90;
+}
+
+/* --- LINKS --- */
+.rdcred-link {
     color: #9c4a4a;
 }
+.rdcred-link:focus {
+    color: #9c4a4a;
+}
+.rdcred-link:hover {
+    color: #702c2c;
+}
+/* ------------*/
+
 .rdcblack{
-    background-color: black;
+    background-color: #3e3e3e;
 }
 .lightlightgray {
     color: #c3c3c3;
 }
 
-/* font */
+
+/* ----------------- TEXT CLASSES -----------------*/
+
 .bold {
     font-weight: bold;
 }
 
-/* pillows */
-.pillow-20 {
-    height: 20px;
+/* ----------------- LIST CLASSES -----------------*/
+.redbulletlist {
+    list-style: none;
+}
+
+.redbulletlist > li::before {
+    content: "\2022";
+    color: #9c4a4a;
+    display: inline-inline-block;
+    width: 1em;
+    margin-left: -1em;
+}
+
+/* ----------------- FLASH SPECIFIC STYLING ----------------- */
+
+.flash-image {
+    background-image: url('../img/paint-roller.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 400px;
+}
+
+.flash-text {
+    color: #222;
+    background-color: #eee;
+    background: rgba(255, 255, 255, 0.7);
+    padding: 48px;
+    width: 50%;
+}
+
+.flash-text p {
+    font-size: 1.5em;
 }

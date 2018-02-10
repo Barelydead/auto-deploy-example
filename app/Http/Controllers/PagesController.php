@@ -24,8 +24,17 @@ class PagesController extends Controller
         return view("contact", compact('adress'));
     }
 
-    public function getForm()
-    {
+
+    public function getProductsAmu() {
+        return view("products_amu");
+    }
+
+    public function getProductsRoof() {
+        return view("products_roof");
+    }
+
+    public function getForm() {
+
         return view("home");
     }
 }
