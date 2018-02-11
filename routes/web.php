@@ -16,7 +16,10 @@ Route::get('/', 'PagesController@getHome');
 Route::get('/about', 'PagesController@getAbout');
 
 
-Route::get('/contact', 'PagesController@getContact');
+Route::get('/contact', 'ContactController@getContactForm')->name('contact.get');
+
+Route::post('/contact', 'ContactController@postContactForm')->name('contact.post');
+
 
 Route::get('/products-amu-coating', 'PagesController@getProductsAmu');
 
