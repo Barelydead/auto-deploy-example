@@ -2,6 +2,8 @@
 
 @section('title', 'Products')
 
+@section('flash_title', "Product Overview")
+@section('flash_text', "Our highly advanced coating products are arguably the most enduring, highest tested paint or coating products on the global market today.")
 
 
 @section('content')
@@ -10,29 +12,24 @@
             <div class="pillow-50">
 
             </div>
-            <center>
-                <img width='60%' src="https://i.imgur.com/qAehYQJ.png" title="rdc" alt='about rdc' />
-            </center>
+            <!-- <div class="col-md-3 col-md-offset-2">
+                <img width='100%' src="https://i.imgur.com/qAehYQJ.png" title="rdc" alt='about rdc' />
+            </div> -->
 
         </div>
     </div>
 
     <div class="row">
-        <center>
-            <h1 class='bold text-danger'>
-                PRODUCT OVERVIEW
-            </h1>
-        </center>
         <div class="pillow-50">
 
         </div>
-        <div class="col-md-8 col-md-offset-2">
-            <div class="col-md-3">
+        <div class="col-md-10 col-md-offset-1">
+            <div class="col-md-2">
 
-                <div class="thumbnail">
-                    <img src="https://i.imgur.com/1oRl5j1.png" alt="prodamuimage1">
+                <div class="thumbnail info-text">
+                    <img class='thumbnailimg' src="https://i.imgur.com/1oRl5j1.png" alt="prodamuimage1">
                     <div class="caption">
-                        <h3 class="text-danger">SIGNIFICANT IMPACT RESISTANCE</h3>
+                        <h5 class="text-danger">SIGNIFICANT IMPACT RESISTANCE</h5>
                         <p>
                             RDC passed this test
                             with NO failure, at the
@@ -59,11 +56,11 @@
                 </div>
             </div>
 
-            <div class="col-md-3">
-                <div class="thumbnail">
-                    <img src="https://i.imgur.com/JkWIaFl.png" alt="fire retardant">
+            <div class="col-md-2">
+                <div class="thumbnail info-text">
+                    <img class='thumbnailimg' src="https://i.imgur.com/JkWIaFl.png" alt="fire retardant">
                     <div class="caption">
-                        <h3 class="text-danger">FIRE RETARDANT</h3>
+                        <h5 class="text-danger">FIRE RETARDANT</h5>
                         <p>
                             RDC is an A-1 Rated Fire
                             Retardant product. As
@@ -93,11 +90,11 @@
                 </div>
             </div>
 
-            <div class="col-md-3">
-                <div class="thumbnail">
-                    <img src="https://i.imgur.com/0WztppB.png" alt="prodamuimage1">
+            <div class="col-md-2">
+                <div class="thumbnail info-text">
+                    <img class='thumbnailimg' src="https://i.imgur.com/0WztppB.png" alt="prodamuimage1">
                     <div class="caption">
-                        <h3 class="text-danger">GREEN/WATER-BOURNE</h3>
+                        <h5 class="text-danger">GREEN/WATER-BOURNE</h5>
                         <p>
                             RDC is an Earth
                             friendly/Green, 100%
@@ -125,11 +122,11 @@
                 </div>
             </div>
 
-            <div class="col-md-3">
-                <div class="thumbnail">
-                    <img src="https://i.imgur.com/slaEjR8.png" alt="prodamuimage1">
+            <div class="col-md-2">
+                <div class="thumbnail info-text">
+                    <img class='thumbnailimg' src="https://i.imgur.com/slaEjR8.png" alt="prodamuimage1">
                     <div class="caption">
-                        <h3 class="text-danger">INCREDIBLE ADHESION</h3>
+                        <h5 class="text-danger">INCREDIBLE ADHESION</h5>
                         <p>
                             RDC has incredible
                             adherence to most
@@ -156,11 +153,98 @@
                 </div>
             </div>
 
+
+            <div class="col-md-2">
+                <div class="thumbnail info-text">
+                    <img class='thumbnailimg' src="https://i.imgur.com/COwcZhJ.png" alt="prodamuimage1">
+                    <div class="caption">
+                        <h5 class="text-danger">WATERPROOF & ANTIFUNGUS</h5>
+                        <p>
+                            RDC provides active,
+                            lifelong moisture
+                            management with strong
+                            resistance to water
+                            penetration, which
+                            prevents leaks, damage
+                            and deterioration of just
+                            about any substrate.
+                            This greatly contributes
+                            to RDC’s enduring, long
+                            life qualities.
+                        </p>
+                        <p>
+                            RDC also contains the
+                            highest quality, cutting-
+                            edge, environmentally
+                            friendly fungicide that
+                            aggressively resists
+                            fungus, mold, mildew and
+                            algae, both in the can
+                            and on the surface.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-2">
+                <div class="thumbnail info-text">
+                    <img class='thumbnailimg' src="https://i.imgur.com/1pHy8Hi.png" alt="prodamuimage1">
+                    <div class="caption">
+                        <h5 class="text-danger">ANTICORROSION</h5>
+                        <p>
+                            RDC delivers high and
+                            long-term resistance to
+                            most causes of corrosion.
+                            RDC provides high
+                            moisture, humidity, salt
+                            spray and acid resistance,
+                            above and below water.
+                        </p>
+                        <p>
+                            RDC significantly resists
+                            membrane deterioration,
+                            blistering and peeling
+                            from the substrate due to
+                            a myriad of corrosive
+                            attacks, greatly extending
+                            the life of the coating and
+                            the substrate.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
         </div> <!-- /col-md-8 col-md-offset-2 -->
     </div> <!-- /row -->
 
+    <div class="row">
+        <div class="spaceshuttle">
+            <div class="row">
+                <div class="col-md-4 col-md-offset-1">
+                    <h2 class="bold text-danger">AEROSPACE GRADE THERMAL BARRIER</h2>
+                    <p style='color:black; font-size: 16px'>
+                        We use the same ceramic technology within our formulations that was
+                        developed by NASA to protect the Space Shuttle and
+                        Apollo Spacecraft from extreme heat during re-entry…
+                    </p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-3 col-md-offset-1">
+                    <h4 class='bold text-danger'>THIS CERAMIC TECHNOLOGY CONTRIBUTES GREATLY TO RDC'S:</h4>
+                    <ul style='color:black; font-weight: bold; font-size: 16px; text-decoration: underline'>
+                        <li>A1 Fire Rating</li>
+                        <li>Thermal Barrier</li>
+                        <li>Energy Savings</li>
+                        <li>Lifetime Performance</li>
+                    </ul>
+                </div>
+            </div>
 
-    <div class="row rdcblack rdcsandbordertop">
+        </div>
+
+    </div>
+    <!-- <div class="row rdcblack rdcsandbordertop">
         <div class="col-md-2 col-md-offset-2">
             <div class="pillow-20">
 
@@ -195,8 +279,9 @@
             </div>
         </div>
 
-    </div>
+    </div> -->
     <div class="pillow-50">
 
     </div>
+
 @endsection

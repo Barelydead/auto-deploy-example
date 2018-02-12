@@ -98,6 +98,20 @@ body {
     border: 3px solid #b6ac90;
 }
 
+.rdcdeepred {
+    background-color: #502d2d;
+}
+.rdcseablue {
+    background-color: #47575d;
+}
+.rdcsandbordertop {
+    border-top: 5px solid #b6ac90;
+}
+
+.rdcsandborder {
+    border: 3px solid #b6ac90;
+}
+
 /* --- LINKS --- */
 .rdcred-link {
     color: #9c4a4a;
@@ -120,8 +134,31 @@ body {
 
 /* ----------------- TEXT CLASSES -----------------*/
 
+
 .bold {
     font-weight: bold;
+}
+.info-text {
+    font-size: 12px;
+}
+
+/* ----------------- IMG CLASSES -----------------*/
+
+.thumbnailimg {
+    width: 190px;
+    padding-top: 20px;
+}
+
+.spaceshuttle {
+    background-image: url('https://i.imgur.com/lphoPHv.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 600px;
+}
+
+/* ----------------- LIST CLASSES -----------------*/
+.redbulletlist {
+    list-style: none;
 }
 
 /* ----------------- LIST CLASSES -----------------*/
@@ -159,6 +196,7 @@ body {
 }
 
 
+
 /* ----------------- ARTICLE STYLING ----------------- */
 
 .article {
@@ -192,4 +230,8 @@ body {
 
 .img-h-500 {
     max-height: 500px
+
+/* ----------------- TEXT CLASSES -----------------*/
+.bold {
+    font-weight: bold;
 }
