@@ -13,9 +13,6 @@ before_script:
     - make prepare
 
 
-after_success:
-  - ./vendor/deployer/dist/dep deploy
-
 before_deploy:
     - openssl aes-256-cbc -K $encrypted_<...>_key -iv $encrypted_<...>_iv -in deploy/deploy_rsa.enc -out /tmp/deploy_rsa -d
     - eval "$(ssh-agent -s)"
