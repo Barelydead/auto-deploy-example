@@ -3,7 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Mail\Contact;
+use App\Mail\ContactMessage;
+use App\Contact as Contact;
 use Mail;
 
 class ContactController extends Controller
@@ -20,9 +21,17 @@ class ContactController extends Controller
 
     public function postContactForm(Request $request)
     {
-        $data = $request->all();
-        unset($data['_token']);
-        Mail::to('reciever@example.com')->send(new Contact($data));
+        $contact = new Contact();
+
+        $data['firstname'] = $request->get('firstname');
+        $data['lastname'] = $request->get('lastname');
+        $data['email'] = $request->get('email');
+        $data['phonenumber'] = $request->get('phonenumber');
+        $data['companyname'] = $request->get('companyname');
+        $data['title'] = $request->get('title');
+        $data['message'] = $request->get('message');
+
+        Mail::to($contact->reciever)->send(new ContactMessage($data, $contact));
         return view('contact.success');
     }
 }

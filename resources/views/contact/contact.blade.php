@@ -1,7 +1,7 @@
 
 @extends('layouts.standard')
 
-@section('title', 'About page')
+@section('title', 'Contact Us')
 
 @section('content')
 <div class="container">
@@ -10,16 +10,16 @@
             <!-- <form method="post"> -->
             {!! Form::open(['route' => 'contact.post']) !!}
                 <div class="form-group col-md-6">
-                    {!! Form::label('firstname', 'First Name') !!}
-                    {!! Form::text('firstname', null, ['class' => 'form-control', 'placeholder' => 'First Name']) !!}
+                    {!! Form::label('firstname', 'First Name*') !!}
+                    {!! Form::text('firstname', null, ['class' => 'form-control', 'placeholder' => 'First Name', 'required' => '']) !!}
                 </div>
                 <div class="form-group col-md-6">
-                    {!! Form::label('lastname', 'Last Name') !!}
-                    {!! Form::text('lastname', null, ['class' => 'form-control', 'placeholder' => 'Last Name']) !!}
+                    {!! Form::label('lastname', 'Last Name*') !!}
+                    {!! Form::text('lastname', null, ['class' => 'form-control', 'placeholder' => 'Last Name', 'required' => '']) !!}
                 </div>
                 <div class="form-group col-md-6">
-                    {!! Form::label('email', 'Email Address') !!}
-                    {!! Form::email('email', null, ['class' => 'form-control', 'placeholder' => 'Email Address']) !!}
+                    {!! Form::label('email', 'Email Address*') !!}
+                    {!! Form::email('email', null, ['class' => 'form-control', 'placeholder' => 'Email Address', 'required' => '']) !!}
                 </div>
                 <div class="form-group col-md-6">
                     {!! Form::label('phonenumber', 'Phone Number') !!}
@@ -48,8 +48,8 @@
                 <div class="form-group">
                     <!-- <label for="message">Message</label> -->
                     <!-- <textarea class="form-control" name="message" id="message" rows="3" placeholder="Message"></textarea> -->
-                    {!! Form::label('message', 'Message') !!}
-                    {!! Form::textarea('message', null, ['class' => 'form-control', 'placeholder' => 'Message']) !!}
+                    {!! Form::label('message', 'Message*') !!}
+                    {!! Form::textarea('message', null, ['class' => 'form-control', 'placeholder' => 'Message', 'required' => '']) !!}
                 </div>
                 <div class="form-group row">
                     <div class="col-sm-10">
