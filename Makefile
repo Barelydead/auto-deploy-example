@@ -70,3 +70,9 @@ help:
 .PHONY:  install
 install:
 	@composer update
+
+
+# target: prepare               - prepare repo with essentials.
+.PHONY:  prepare
+prepare:
+	@php artisan key:generate

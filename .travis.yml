@@ -10,6 +10,7 @@ git:
 
 before_script:
     - make install
+    - make prepare
 
 # after_success:
 #   - ./vendor/deployer/dist/dep deploy
