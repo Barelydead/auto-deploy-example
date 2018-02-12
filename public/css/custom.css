@@ -5,15 +5,6 @@ body {
 /* ----------------- STYLE HELP CLASSES ----------------- */
 
 /* contain img in div */
-.contained-img {
-    max-width: 100%;
-    max-height: 100%;
-}
-
-.contained-img-width {
-    max-width: 100%;
-}
-
 .flex-row {
     display: flex;
     align-items: center;
@@ -165,4 +156,40 @@ body {
 
 .flash-text p {
     font-size: 1.5em;
+}
+
+
+/* ----------------- ARTICLE STYLING ----------------- */
+
+.article {
+    margin: 1em -15px;
+    padding: 1em 15px;
+}
+
+.article-standard {
+    background-color: #eee;
+}
+
+
+
+/*  Images  */
+.contained-img {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.contained-img-width {
+    max-width: 100%;
+}
+
+.img-h-200 {
+    max-height: 200px
+}
+
+.img-h-300 {
+    max-height: 300px
+}
+
+.img-h-500 {
+    max-height: 500px
 }
