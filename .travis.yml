@@ -9,10 +9,13 @@ sudo: false
 git:
     submodules: false
 
-
+before_scipt:
+    - make install
 
 # after_success:
 #   - ./vendor/deployer/dist/dep deploy
+
+
 # addons:
 #     apt:
 #         packages:
