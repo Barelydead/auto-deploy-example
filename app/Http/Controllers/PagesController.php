@@ -16,16 +16,16 @@ class PagesController extends Controller
         return view("about");
     }
 
-    public function getContact()
-    {
-        $adress = (object)[
-            "street" => "New Street"
-        ];
-        return view("contact", compact('adress'));
+    public function getProductsAmu() {
+        return view("products_amu");
     }
 
-    public function getForm()
-    {
+    public function getProductsRoof() {
+        return view("products_roof");
+    }
+
+    public function getForm() {
+
         return view("home");
     }
 }
