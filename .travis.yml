@@ -18,9 +18,8 @@ before_script:
     - make install
     - make prepare
 
-deploy:
-    provider: script
-    script: ./vendor/deployer/dist/dep deploy -vvv
+after_success:
+    - ./vendor/deployer/dist/dep deploy -vvv
 
 
 # addons:
