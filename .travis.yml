@@ -18,9 +18,9 @@ before_script:
     - make install
     - make prepare
 
-# deploy:
-#     provider: script
-#     script: ./vendor/deployer/dist/dep depoly -vvv
+deploy:
+    provider: script
+    script: ./vendor/deployer/dist/dep depoly -vvv
 
 
 # addons:
