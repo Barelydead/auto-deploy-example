@@ -20,7 +20,7 @@ before_script:
 
 deploy:
     provider: script
-    script: ./vendor/deployer/dist/dep depoly -vvv
+    script: ./vendor/deployer/dist/dep deploy -vvv
 
 
 # addons:
