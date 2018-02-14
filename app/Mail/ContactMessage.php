@@ -26,7 +26,6 @@ class ContactMessage extends Mailable
         $this->address = $contact->sender;
         $this->name = $contact->sendername;
         $this->subject = $contact->subject;
-
     }
 
     /**

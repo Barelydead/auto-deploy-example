@@ -16,9 +16,9 @@ Route::get('/', 'PagesController@getHome');
 Route::get('/about', 'PagesController@getAbout');
 
 
-Route::get('/contact', 'ContactController@getContactForm')->name('contact.get');
+Route::get('/contact', 'Contact\ContactController@getContactForm')->name('contact.get');
 
-Route::post('/contact', 'ContactController@postContactForm')->name('contact.post');
+Route::post('/contact', 'Contact\ContactController@postContactForm')->name('contact.post');
 
 
 Route::get('/products-amu-coating', 'PagesController@getProductsAmu');
