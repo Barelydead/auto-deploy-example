@@ -218,7 +218,47 @@
     </div> <!-- /row -->
 
     <div class="row">
+
+        <div class="row rdcseablue rdcwhite-text">
+            <div class="col-md-4 col-md-offset-1">
+                <h2 class="">AEROSPACE GRADE THERMAL BARRIER</h2>
+                <p>
+                    We use the same ceramic technology within our formulations that was
+                    developed by NASA to protect the Space Shuttle and
+                    Apollo Spacecraft from extreme heat during re-entry…
+                </p>
+                <div class="pillow-20">
+
+                </div>
+            </div>
+
+        </div>
+        <div class="parallax-shuttle"></div>
+    </div>
+
+
+        <div class="pillow-20">
+
+        </div>
+
+        <div class="row rdcwhite">
+            <div class="col-md-3 col-md-offset-1 col-xs-3-col-xs-offset-3">
+                <h4 class='bold text-danger'>THIS CERAMIC TECHNOLOGY CONTRIBUTES GREATLY TO RDC'S:</h4>
+                <ul style='color:black; font-weight: bold; font-size: 16px; text-decoration: underline'>
+                    <li>A1 Fire Rating</li>
+                    <li>Thermal Barrier</li>
+                    <li>Energy Savings</li>
+                    <li>Lifetime Performance</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+
+
+    <!-- <div class="row">
         <div class="spaceshuttle">
+
             <div class="row">
                 <div class="col-md-4 col-md-offset-1">
                     <h2 class="bold text-danger">AEROSPACE GRADE THERMAL BARRIER</h2>
@@ -242,8 +282,9 @@
             </div>
 
         </div>
+    </div> -->
 
-    </div>
+
     <!-- <div class="row rdcblack rdcsandbordertop">
         <div class="col-md-2 col-md-offset-2">
             <div class="pillow-20">
