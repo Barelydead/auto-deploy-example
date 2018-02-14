@@ -16,15 +16,23 @@ class PagesController extends Controller
         return view("about");
     }
 
-    public function getProductsAmu() {
+    public function getProductsAmu()
+    {
         return view("products_amu");
     }
 
-    public function getProductsRoof() {
+    public function getProductsRoof()
+    {
         return view("products_roof");
     }
 
-    public function getForm() {
+    public function getFutureProducts()
+    {
+        return view("future_products");
+    }
+
+    public function getForm()
+    {
 
         return view("home");
     }

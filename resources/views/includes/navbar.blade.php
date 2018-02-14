@@ -29,6 +29,7 @@
                         <li><a href="{{ URL::to('/products-roof-coating') }}">Roof Coating</a></li>
                       </ul>
                     </li>
+                    <li class=""><a href="{{ URL::to('/future-products') }}">Future Products</a></li>
                     <li class="dropdown">
                       <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">User/Applications <span class="caret"></span></a>
                       <ul class="dropdown-menu" role="menu">
