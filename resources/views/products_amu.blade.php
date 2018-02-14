@@ -230,7 +230,7 @@
                 </div>
             </div>
             <div class="row">
-                <div class="col-md-3 col-md-offset-1">
+                <div class="col-md-3 col-md-offset-1 col-xs-3-col-xs-offset-3">
                     <h4 class='bold text-danger'>THIS CERAMIC TECHNOLOGY CONTRIBUTES GREATLY TO RDC'S:</h4>
                     <ul style='color:black; font-weight: bold; font-size: 16px; text-decoration: underline'>
                         <li>A1 Fire Rating</li>
