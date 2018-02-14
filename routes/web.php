@@ -32,3 +32,7 @@ Route::get('/future-products', 'PagesController@getFutureProducts');
 Route::get('/performance-test', 'PagesController@getPerformanceTest');
 
 Route::get('/', 'PagesController@getHome');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
