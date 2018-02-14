@@ -29,4 +29,6 @@ Route::get('/products-roof-coating', 'PagesController@getProductsRoof');
 Route::get('/future-products', 'PagesController@getFutureProducts');
 
 
+Route::get('/performance-test', 'PagesController@getPerformanceTest');
+
 Route::get('/', 'PagesController@getHome');
