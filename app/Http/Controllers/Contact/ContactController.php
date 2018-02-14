@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Contact;
 
 use Illuminate\Http\Request;
 use App\Mail\ContactMessage;
