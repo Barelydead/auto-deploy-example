@@ -16,9 +16,9 @@ Route::get('/', 'PagesController@getHome');
 Route::get('/about', 'PagesController@getAbout');
 
 
-Route::get('/contact', 'ContactController@getContactForm')->name('contact.get');
+Route::get('/contact', 'Contact\ContactController@getContactForm')->name('contact.get');
 
-Route::post('/contact', 'ContactController@postContactForm')->name('contact.post');
+Route::post('/contact', 'Contact\ContactController@postContactForm')->name('contact.post');
 
 
 Route::get('/products-amu-coating', 'PagesController@getProductsAmu');
@@ -33,7 +33,11 @@ Route::get('/performance-test', 'PagesController@getPerformanceTest');
 
 Route::get('/', 'PagesController@getHome');
 
-
+// TESTROUTE FOR DB CONNECTION
 Route::get('/dbtest', 'PagesController@getdbtest');
 
 Route::get('/search', 'PagesController@getSearch');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');

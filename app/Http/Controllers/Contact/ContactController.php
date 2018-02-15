@@ -1,10 +1,11 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Contact;
 
+use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Mail\ContactMessage;
-use App\Contact as Contact;
+use App\Contact\Contact as Contact;
 use Mail;
 
 class ContactController extends Controller
