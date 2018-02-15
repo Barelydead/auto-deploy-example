@@ -35,3 +35,5 @@ Route::get('/', 'PagesController@getHome');
 
 
 Route::get('/dbtest', 'PagesController@getdbtest');
+
+Route::get('/search', 'PagesController@getSearch');

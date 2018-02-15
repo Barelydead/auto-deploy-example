@@ -43,6 +43,17 @@ class PagesController extends Controller
         return view("performance-test");
     }
 
+    public function getSearch(Request $request)
+    {
+        $searchQuery = $request->query("search");
+
+        $articles = DB::select('select * from content WHERE content LIKE ?', ["%$searchQuery%", "%$searchQuery%", "%$searchQuery%"]);
+
+        $articles = isset($articles) ? $articles : [];
+
+        return view("search_results", ["articles" => $articles, "query" => $searchQuery]);
+    }
+
     // TESTPAGE FOR CHECKING DB CONNECTION
     public function getDbtest()
     {

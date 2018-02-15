@@ -7,7 +7,7 @@
                     <li class="active"><a href="contact">Contact</a></li>
                     <li class="active"><a href="#">Location</a></li>
                 </ul>
-                <form class="form-inline">
+                <form class="form-inline" action="{{ URL::to('/search') }}">
                     <div class="form-group">
                         <input type="text" name="search" class="form-control" placeholder="search page content">
                     </div>
