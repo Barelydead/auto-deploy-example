@@ -4,9 +4,9 @@ checks:
 build:
     environment:
         php: 7.1
-        mysql: 5.6
 
     tests:
         override:
+            before: "make prepare"
             -
                 command: "make test"
