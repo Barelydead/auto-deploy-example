@@ -77,3 +77,8 @@ install:
 prepare:
 	@cp public/.env_dummy .env
 	@php artisan key:generate
+
+# target: test               - Run unittest and generate coverage
+.PHONY:  test
+test:
+	@./vendor/bin/phpunit
