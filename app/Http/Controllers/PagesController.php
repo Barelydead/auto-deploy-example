@@ -51,19 +51,4 @@ class PagesController extends Controller
 
         return view("search_results", ["articles" => $articles, "query" => $searchQuery]);
     }
-
-    // TESTPAGE FOR CHECKING DB CONNECTION
-    public function getDbtest()
-    {
-        $content = DB::select('select title, content from content WHERE type = ?', ['article']);
-
-        var_dump($content);
-
-        if ($content) {
-            return "<br><br><strong>connection working</strong>";
-        } else {
-            return "<br><br><strong>connection no working</strong>";
-        }
-    }
-
 }

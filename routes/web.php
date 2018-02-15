@@ -33,9 +33,6 @@ Route::get('/performance-test', 'PagesController@getPerformanceTest');
 
 Route::get('/', 'PagesController@getHome');
 
-// TESTROUTE FOR DB CONNECTION
-Route::get('/dbtest', 'PagesController@getdbtest');
-
 Route::get('/search', 'PagesController@getSearch');
 
 Auth::routes();
