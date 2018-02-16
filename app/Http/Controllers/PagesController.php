@@ -33,8 +33,8 @@ class PagesController extends Controller
     }
 
 
-        return view("home");
-    }
+    //     return view("home");
+    // }
 
     public function getPerformanceTest()
     {
