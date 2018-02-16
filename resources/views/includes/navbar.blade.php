@@ -47,6 +47,16 @@
                     <li class=""><a href="{{ URL::to('/about') }}">About Us</a></li>
                     <li class=""><a href="{{ URL::to('/contact') }}">Contact</a></li>
                 </ul>
+                @if (Route::has('login'))
+                <div class="top-right links">
+                    @auth
+                        <a href="{{ url('/home') }}">Home</a>
+                    @else
+                        <a href="{{ route('login') }}">Login</a>
+                        <a href="{{ route('register') }}">Register</a>
+                    @endauth
+                </div>
+            @endif
             </div>
         </div>
 
