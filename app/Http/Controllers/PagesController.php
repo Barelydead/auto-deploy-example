@@ -33,12 +33,9 @@ class PagesController extends Controller
     }
 
 
-    //     return view("home");
-    // }
-
     public function getPerformanceTest()
     {
-        return view("performance-test");
+        return view("performance-test", ["flashImage" => 'dumper-truck.jpg']);
     }
 
     public function getSearch(Request $request)
