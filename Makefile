@@ -83,7 +83,7 @@ prepare:
 # target: test               	- Run unittest and generate coverage
 .PHONY:  test
 test:
-	@./vendor/bin/phpunit
+	@./vendor/bin/phpunit --configuration phpunit.xml
 
 
 

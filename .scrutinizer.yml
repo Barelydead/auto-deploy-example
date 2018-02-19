@@ -1,12 +1,24 @@
 checks:
     php: true
 
+filter:
+    excluded_paths: [vendor/*, test/*]
+
 build:
     environment:
-        php: 7.1
+        php: 7.1.12
+
+    dependencies:
+        before:
+            -
+                command:
+                    - "make prepare"
+                    - "mkdir build"
 
     tests:
         override:
-            before: "make prepare"
             -
                 command: "make test"
+                coverage:
+                    file: "build/coverage.clover"
+                    format: "php-clover"
