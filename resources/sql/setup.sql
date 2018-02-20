@@ -35,11 +35,34 @@ CREATE TABLE content (
     `subCategory` VARCHAR(100),
     `title` VARCHAR(100),
     `content` TEXT,
+    `path` VARCHAR(100),
     `author` VARCHAR(100),
     `created` DATETIME DEFAULT CURRENT_TIMESTAMP,
     `updated` DATETIME ON UPDATE CURRENT_TIMESTAMP,
     `deleted` DATETIME
 );
+
+
+DROP TABLE IF EXISTS contentImages;
+CREATE TABLE contentImages (
+    `id` INTEGER PRIMARY KEY AUTO_INCREMENT NOT NULL,
+    `filename` VARCHAR(100),
+    `contentReference` INTEGER,
+
+    FOREIGN KEY (`content`) REFERENCES `content`(`id`)
+);
+
+-- Join images to content
+SELECT c.*, i.filename FROM content as c
+INNER JOIN contentImages as i
+ON c.id = i.contentReference;
+
+
+-- table inserts
+INSERT INTO `contentImages`(filename, contentReference) VALUES
+('testimage.jpg', 1),
+('a-pic.png', 1)
+;
 
 
 INSERT INTO `contact`(sender, reciever, `name`, title, phoneNumber, company, `subject`, message)
