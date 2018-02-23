@@ -50,12 +50,17 @@
                 @if (Route::has('login'))
                 <div class="top-right links">
                     @auth
-                    <li class="dropdown">
+                    <li style='list-style-type: none;' class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" aria-haspopup="true">
                             {{ Auth::user()->name }} <span class="caret"></span>
                         </a>
 
                         <ul class="dropdown-menu">
+                            <li>
+                                <a href="{{ route('adminindex') }}">
+                                    Admin
+                                </a>
+                            </li>
                             <li>
                                 <a href="{{ route('logout') }}"
                                     onclick="event.preventDefault();
