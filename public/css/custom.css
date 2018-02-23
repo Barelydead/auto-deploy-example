@@ -164,7 +164,7 @@ body {
 /* --------------- PARALLAX CLASSES ---------------*/
 .parallax-shuttle {
     /* The image used */
-    background-image: url("../img/shuttle_shield.png");
+    background-image: url("../img/product/shuttle_shield.png");
 
     /* Set a specific height */
     min-height: 300px;
