@@ -10,8 +10,26 @@ SET NAMES utf8;
 
 -- Create tables
 
-DROP TABLE IF EXISTS contact;
-CREATE TABLE contact (
+DROP TABLE IF EXISTS contact_adress;
+CREATE TABLE contact_adress (
+    `companyName` VARCHAR(100),
+    `street` VARCHAR(100),
+    `postalcode` VARCHAR(100),
+    `country` VARCHAR(100),
+	`telephone` VARCHAR(100)
+);
+
+DROP TABLE IF EXISTS contact_mail_config;
+CREATE TABLE contact_mail_config (
+    `reciever` VARCHAR(100),
+    `sender` VARCHAR(100),
+    `sendername` VARCHAR(100),
+    `counsubject` VARCHAR(255),
+	`telephone` VARCHAR(100)
+);
+
+DROP TABLE IF EXISTS contact_messages;
+CREATE TABLE contact_messages (
     `id` INTEGER PRIMARY KEY AUTO_INCREMENT NOT NULL,
     `sender` VARCHAR(100),
     `reciever` VARCHAR(100),
@@ -25,7 +43,6 @@ CREATE TABLE contact (
     `created` DATETIME DEFAULT CURRENT_TIMESTAMP,
     `deleted` DATETIME
 );
-
 
 DROP TABLE IF EXISTS content;
 CREATE TABLE content (
