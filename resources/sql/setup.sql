@@ -60,29 +60,7 @@ CREATE TABLE content (
 );
 
 
-DROP TABLE IF EXISTS contentImages;
-CREATE TABLE contentImages (
-    `id` INTEGER PRIMARY KEY AUTO_INCREMENT NOT NULL,
-    `filename` VARCHAR(100),
-    `contentReference` INTEGER,
-
-    FOREIGN KEY (`content`) REFERENCES `content`(`id`)
-);
-
--- Join images to content
-SELECT c.*, i.filename FROM content as c
-INNER JOIN contentImages as i
-ON c.id = i.contentReference;
-
-
--- table inserts
-INSERT INTO `contentImages`(filename, contentReference) VALUES
-('testimage.jpg', 1),
-('a-pic.png', 1)
-;
-
-
-INSERT INTO `contact`(sender, reciever, `name`, title, phoneNumber, company, `subject`, message)
+INSERT INTO `contact_messages`(sender, reciever, `name`, title, phoneNumber, company, `subject`, message)
 VALUES
 	('sender@test.se',
 	'reciever@test.se',
