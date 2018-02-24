@@ -108,6 +108,9 @@ body {
 .rdcseablue {
     background-color: #47575d;
 }
+.rdcsand {
+    background-color: #b6ac90;
+}
 .rdcsandbordertop {
     border-top: 5px solid #b6ac90;
 }
@@ -137,8 +140,6 @@ body {
 
 
 /* ----------------- TEXT CLASSES -----------------*/
-
-
 .bold {
     font-weight: bold;
 }
@@ -159,6 +160,30 @@ body {
     background-size: cover;
     height: 600px;
 }
+
+/* --------------- PARALLAX CLASSES ---------------*/
+.parallax-shuttle {
+    /* The image used */
+    background-image: url("../img/product/shuttle_shield.png");
+
+    /* Set a specific height */
+    min-height: 300px;
+
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.parallax-overlay {
+    color: #222;
+    background-color: #eee;
+    background: rgba(255, 255, 255, 0.7);
+    padding: 48px;
+    width: 50%;
+}
+
+
 
 /* ----------------- LIST CLASSES -----------------*/
 .redbulletlist {
@@ -239,4 +264,22 @@ body {
 /* ----------------- TEXT CLASSES -----------------*/
 .bold {
     font-weight: bold;
+}
+
+/* ----------------- LIST CLASSES -----------------*/
+.redbulletlist {
+    list-style: none;
+}
+
+/* ----------------- LIST CLASSES -----------------*/
+.redbulletlist {
+    list-style: none;
+}
+
+.redbulletlist > li::before {
+    content: "\2022";
+    color: #9c4a4a;
+    display: inline-inline-block;
+    width: 1em;
+    margin-left: -1em;
 }

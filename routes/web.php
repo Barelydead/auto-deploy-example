@@ -31,4 +31,11 @@ Route::get('/future-products', 'PagesController@getFutureProducts');
 
 Route::get('/performance-test', 'PagesController@getPerformanceTest');
 
-Route::get('/', 'PagesController@getHome');
+
+Route::get('/search', 'PagesController@getSearch');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
+
+Route::get('/admin', 'Admin\AdminController@getIndex')->name('adminindex');

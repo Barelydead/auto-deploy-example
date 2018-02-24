@@ -77,3 +77,17 @@ install:
 prepare:
 	@cp public/.env_dummy .env
 	@php artisan key:generate
+
+
+
+# target: test               	- Run unittest and generate coverage
+.PHONY:  test
+test:
+	@./vendor/bin/phpunit --configuration phpunit.xml
+
+
+
+# target: deploy-staging      	- Run deploy script to deploy to staging server
+.PHONY:  deploy-staging
+deploy-staging:
+	@./vendor/deployer/dist/dep deploy
