@@ -20,3 +20,5 @@ services:
             - MYSQL_DATABASE=rdc
         ports:
             - "3306:3306"
+        volumes:
+            - ./resources/sql:/docker-entrypoint-initdb.d

@@ -59,7 +59,7 @@ CREATE TABLE content (
 );
 
 
-INSERT INTO `contact`(sender, reciever, `name`, title, phoneNumber, company, `subject`, message)
+INSERT INTO `contact_messages`(sender, reciever, `name`, title, phoneNumber, company, `subject`, message)
 VALUES
 	('sender@test.se',
 	'reciever@test.se',
