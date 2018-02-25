@@ -62,7 +62,15 @@
         </div>
         <div id="contact-form" class="col-md-4">
             <div>
-                Address {{ $address["street"] }}
+                <b>Address:</b><br>
+                {{ $address["street"] }}<br>
+                {{ $address["postalcode"] }}<br>
+                {{ $address["state"] }}<br>
+                {{ $address["country"] }}<br>
+                <b>Telephone:</b><br>
+                {{ $address["telephone"] }}<br>
+                <b>Email:</b><br>
+                {{ $address["email"] }}<br>
             </div>
         </div>
     </div>
