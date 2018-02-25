@@ -62,7 +62,7 @@
         </div>
         <div id="contact-form" class="col-md-4">
             <div>
-                Address {{ $adress->street }}
+                Address {{ $address["street"] }}
             </div>
         </div>
     </div>
