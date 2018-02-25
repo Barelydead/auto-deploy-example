@@ -11,7 +11,7 @@ SET NAMES utf8;
 -- Create tables
 
 DROP TABLE IF EXISTS contact_address;
-CREATE TABLE contact_adress (
+CREATE TABLE contact_address (
     `companyName` VARCHAR(100),
     `street` VARCHAR(100),
     `postalcode` VARCHAR(100),
@@ -27,8 +27,7 @@ CREATE TABLE contact_mail_config (
     `reciever` VARCHAR(100),
     `sender` VARCHAR(100),
     `sendername` VARCHAR(100),
-    `counsubject` VARCHAR(255),
-    `telephone` VARCHAR(100)
+    `subject` VARCHAR(255)
 );
 
 DROP TABLE IF EXISTS contact_messages;
@@ -61,7 +60,16 @@ CREATE TABLE content (
     `deleted` DATETIME
 );
 
-INSERT INTO `contact_address`(companyName, street, postalcode, city, state, country, telephone, email)
+INSERT INTO `contact_mail_config`(reciever, sender, sendername, subject)
+VALUES
+(
+    'reciever@rdc.com',
+    'sender@rdc.com',
+    'RDC',
+    'RDC - Contact Message'
+);
+
+INSERT INTO `contact_address`(companyName, street, postalcode, city, `state`, country, telephone, email)
 VALUES (
     'Red Diamond Coatings',
     'Test Street 5',
@@ -71,7 +79,7 @@ VALUES (
     'USA',
     '1-613-12345',
     'info@rdc.com'
-)
+);
 
 INSERT INTO `contact_messages`(sender, reciever, `name`, title, phoneNumber, company, `subject`, message)
 VALUES

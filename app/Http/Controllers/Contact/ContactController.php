@@ -5,13 +5,15 @@ namespace App\Http\Controllers\Contact;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Mail\ContactMessage;
-use App\Contact\Contact as Contact;
+use App\Contact\ContactMailConfig as ContactMailConfig;
 use Mail;
 
 class ContactController extends Controller
 {
     public function getContactForm()
     {
+        $config = ContactMailConfig::all();
+        var_dump($config);
         $adress = (object)[
             "street" => "New Street"
         ];
@@ -22,7 +24,7 @@ class ContactController extends Controller
 
     public function postContactForm(Request $request)
     {
-        $contact = new Contact();
+        $contact = new ContactMailConfig();
 
         $data['firstname'] = $request->get('firstname');
         $data['lastname'] = $request->get('lastname');
