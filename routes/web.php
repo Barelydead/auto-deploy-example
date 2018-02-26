@@ -39,3 +39,5 @@ Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
 
 Route::get('/admin', 'Admin\AdminController@getIndex')->name('adminindex');
+
+Route::get('/location', 'PagesController@getLocation');
