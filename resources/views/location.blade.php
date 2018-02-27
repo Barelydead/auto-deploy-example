@@ -24,6 +24,8 @@
                 <li>1854 NDSU Research Circle North</li>
                 <li>Fargo, ND 58102 USA</li>
             </ul>
+            <div class="pillow-30"></div>
+            <a href="{{ URL::to('/contact') }}" class="btn btn-primary btn-block">Contact us</a>
         </div>
         <div class="col-md-9">
             <div id="map"></div>
@@ -34,6 +36,6 @@
 @endsection
 
 
-<script src="js/maps.js"></script>
+<script src="{{asset("js/maps.js")}}"></script>
 <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyApLmcCATzFtYdnERmYwp8On90Jae-J1PM&callback=initMap">
 </script>
