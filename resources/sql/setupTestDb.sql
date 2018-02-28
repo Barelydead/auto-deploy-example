@@ -44,7 +44,7 @@ CREATE TABLE contact_messages (
     `subject` VARCHAR(255),
     `message` TEXT,
     `created` TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-    `deleted` DATETIME
+    `deleted` TIMESTAMP
 );
 
 DROP TABLE IF EXISTS content;
@@ -57,8 +57,8 @@ CREATE TABLE content (
     `content` TEXT,
     `author` VARCHAR(100),
     `created` TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-    `updated` DATETIME ON UPDATE CURRENT_TIMESTAMP,
-    `deleted` DATETIME
+    `updated` TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+    `deleted` TIMESTAMP
 );
 
 INSERT INTO `contact_mail_config`(reciever, sender, sendername, subject)
