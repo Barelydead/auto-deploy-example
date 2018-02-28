@@ -283,3 +283,25 @@ body {
     width: 1em;
     margin-left: -1em;
 }
+
+
+/* -------- Google maps ------------- */
+#map {
+    width: 100%;
+    height: 400px
+}
+
+
+/* -------- HOME PAGE ------------- */
+
+.info-card img {
+    height: 200px;
+    width: 100%;
+}
+
+.info-card {
+    height: 340px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}

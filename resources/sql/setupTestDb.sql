@@ -1,9 +1,8 @@
 -- Database setup
+SET sql_mode = '';
 
-CREATE DATABASE IF NOT EXISTS RDC;
-USE RDC;
-
-GRANT ALL ON RDC.* TO test@localhost IDENTIFIED BY 'test';
+CREATE DATABASE IF NOT EXISTS rdcTest;
+USE rdcTest;
 
 SET NAMES utf8;
 
@@ -42,8 +41,8 @@ CREATE TABLE contact_messages (
     `company` CHAR(100),
     `subject` VARCHAR(255),
     `message` TEXT,
-    `created` DATETIME DEFAULT CURRENT_TIMESTAMP,
-    `deleted` DATETIME
+    `created` TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    `deleted` TIMESTAMP
 );
 
 DROP TABLE IF EXISTS content;
@@ -55,9 +54,9 @@ CREATE TABLE content (
     `title` VARCHAR(100),
     `content` TEXT,
     `author` VARCHAR(100),
-    `created` DATETIME DEFAULT CURRENT_TIMESTAMP,
-    `updated` DATETIME ON UPDATE CURRENT_TIMESTAMP,
-    `deleted` DATETIME
+    `created` TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    `updated` TIMESTAMP,
+    `deleted` TIMESTAMP
 );
 
 INSERT INTO `contact_mail_config`(reciever, sender, sendername, subject)

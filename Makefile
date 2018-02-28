@@ -86,8 +86,13 @@ test:
 	@./vendor/bin/phpunit --configuration phpunit.xml
 
 
-
 # target: deploy-staging      	- Run deploy script to deploy to staging server
 .PHONY:  deploy-staging
 deploy-staging:
+	@./vendor/deployer/dist/dep deploy
+
+
+# target: mock-db      	- Fill database with test data
+.PHONY:  mock-db
+mock-db:
 	@./vendor/deployer/dist/dep deploy

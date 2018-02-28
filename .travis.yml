@@ -20,6 +20,8 @@ notifications:
 before_script:
     - make install
     - make prepare
+    - mysql -e 'CREATE DATABASE rdcTest;'
+    - mysql -uroot rdcTest < resources/sql/setupTestDb.sql
 
 # after_success:
 #     - ./vendor/deployer/dist/dep deploy -vvv
