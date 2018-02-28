@@ -43,7 +43,7 @@ CREATE TABLE contact_messages (
     `company` CHAR(100),
     `subject` VARCHAR(255),
     `message` TEXT,
-    `created` DATETIME DEFAULT CURRENT_TIMESTAMP,
+    `created` TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
     `deleted` DATETIME
 );
 
@@ -56,7 +56,7 @@ CREATE TABLE content (
     `title` VARCHAR(100),
     `content` TEXT,
     `author` VARCHAR(100),
-    `created` DATETIME DEFAULT CURRENT_TIMESTAMP,
+    `created` TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
     `updated` DATETIME ON UPDATE CURRENT_TIMESTAMP,
     `deleted` DATETIME
 );
