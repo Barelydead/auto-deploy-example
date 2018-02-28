@@ -1,4 +1,5 @@
 -- Database setup
+SET sql_mode = '';
 
 CREATE DATABASE IF NOT EXISTS rdcTest;
 USE rdcTest;
