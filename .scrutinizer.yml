@@ -13,6 +13,9 @@ build:
         before:
             - "make prepare"
             - "mkdir build"
+
+    project_setup:
+        before:
             - mysql -uroot -e 'CREATE DATABASE rdcTest'
             - mysql -uroot rdcTest < resources/sql/setupTestDb.sql
 

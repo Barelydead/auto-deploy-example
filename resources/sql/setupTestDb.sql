@@ -4,8 +4,6 @@ SET sql_mode = '';
 CREATE DATABASE IF NOT EXISTS rdcTest;
 USE rdcTest;
 
-GRANT ALL ON RDC.* TO test@localhost IDENTIFIED BY 'test';
-
 SET NAMES utf8;
 
 
