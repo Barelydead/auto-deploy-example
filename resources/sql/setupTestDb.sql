@@ -57,7 +57,7 @@ CREATE TABLE content (
     `content` TEXT,
     `author` VARCHAR(100),
     `created` TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-    `updated` TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+    `updated` TIMESTAMP,
     `deleted` TIMESTAMP
 );
 
