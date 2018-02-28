@@ -8,6 +8,30 @@ use Illuminate\Foundation\Testing\RefreshDatabase;
 
 class RouteTest extends TestCase
 {
+  // 
+  //   /**
+  //    * Set up database test data before tests
+  //    *
+  //    * @return void
+  //    */
+  //   protected function setUp()
+  //  {
+  //      $this->stack = [];
+  //  }
+  //
+  //
+  //  /**
+  //   * Remove testdata from DB
+  //   *
+  //   * @return void
+  //   */
+  //  protected function tearDown()
+  // {
+  //     $this->stack = [];
+  // }
+
+
+
     /**
      * Test status code on homepage
      *
