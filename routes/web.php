@@ -38,6 +38,11 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
+/* --------------- ADMIN ROUTES --------------*/
 Route::get('/admin', 'Admin\AdminController@getIndex')->name('adminindex');
 
+
 Route::get('/location', 'PagesController@getLocation');
+
+Route::get('/admin/product', 'Admin\AdminController@getProduct')->name('adminproduct');
+Route::post('/admin/editproduct', 'Admin\AdminController@postProduct')->name('admineditproduct');;
