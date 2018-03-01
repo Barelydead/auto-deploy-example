@@ -38,6 +38,11 @@ class PagesController extends Controller
         return view("performance-test", ["flashImage" => 'dumper-truck.jpg']);
     }
 
+    public function getLocation()
+    {
+        return view("location");
+    }
+
     public function getSearch(Request $request)
     {
         $searchQuery = $request->query("search");
