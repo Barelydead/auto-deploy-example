@@ -18,7 +18,7 @@
         <div class="row">
             <div class="navbar-wrap flex-row space-between main-nav">
                 <div class="logo-wrap">
-                    <a href="#"><img src="img/rdc_logo.png" alt="logo" class="contained-img"></a>
+                    <a href="#"><img src="{{asset('img/rdc_logo.png')}}" alt="logo" class="contained-img"></a>
                 </div>
                 <ul class="nav navbar-nav">
                     <li class="active"><a href="{{ URL::to('/') }}">Home</a></li>
@@ -32,6 +32,7 @@
                       </ul>
                     </li>
                     <li class="active"><a href="#">Edit users</a></li>
+                    <li class="active"><a href="{{ route('new-user-form') }}">New user</a></li>
                 </ul>
                 @if (Route::has('login'))
                 <div class="top-right links">

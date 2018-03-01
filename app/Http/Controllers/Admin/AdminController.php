@@ -21,4 +21,9 @@ class AdminController extends Controller
     {
         return view("Admin/index");
     }
+
+    public function getNewUserForm()
+    {
+        return view("Admin/new-user");
+    }
 }

@@ -40,4 +40,6 @@ Route::get('/home', 'HomeController@index')->name('home');
 
 Route::get('/admin', 'Admin\AdminController@getIndex')->name('adminindex');
 
+Route::get('/admin/new-user-form', 'Admin\AdminController@getNewUserForm')->name('new-user-form');
+
 Route::get('/location', 'PagesController@getLocation');
