@@ -27,7 +27,7 @@
                       <ul class="dropdown-menu" role="menu">
                         <li><a href="#">Home</a></li>
                         <li><a href="#">About Us</a></li>
-                        <li><a href="#">Product</a></li>
+                        <li><a href="{{ route('adminproduct') }}">Product</a></li>
                         <li><a href="#">Research</a></li>
                       </ul>
                     </li>

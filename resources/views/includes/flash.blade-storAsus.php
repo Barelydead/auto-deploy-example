@@ -2,7 +2,7 @@
     <?php $flashImage = 'paint-roller.jpg'; ?>
 @endif
 
-<div class="container-fluid">
+<div class="container-fluid" id="flash">
     <div class="row">
         <div class="flash-image flex-row space-center" style="background-image: url(img/flash/{{$flashImage}})">
             <div class="flash-text">
