@@ -25,10 +25,10 @@
                     <li class="dropdown">
                       <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Edit Content <span class="caret"></span></a>
                       <ul class="dropdown-menu" role="menu">
-                        <li><a href="#">Home</a></li>
-                        <li><a href="#">About Us</a></li>
-                        <li><a href="{{ route('adminproduct') }}">Product</a></li>
-                        <li><a href="#">Research</a></li>
+                        <li><a href="{{ URL::to('/admin/content/home') }}">Home</a></li>
+                        <li><a href="{{ URL::to('/admin/content/about') }}">About Us</a></li>
+                        <li><a href="{{ URL::to('/admin/content/products') }}">Product</a></li>
+                        <li><a href="{{ URL::to('/admin/content/research') }}">Research</a></li>
                       </ul>
                     </li>
                     <li class="active"><a href="#">Edit users</a></li>

@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Http\Request;
+use Illuminate\Http\RedirectResponse;
 
 class AdminController extends Controller
 {
@@ -23,26 +24,36 @@ class AdminController extends Controller
         return view("Admin/index");
     }
 
-    public function getProduct()
+    public function getContent($category)
     {
-        $content = DB::select('select * from content WHERE category LIKE ?', ['products']);
-        return view("Admin/content/product", ["content" => $content]);
+        $content = DB::select('select * from content WHERE category LIKE ?', [$category]);
+        return view("Admin/content/viewcontent", ["content" => $content, "category" => $category]);
     }
 
-    public function editProduct($id)
+    public function editContent($id)
     {
         $content = DB::select('select * from content WHERE id LIKE ?', [$id]);
         return view("Admin/content/edit", ["content" => $content]);
     }
 
-    public function postProduct()
+    public function editContentProcess()
     {
-        $data['id'] = $request->get('id');
-        $data['field'] = $request->get('field');
-        $data['newvalue'] = $request->get('newvalue');
-        DB::table('content')
-            ->where('id', $data['id'])
-            ->update([$data['field'] => $data['newvalue']]);
-        return view("Admin/content/product", ["content" => $data]);
+        // $data['id'] = $request->post('id');
+        // $data['category'] = $request->post('category');
+        // $data['title'] = $request->post('title');
+        // $data['content'] = $request->post('content');
+        //
+        // /*--------------------------------------------*/
+        //
+        // DB::table('content')
+        //     ->where('id', $data['id'])
+        //     ->update([
+        //         'title'     => $data['title'],
+        //         'content'   => $data['content']
+        //     ]);
+        //
+        //
+        // $returnurl = "Admin/content/".$data['category'];
+        return redirect()->route('login');
     }
 }

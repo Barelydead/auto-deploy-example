@@ -6,7 +6,7 @@
 <div class="container">
     <div class="row">
         <div class="col-md-12">
-            <h1>Product page</h1>
+            <h4><?= ucfirst($category) ?> page</h4>
             <table class='table'>
                 <thead>
                     <tr>

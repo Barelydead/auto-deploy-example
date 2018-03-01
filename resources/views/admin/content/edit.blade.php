@@ -9,7 +9,7 @@
             <h1>Edit</h1>
 
             @foreach ($content as $row)
-                <form action="#" method="post">
+                <form action="{{ URL::to('/admin/content/editcontentprocess') }}" method="post">
                     <div class="form-group">
                         <label for="title">Title</label>
                         <input class='form-control' type="text" name="title" value="{{$row->title}}">
@@ -19,7 +19,7 @@
                         <textarea id="form-element-data" class='form-control md-input' name="content" rows="8" cols="80" data-provide='markdown' style="resize: none;">{{$row->content}}</textarea>
                     </div>
                     <div class="form-group">
-                        <input class='btn btn-default' type="submint" name="editbtn" value="Edit">
+                        <input class='btn btn-default' type="submit" name="editbtn" value="Edit">
                     </div>
                 </form>
             @endforeach
