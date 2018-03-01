@@ -36,24 +36,24 @@ class AdminController extends Controller
         return view("Admin/content/edit", ["content" => $content]);
     }
 
-    public function editContentProcess()
+    public function editContentProcess(Request $request)
     {
-        // $data['id'] = $request->post('id');
-        // $data['category'] = $request->post('category');
-        // $data['title'] = $request->post('title');
-        // $data['content'] = $request->post('content');
-        //
-        // /*--------------------------------------------*/
-        //
-        // DB::table('content')
-        //     ->where('id', $data['id'])
-        //     ->update([
-        //         'title'     => $data['title'],
-        //         'content'   => $data['content']
-        //     ]);
-        //
-        //
-        // $returnurl = "Admin/content/".$data['category'];
-        return redirect()->route('login');
+        $data['id'] = $request->post('id');
+        $data['category'] = $request->post('category');
+        $data['title'] = $request->post('title');
+        $data['content'] = $request->post('content');
+
+        /*--------------------------------------------*/
+
+        DB::table('content')
+            ->where('id', $data['id'])
+            ->update([
+                'title'     => $data['title'],
+                'content'   => $data['content']
+            ]);
+
+
+        $returnurl = "admin/content/".$data['category'];
+        return redirect($returnurl);
     }
 }

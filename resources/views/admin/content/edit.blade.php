@@ -18,6 +18,8 @@
                         <label for="content">Content</label>
                         <textarea id="form-element-data" class='form-control md-input' name="content" rows="8" cols="80" data-provide='markdown' style="resize: none;">{{$row->content}}</textarea>
                     </div>
+                    <input type="hidden" name="id" value="{{$row->id}}">
+                    <input type="hidden" name="category" value="{{$row->category}}">
                     <div class="form-group">
                         <input class='btn btn-default' type="submit" name="editbtn" value="Edit">
                     </div>
