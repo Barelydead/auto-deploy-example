@@ -44,4 +44,4 @@ Route::get('/admin', 'Admin\AdminController@getIndex')->name('adminindex');
 Route::get('/location', 'PagesController@getLocation');
 
 Route::get('/admin/product', 'Admin\AdminController@getProduct')->name('adminproduct');
-Route::post('/admin/editproduct', 'Admin\AdminController@postProduct')->name('admineditproduct');;
+Route::get('/admin/content/edit/{id}', 'Admin\AdminController@editProduct')->name('admineditproduct');

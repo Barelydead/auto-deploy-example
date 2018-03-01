@@ -19,11 +19,15 @@
                         <th>title</th>
 
                         <th>content</th>
+                        <th>actions</th>
                     </tr>
                 </thead>
                 <tbody>
 
                         @foreach ($content as $row)
+                            <?php
+                            $editurl = url('/admin/content/edit/'.$row->id);
+                            ?>
                             <tr>
                                 <td>{{ $row->id }}</td>
                                 <td>{{ $row->type }}</td>
@@ -36,9 +40,11 @@
                                 <td>
                                     {{ $row->content }}
                                 </td>
+                                <td>
+                                    <a href="{{$editurl}}">edit</a>
+                                </td>
                             </tr>
                         @endforeach
-
 
                 </tbody>
             </table>

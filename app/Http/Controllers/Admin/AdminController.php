@@ -29,6 +29,12 @@ class AdminController extends Controller
         return view("Admin/content/product", ["content" => $content]);
     }
 
+    public function editProduct($id)
+    {
+        $content = DB::select('select * from content WHERE id LIKE ?', [$id]);
+        return view("Admin/content/edit", ["content" => $content]);
+    }
+
     public function postProduct()
     {
         $data['id'] = $request->get('id');
