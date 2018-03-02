@@ -40,15 +40,12 @@ Route::get('/home', 'HomeController@index')->name('home');
 
 Route::get('/admin', 'Admin\AdminController@getIndex')->name('adminindex');
 
-Route::get('/admin/user/new-user', 'Admin\AdminController@getNewUserForm')->name('new-user-form');
-
 Route::get('/admin/user/edit-users', 'Admin\AdminController@getUsers')->name('get-users');
-
 Route::get('/admin/user/edit/{id}', 'Admin\AdminController@editUser')->name('edit-user');
 
 Route::post('/admin/user/edit/edituserprocess', 'Admin\AdminController@editUserProcess');
-
 Route::post('/admin/user/edit/edituserpassword', 'Admin\AdminController@editUserPassword');
+Route::post('/admin/user/adduserprocess', 'Admin\AdminController@addUserProcess');
 
 Route::get('/location', 'PagesController@getLocation');
 

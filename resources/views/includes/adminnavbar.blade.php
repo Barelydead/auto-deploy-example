@@ -32,7 +32,6 @@
                       </ul>
                     </li>
                     <li class="active"><a href="{{ URL::to('/admin/user/edit-users') }}">Edit users</a></li>
-                    <li class="active"><a href="{{ URL::to('/admin/user/new-user') }}">New user</a></li>
                 </ul>
                 @if (Route::has('login'))
                 <div class="top-right links">

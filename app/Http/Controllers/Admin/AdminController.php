@@ -79,10 +79,32 @@ class AdminController extends Controller
         return back()->with('status', 'Password updated.');
     }
 
+    public function addUserProcess(Request $request) {
+        $request->validate([
+            'name' => 'required|string',
+            'email' => 'required|string|unique:users|email',
+            'password' => 'required|string|min:6',
+            'password_confirmation' => 'same:password',
+            'admin' => 'required'
+        ]);
 
-    public function getNewUserForm()
-    {
-        return view("admin/user/new-user");
+        $post['name'] = $request->post('name');
+        $post['password'] = $request->post('password');
+        $post['password_confirmation'] = $request->post('password_confirmation');
+        $post['email'] = $request->post('email');
+        $post['admin'] = $request->post('admin');
+
+        DB::table('users')
+            ->insert([
+                'name' => $post['name'],
+                'password' => bcrypt($post['password']),
+                'email' => $post['email'],
+                'admin' => $post['admin'],
+                'created_at' => \Carbon\Carbon::now()
+            ]);
+
+
+        return back()->with('status', 'New user was created');
     }
 
     public function getContent($category)

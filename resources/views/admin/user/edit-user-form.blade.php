@@ -18,7 +18,14 @@
                         <div class="form-group">
                             <label for="email">email</label>
                             <input type="text" name="email" value="{{ $user->email }}" class="form-control">
+                        </div>
 
+                        <div class="form-group">
+                            <label for="radio">Admin privileges</label>
+                            <div class="radio">
+                                <label><input type="radio" name="admin" value="1" {{ $user->admin ? "checked='checked'" : "" }}>Yes</label>
+                                <label><input type="radio" name="admin" value="0" {{ !$user->admin ? "checked='checked'" : "" }}>No</label>
+                            </div>
                         </div>
 
                         <input type="hidden" name="id" value="{{ $user->id }}">
@@ -40,7 +47,6 @@
                         <div class="form-group">
                             <label for="re-password">New Password again</label>
                             <input type="password" name="re-password" value="" class="form-control">
-
                         </div>
 
                         <input type="hidden" name="id" value="{{ $user->id }}">
