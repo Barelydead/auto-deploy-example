@@ -8,6 +8,11 @@ class Address extends Model
 {
     protected $table = 'contact_address';
 
+    /**
+     * Get stored address information
+     *
+     * @return void
+     */
     public function getAddress()
     {
         $addressStored = $this->first();
