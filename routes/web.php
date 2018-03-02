@@ -40,6 +40,14 @@ Route::get('/home', 'HomeController@index')->name('home');
 
 Route::get('/admin', 'Admin\AdminController@getIndex')->name('adminindex');
 
-Route::get('/admin/new-user-form', 'Admin\AdminController@getNewUserForm')->name('new-user-form');
+Route::get('/admin/user/new-user', 'Admin\AdminController@getNewUserForm')->name('new-user-form');
+
+Route::get('/admin/user/edit-users', 'Admin\AdminController@getUsers')->name('get-users');
+
+Route::get('/admin/user/edit/{id}', 'Admin\AdminController@editUser')->name('edit-user');
 
 Route::get('/location', 'PagesController@getLocation');
+
+Route::get('/admin/content/{category}', 'Admin\AdminController@getContent');
+Route::get('/admin/content/edit/{id}', 'Admin\AdminController@editContent');
+Route::post('/admin/content/editcontentprocess', 'Admin\AdminController@editContentProcess');
