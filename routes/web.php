@@ -46,6 +46,10 @@ Route::get('/admin/user/edit-users', 'Admin\AdminController@getUsers')->name('ge
 
 Route::get('/admin/user/edit/{id}', 'Admin\AdminController@editUser')->name('edit-user');
 
+Route::post('/admin/user/edit/edituserprocess', 'Admin\AdminController@editUserProcess');
+
+Route::post('/admin/user/edit/edituserpassword', 'Admin\AdminController@editUserPassword');
+
 Route::get('/location', 'PagesController@getLocation');
 
 Route::get('/admin/content/{category}', 'Admin\AdminController@getContent');

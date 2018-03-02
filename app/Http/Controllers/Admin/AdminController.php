@@ -35,9 +35,48 @@ class AdminController extends Controller
     public function editUser($id) {
         $user = DB::table('users')->Where('id', $id)->first();
 
-        var_dump($user);
-
         return view('admin/user/edit-user-form', ["user" => $user]);
+    }
+
+    public function editUserProcess(Request $request) {
+        $request->validate([
+            'name' => 'required',
+            'email' => 'required|email',
+        ]);
+
+        $post['name'] = $request->post('name');
+        $post['email'] = $request->post('email');
+        $post['id'] = $request->post('id');
+
+        DB::table('users')
+            ->Where('id', $post['id'])
+            ->update([
+                'name' => $post['name'],
+                'email' => $post['email']
+            ]);
+
+        return back()->with('status', 'Profile updated!');
+    }
+
+
+    public function editUserPassword(Request $request) {
+        $request->validate([
+            'password' => 'required|string|min:6',
+            're-password' => 'same:password',
+        ]);
+
+        $post['password'] = $request->post('password');
+        $post['re-password'] = $request->post('re-password');
+        $post['id'] = $request->post('id');
+
+        DB::table('users')
+            ->Where('id', $post['id'])
+            ->update([
+                'password' => bcrypt($post['password'])
+            ]);
+
+
+        return back()->with('status', 'Password updated.');
     }
 
 
