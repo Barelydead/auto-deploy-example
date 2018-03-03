@@ -9,6 +9,9 @@
 @section('content')
 <div class="container">
     <div class="row">
+        <div>
+            <h1>@yield('title')</h1>
+        </div>
         <div id="contact-form" class="col-md-8">
             <!-- <form method="post"> -->
             {!! Form::open(['route' => 'contact.post']) !!}
@@ -42,21 +45,19 @@
                         Option2
                     </label> -->
                 </div>
-                <div class="form-group">
+                <div class="form-group col-md-12">
                     <!-- <label for="message">Message</label> -->
                     <!-- <textarea class="form-control" name="message" id="message" rows="3" placeholder="Message"></textarea> -->
                     {!! Form::textarea('message', null, ['class' => 'form-control', 'placeholder' => 'Message*', 'required' => '']) !!}
                 </div>
-                <div class="form-group row">
-                    <div class="col-sm-10">
-                        <!-- <button type="submit" class="btn btn-primary">Submit</button> -->
-                        {!! Form::submit('Submit', ['class' => 'btn btn-primary']) !!}
-                    </div>
+                <div class="form-group col-md-12">
+                    <!-- <button type="submit" class="btn btn-primary">Submit</button> -->
+                    {!! Form::submit('Submit', ['class' => 'btn btn-primary']) !!}
                 </div>
             <!-- </form> -->
             {!! Form::close() !!}
         </div>
-        <div id="contact-form" class="col-md-4">
+        <div id="contact-address" class="col-md-4">
             <div>
                 <b>Address:</b><br>
                 {{ $address["street"] }}<br>
@@ -66,7 +67,7 @@
                 <b>Telephone:</b><br>
                 {{ $address["telephone"] }}<br>
                 <b>Email:</b><br>
-                {{ $address["email"] }}<br>
+                <a href="mailto:{{ $address["email"] }}">{{ $address["email"] }}</a><br>
             </div>
         </div>
     </div>
