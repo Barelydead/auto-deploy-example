@@ -29,6 +29,8 @@
                         <li><a href="{{ URL::to('/admin/content/about') }}">About Us</a></li>
                         <li><a href="{{ URL::to('/admin/content/products') }}">Product</a></li>
                         <li><a href="{{ URL::to('/admin/content/research') }}">Research</a></li>
+                        <li><a href="{{ URL::to('/admin/contact/edit') }}">Contact</a></li>
+
                       </ul>
                     </li>
                     <li class="active"><a href="#">Edit users</a></li>
