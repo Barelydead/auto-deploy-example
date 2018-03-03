@@ -279,10 +279,13 @@ body {
     margin-left: -1em;
 }
 
-<<<<<<< HEAD
 /* ----------------- CONTACT PAGE -----------------*/
+#contact-form {
+    padding: 0;
+}
+
 #contact-address {
-    padding: 0 30px;
+    padding: 0 15px;
 }
 
 .form-control::-webkit-input-placeholder {
@@ -306,7 +309,6 @@ body {
     color: #636b6f !important;
     font-weight: 800;
 }
-=======
 /**
  * Bootstrap-Markdown.less
  *
@@ -463,4 +465,3 @@ body {
   position: fixed;
   width: 100%;
 }
->>>>>>> master
