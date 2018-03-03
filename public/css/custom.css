@@ -280,6 +280,9 @@ body {
 }
 
 /* ----------------- CONTACT PAGE -----------------*/
+#contact-address {
+    padding: 0 30px;
+}
 
 .form-control::-webkit-input-placeholder {
     color: #636b6f !important;

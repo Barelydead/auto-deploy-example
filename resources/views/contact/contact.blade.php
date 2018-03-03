@@ -9,7 +9,7 @@
 @section('content')
 <div class="container">
     <div class="row">
-        <div>
+        <div class="col-md-12">
             <h1>@yield('title')</h1>
         </div>
         <div id="contact-form" class="col-md-8">
@@ -58,17 +58,15 @@
             {!! Form::close() !!}
         </div>
         <div id="contact-address" class="col-md-4">
-            <div>
-                <b>Address:</b><br>
-                {{ $address["street"] }}<br>
-                {{ $address["postalcode"] }}<br>
-                {{ $address["state"] }}<br>
-                {{ $address["country"] }}<br>
-                <b>Telephone:</b><br>
-                {{ $address["telephone"] }}<br>
-                <b>Email:</b><br>
-                <a href="mailto:{{ $address["email"] }}">{{ $address["email"] }}</a><br>
-            </div>
+            <b>Address:</b><br>
+            {{ $address["street"] }}<br>
+            {{ $address["postalcode"] }}<br>
+            {{ $address["state"] }}<br>
+            {{ $address["country"] }}<br>
+            <b>Telephone:</b><br>
+            {{ $address["telephone"] }}<br>
+            <b>Email:</b><br>
+            <a href="mailto:{{ $address["email"] }}">{{ $address["email"] }}</a><br>
         </div>
     </div>
 </div>
