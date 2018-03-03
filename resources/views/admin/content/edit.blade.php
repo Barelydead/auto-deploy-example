@@ -21,7 +21,8 @@
                     <input type="hidden" name="id" value="{{$row->id}}">
                     <input type="hidden" name="category" value="{{$row->category}}">
                     <div class="form-group">
-                        <input class='btn btn-default' type="submit" name="editbtn" value="Edit">
+                        <input class='btn btn-primary' type="submit" name="editbtn" value="Edit">
+                        <input class='btn btn-default' type="submit" name="cancelbtn" value="Cancel">
                     </div>
                 </form>
             @endforeach

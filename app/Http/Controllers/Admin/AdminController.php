@@ -45,15 +45,46 @@ class AdminController extends Controller
 
         /*--------------------------------------------*/
 
-        DB::table('content')
-            ->where('id', $data['id'])
-            ->update([
-                'title'     => $data['title'],
-                'content'   => $data['content']
-            ]);
-
+        if(isset($_POST['editbtn'])) {
+            DB::table('content')
+                ->where('id', $data['id'])
+                ->update([
+                    'title'     => $data['title'],
+                    'content'   => $data['content']
+                ]);
+        }
 
         $returnurl = "admin/content/".$data['category'];
         return redirect($returnurl);
+    }
+
+    public function addContent()
+    {
+        return view("admin/content/add");
+    }
+
+    public function addContentProcess(Request $request)
+    {
+        $data['type'] = $request->post('type');
+        $data['category'] = $request->post('category');
+        $data['subcategory'] = $request->post('subcategory');
+        $data['title'] = $request->post('title');
+        $data['content'] = $request->post('content');
+        $data['author'] = $request->post('author');
+
+        /*--------------------------------------------*/
+
+        DB::table('content')->insert(
+            [
+                'type' => $data['type'],
+                'category' => $data['category'],
+                'subcategory' => $data['subcategory'],
+                'title' => $data['title'],
+                'content' => $data['content'],
+                'author' => $data['author']
+            ]);
+
+            $returnurl = "admin/content/".$data['category'];
+            return redirect($returnurl);
     }
 }

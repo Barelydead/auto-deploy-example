@@ -43,6 +43,8 @@ Route::get('/admin', 'Admin\AdminController@getIndex')->name('adminindex');
 
 Route::get('/location', 'PagesController@getLocation');
 
+Route::get('/admin/content/add', 'Admin\AdminController@addContent');
 Route::get('/admin/content/{category}', 'Admin\AdminController@getContent');
 Route::get('/admin/content/edit/{id}', 'Admin\AdminController@editContent');
 Route::post('/admin/content/editcontentprocess', 'Admin\AdminController@editContentProcess');
+Route::post('/admin/content/addcontentprocess', 'Admin\AdminController@addContentProcess');
