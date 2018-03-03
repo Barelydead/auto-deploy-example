@@ -3,6 +3,9 @@
 
 @section('title', 'Contact Us')
 
+@section('flash_title', "Contact Us")
+@section('flash_text', "For more information contact us.")
+
 @section('content')
 <div class="container">
     <div class="row">
@@ -10,27 +13,21 @@
             <!-- <form method="post"> -->
             {!! Form::open(['route' => 'contact.post']) !!}
                 <div class="form-group col-md-6">
-                    {!! Form::label('firstname', 'First Name*') !!}
-                    {!! Form::text('firstname', null, ['class' => 'form-control', 'placeholder' => 'First Name', 'required' => '']) !!}
+                    {!! Form::text('firstname', null, ['class' => 'form-control', 'placeholder' => 'First Name*', 'required' => '']) !!}
                 </div>
                 <div class="form-group col-md-6">
-                    {!! Form::label('lastname', 'Last Name*') !!}
-                    {!! Form::text('lastname', null, ['class' => 'form-control', 'placeholder' => 'Last Name', 'required' => '']) !!}
+                    {!! Form::text('lastname', null, ['class' => 'form-control', 'placeholder' => 'Last Name*', 'required' => '']) !!}
                 </div>
                 <div class="form-group col-md-6">
-                    {!! Form::label('email', 'Email Address*') !!}
-                    {!! Form::email('email', null, ['class' => 'form-control', 'placeholder' => 'Email Address', 'required' => '']) !!}
+                    {!! Form::email('email', null, ['class' => 'form-control', 'placeholder' => 'Email Address*', 'required' => '']) !!}
                 </div>
                 <div class="form-group col-md-6">
-                    {!! Form::label('phonenumber', 'Phone Number') !!}
                     {!! Form::text('phonenumber', null, ['class' => 'form-control', 'placeholder' => 'Phone Number']) !!}
                 </div>
                 <div class="form-group col-md-6">
-                    {!! Form::label('companyname', 'Company Name') !!}
                     {!! Form::text('companyname', null, ['class' => 'form-control', 'placeholder' => 'Company Name']) !!}
                 </div>
                 <div class="form-group col-md-6">
-                    {!! Form::label('title', 'Your Title') !!}
                     {!! Form::text('title', null, ['class' => 'form-control', 'placeholder' => 'Your Title']) !!}
                 </div>
                 <div class="form-check">
@@ -48,8 +45,7 @@
                 <div class="form-group">
                     <!-- <label for="message">Message</label> -->
                     <!-- <textarea class="form-control" name="message" id="message" rows="3" placeholder="Message"></textarea> -->
-                    {!! Form::label('message', 'Message*') !!}
-                    {!! Form::textarea('message', null, ['class' => 'form-control', 'placeholder' => 'Message', 'required' => '']) !!}
+                    {!! Form::textarea('message', null, ['class' => 'form-control', 'placeholder' => 'Message*', 'required' => '']) !!}
                 </div>
                 <div class="form-group row">
                     <div class="col-sm-10">

@@ -16,7 +16,9 @@ class ContactController extends Controller
         $addressObj = new Address;
         var_dump($addressObj->getAddress());
         $address = $addressObj->getAddress();
-        return view('contact.contact', compact('address'));
+        return view('contact.contact', [
+            "flashImage" => 'contact-us.jpg',
+            "address" => $address]);
     }
 
 
