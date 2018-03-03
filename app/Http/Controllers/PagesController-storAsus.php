@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\DB;
+use App\Content;
 
 class PagesController extends Controller
 {
@@ -43,13 +43,11 @@ class PagesController extends Controller
         return view("location");
     }
 
-    public function getSearch(Request $request)
+    public function getSearch(Request $request, Content $content)
     {
         $searchQuery = $request->query("search");
 
-        $articles = DB::select('select * from content WHERE content LIKE ?', ["%$searchQuery%", "%$searchQuery%", "%$searchQuery%"]);
-
-        $articles = isset($articles) ? $articles : [];
+        $articles = $content->searchTable($searchQuery);
 
         return view("search_results", ["articles" => $articles, "query" => $searchQuery]);
     }

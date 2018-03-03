@@ -5,7 +5,7 @@
             <div class="top-nav flex-row space-end">
                 <ul class="nav navbar-nav">
                     <li class="active"><a href="contact">Contact</a></li>
-                    <li class="active"><a href="#">Location</a></li>
+                    <li class="active"><a href="{{ URL::to('/location') }}">Location</a></li>
                 </ul>
                 <form class="form-inline" action="{{ URL::to('/search') }}">
                     <div class="form-group">
