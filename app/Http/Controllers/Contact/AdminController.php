@@ -18,7 +18,9 @@ class AdminController extends Controller
 
     public function getContactForm()
     {
-        return view('contact.admin.contact-form');
+        $mailConfig = new MailConfig();
+        $conf = $mailConfig->first();
+        return view('contact.admin.contact-form', ["conf" => $conf]);
     }
 
 
