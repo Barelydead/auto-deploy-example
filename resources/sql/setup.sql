@@ -46,8 +46,8 @@ CREATE TABLE contact_messages (
     `company` CHAR(100),
     `subject` VARCHAR(255),
     `message` TEXT,
-    `created` DATETIME DEFAULT CURRENT_TIMESTAMP,
-    `deleted` DATETIME
+    `created_at` DATETIME DEFAULT CURRENT_TIMESTAMP,
+    `deleted_at` DATETIME
 );
 
 DROP TABLE IF EXISTS content;

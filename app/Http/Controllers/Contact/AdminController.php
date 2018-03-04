@@ -27,7 +27,6 @@ class AdminController extends Controller
     {
         $mailConfig = new MailConfig();
         $mailConfig = $mailConfig->first();
-        var_dump($mailConfig);
         $mailConfig->reciever = $request->post('reciever');
         $mailConfig->sender = $request->post('sender');
         $mailConfig->sendername = $request->post('sendername');
