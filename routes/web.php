@@ -49,4 +49,6 @@ Route::get('/admin/content/edit/{id}', 'Admin\AdminController@editContent');
 Route::post('/admin/content/editcontentprocess', 'Admin\AdminController@editContentProcess');
 Route::post('/admin/content/addcontentprocess', 'Admin\AdminController@addContentProcess');
 
-Route::get('/admin/contact/edit', 'Contact\AdminController@editContact');
+Route::get('/admin/contact/contact-form', 'Contact\AdminController@getContactForm');
+Route::get('/admin/contact/address', 'Contact\AdminController@getAddress');
+Route::get('/admin/contact/messages', 'Contact\AdminController@getMessages');

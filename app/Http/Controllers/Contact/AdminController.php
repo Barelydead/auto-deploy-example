@@ -16,8 +16,20 @@ class AdminController extends Controller
         // $this->middleware('auth');
     }
 
-    public function editContact()
+    public function getContactForm()
     {
-        return view('contact.admin.edit');
+        return view('contact.admin.contact-form');
+    }
+
+
+    public function getAddress()
+    {
+        return view('contact.admin.address');
+    }
+
+
+    public function getMessages()
+    {
+        return view('contact.admin.messages');
     }
 }
