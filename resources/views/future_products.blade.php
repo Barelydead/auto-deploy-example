@@ -2,6 +2,9 @@
 
 @section('title', 'Future Products')
 
+<!-- @section('flash_img', "future_products.jpg") -->
+@section('flash_title', "Future Products")
+@section('flash_text', "Our high quality products.")
 
 
 @section('content')

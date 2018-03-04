@@ -271,11 +271,6 @@ body {
     list-style: none;
 }
 
-/* ----------------- LIST CLASSES -----------------*/
-.redbulletlist {
-    list-style: none;
-}
-
 .redbulletlist > li::before {
     content: "\2022";
     color: #9c4a4a;
@@ -283,6 +278,38 @@ body {
     width: 1em;
     margin-left: -1em;
 }
+
+/* ----------------- CONTACT PAGE -----------------*/
+#contact-form {
+    padding: 0;
+}
+
+#contact-address {
+    padding: 0 15px;
+}
+
+.form-control::-webkit-input-placeholder {
+    color: #636b6f !important;
+    font-weight: 800;
+}
+
+.form-control:-moz-placeholder {
+    /* Firefox 18- */
+    color: #636b6f !important;
+    font-weight: 800;
+}
+
+.form-control::-moz-placeholder {
+    /* Firefox 19+ */
+    color: #636b6f !important;
+    font-weight: 800;
+}
+
+.form-control:-ms-input-placeholder {
+    color: #636b6f !important;
+    font-weight: 800;
+}
+
 
 /**
  * Bootstrap-Markdown.less
