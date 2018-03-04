@@ -19,10 +19,23 @@ class AdminController extends Controller
     public function getContactForm()
     {
         $mailConfig = new MailConfig();
-        $conf = $mailConfig->first();
-        return view('contact.admin.contact-form', ["conf" => $conf]);
+        $mailConfig = $mailConfig->first();
+        return view('contact.admin.contact-form', ["mailConfig" => $mailConfig]);
     }
 
+    public function postContactForm(Request $request)
+    {
+        $mailConfig = new MailConfig();
+        $mailConfig = $mailConfig->first();
+        var_dump($mailConfig);
+        $mailConfig->reciever = $request->post('reciever');
+        $mailConfig->sender = $request->post('sender');
+        $mailConfig->sendername = $request->post('sendername');
+        $mailConfig->subject = $request->post('subject');
+        $mailConfig->save();
+
+        return view('contact.admin.contact-form', ["mailConfig" => $mailConfig]);
+    }
 
     public function getAddress()
     {

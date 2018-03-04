@@ -1,28 +1,33 @@
 @extends('layouts.admin')
 
-@section('title', 'Edit Contact Form')
+@section('title', 'Edit Contact Form Config')
 
 @section('content')
 <div class="container">
     <div class="row">
-        <h1>Edit Contact Form</h1>
+        <div class="col-md-12">
+            <h1>Edit Contact Form Config</h1>
+        </div>
         <div id="contact-form" class="col-md-8">
             <!-- <form method="post"> -->
-            {!! Form::open(['route' => 'contact.post']) !!}
+            {!! Form::open(['route' => 'admin.contact.contact-form.post']) !!}
                 <div class="form-group col-md-6">
-                    {!! Form::email('reciever', $conf->reciever, ['class' => 'form-control', 'placeholder' => 'Reciever*', 'required' => '']) !!}
+                    {!! Form::label('reciever', 'Reciever Email*') !!}
+                    {!! Form::email('reciever', $mailConfig->reciever, ['class' => 'form-control', 'placeholder' => 'Reciever*', 'required' => '']) !!}
                 </div>
                 <div class="form-group col-md-6">
-                    {!! Form::email('sender', $conf->sender, ['class' => 'form-control', 'placeholder' => 'Sender*', 'required' => '']) !!}
+                    {!! Form::label('sender', 'Sender Email*') !!}
+                    {!! Form::email('sender', $mailConfig->sender, ['class' => 'form-control', 'placeholder' => 'Sender*', 'required' => '']) !!}
                 </div>
                 <div class="form-group col-md-6">
-                    {!! Form::text('sendername', $conf->sendername, ['class' => 'form-control', 'placeholder' => 'From Name*', 'required' => '']) !!}
+                    {!! Form::label('sendername', 'From Name*') !!}
+                    {!! Form::text('sendername', $mailConfig->sendername, ['class' => 'form-control', 'placeholder' => 'From Name*', 'required' => '']) !!}
                 </div>
                 <div class="form-group col-md-6">
-                    {!! Form::text('subject', $conf->subject, ['class' => 'form-control', 'placeholder' => 'Subject*', 'required']) !!}
+                    {!! Form::label('subject', 'Subject') !!}
+                    {!! Form::text('subject', $mailConfig->subject, ['class' => 'form-control', 'placeholder' => 'Subject*', 'required']) !!}
                 </div>
                 <div class="form-group col-md-12">
-                    <!-- <button type="submit" class="btn btn-primary">Submit</button> -->
                     {!! Form::submit('Submit', ['class' => 'btn btn-primary']) !!}
                 </div>
             <!-- </form> -->

@@ -12,6 +12,7 @@ SET NAMES utf8;
 
 DROP TABLE IF EXISTS contact_address;
 CREATE TABLE contact_address (
+    `id` INTEGER PRIMARY KEY AUTO_INCREMENT NOT NULL,
     `companyName` VARCHAR(100),
     `street` VARCHAR(100),
     `postalcode` VARCHAR(100),
@@ -19,15 +20,18 @@ CREATE TABLE contact_address (
     `state` VARCHAR(100),
     `country` VARCHAR(100),
     `telephone` VARCHAR(100),
-    `email` VARCHAR(100)
+    `email` VARCHAR(100),
+    `updated_at` DATETIME
 );
 
 DROP TABLE IF EXISTS contact_mail_config;
 CREATE TABLE contact_mail_config (
+    `id` INTEGER PRIMARY KEY AUTO_INCREMENT NOT NULL,
     `reciever` VARCHAR(100),
     `sender` VARCHAR(100),
     `sendername` VARCHAR(100),
-    `subject` VARCHAR(255)
+    `subject` VARCHAR(255),
+    `updated_at` DATETIME
 );
 
 DROP TABLE IF EXISTS contact_messages;
