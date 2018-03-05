@@ -22,7 +22,7 @@ class AdminController extends Controller
 
 
     /**
-     * Get contact form config
+     * GET contact form config
      *
      * @return void
      */
@@ -32,14 +32,13 @@ class AdminController extends Controller
         $mailConfig = $mailConfig->first();
         return view('contact.admin.contact-form', [
             "mailConfig" => $mailConfig,
-            "result" => null]
-        );
+            "result" => null]);
     }
 
 
 
     /**
-     * Post method for contact form config
+     * POST method for contact form config
      *
      * @param Request $request
      * @return void
@@ -69,14 +68,56 @@ class AdminController extends Controller
 
 
     /**
-     * Get method for stored address
+     * GET method for stored address
      *
      * @return void
      */
     public function getAddress()
     {
-        return view('contact.admin.address');
+        $address = new Address();
+        $address = $address->getAddress();
+
+        return view('contact.admin.address', [
+            "result" => null,
+            "address" => $address
+        ]);
     }
+
+
+
+    /**
+     * POST method for stored address
+     *
+     * @return void
+     */
+    public function postAddress(Request $request)
+    {
+        try {
+            $address = new Address();
+            $address = $address->first();
+            $address->companyName = $request->post('companyName');
+            $address->street1 = $request->post('street1');
+            $address->street2 = $request->post('street2');
+            $address->postalcode = $request->post('postalcode');
+            $address->city = $request->post('city');
+            $address->state = $request->post('state');
+            $address->country = $request->post('country');
+            $address->telephone = $request->post('telephone');
+            $address->email = $request->post('email');
+            $address->save();
+            $result = true;
+            $resultMsg = "<strong>Success!</strong> Successfully updated.";
+        } catch (Exception $e) {
+            $result = false;
+            $resultMsg = "<strong>Failed!</strong>Update not successfull.";
+        }
+        return view('contact.admin.address', [
+            "address" => $address->getAddress(),
+            "result" => $result,
+            "resultMsg" => $resultMsg
+        ]);
+    }
+
 
 
     public function getMessages()

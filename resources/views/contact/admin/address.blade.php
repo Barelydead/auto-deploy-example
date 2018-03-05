@@ -19,20 +19,40 @@
             <!-- <form method="post"> -->
             {!! Form::open(['route' => 'admin.contact.address.post']) !!}
                 <div class="form-group col-md-6">
-                    {!! Form::label('reciever', 'Reciever Email*') !!}
-                    {!! Form::email('reciever', $mailConfig->reciever, ['class' => 'form-control', 'placeholder' => 'Reciever*', 'required' => '']) !!}
+                    {!! Form::label('companyName', 'Company Name') !!}
+                    {{ Form::text('companyName', $address['companyName'], ['class' => 'form-control', 'placeholder' => 'Company Name']) }}
                 </div>
                 <div class="form-group col-md-6">
-                    {!! Form::label('sender', 'Sender Email*') !!}
-                    {!! Form::email('sender', $mailConfig->sender, ['class' => 'form-control', 'placeholder' => 'Sender*', 'required' => '']) !!}
+                    {!! Form::label('street1', 'Street1') !!}
+                    {{ Form::text('street1', $address['street1'], ['class' => 'form-control', 'placeholder' => 'Street1']) }}
                 </div>
                 <div class="form-group col-md-6">
-                    {!! Form::label('sendername', 'From Name*') !!}
-                    {!! Form::text('sendername', $mailConfig->sendername, ['class' => 'form-control', 'placeholder' => 'From Name*', 'required' => '']) !!}
+                    {!! Form::label('street2', 'Street2') !!}
+                    {{ Form::text('street2', $address['street2'], ['class' => 'form-control', 'placeholder' => 'Street2']) }}
                 </div>
                 <div class="form-group col-md-6">
-                    {!! Form::label('subject', 'Subject') !!}
-                    {!! Form::text('subject', $mailConfig->subject, ['class' => 'form-control', 'placeholder' => 'Subject*', 'required']) !!}
+                    {!! Form::label('postalcode', 'Postalcode') !!}
+                    {{ Form::text('postalcode', $address['postalcode'], ['class' => 'form-control', 'placeholder' => 'Postalcode']) }}
+                </div>
+                <div class="form-group col-md-6">
+                    {!! Form::label('city', 'City') !!}
+                    {{ Form::text('city', $address['city'], ['class' => 'form-control', 'placeholder' => 'City']) }}
+                </div>
+                <div class="form-group col-md-6">
+                    {!! Form::label('state', 'State') !!}
+                    {{ Form::text('state', $address['state'], ['class' => 'form-control', 'placeholder' => 'State']) }}
+                </div>
+                <div class="form-group col-md-6">
+                    {!! Form::label('country', 'Country') !!}
+                    {{ Form::text('country', $address['country'], ['class' => 'form-control', 'placeholder' => 'Country']) }}
+                </div>
+                <div class="form-group col-md-6">
+                    {!! Form::label('telephone', 'Telephone') !!}
+                    {{ Form::text('telephone', $address['telephone'], ['class' => 'form-control', 'placeholder' => 'Telephone']) }}
+                </div>
+                <div class="form-group col-md-6">
+                    {!! Form::label('email', 'Email') !!}
+                    {{ Form::text('email', $address['email'], ['class' => 'form-control', 'placeholder' => 'Email']) }}
                 </div>
                 <div class="form-group col-md-12">
                     {!! Form::submit('Submit', ['class' => 'btn btn-primary']) !!}
