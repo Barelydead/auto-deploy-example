@@ -32,7 +32,7 @@
                             </tr>
                         </thead>
                         <tbody>
-                                @foreach ($content as $row)
+                                @foreach ($tableHTML['tableres'] as $row)
                                     <?php
                                     $editurl = url('/admin/content/edit/'.$row->id);
                                     ?>
@@ -58,7 +58,7 @@
                 </div>
             </div>
             <!-- table row -->
-
+            <?= $tableHTML['pgnctrl'] ?>
         </div>
     </div>
 </div>
