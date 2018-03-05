@@ -25,6 +25,9 @@ body {
 
 /* ------- PILLOWS ------ */
 /* For vertical spacing */
+.pillow-10 {
+    height: 10px;
+}
 .pillow-20 {
     height: 20px;
 }
@@ -75,7 +78,7 @@ body {
 }
 .rdcred-text {
     /* color: #f67878; */
-    color: #b06e6e;
+    color: #863535;
 }
 .rdcwhite-text {
     color: #c3c3c3;
