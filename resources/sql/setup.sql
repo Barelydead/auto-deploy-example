@@ -14,7 +14,8 @@ DROP TABLE IF EXISTS contact_address;
 CREATE TABLE contact_address (
     `id` INTEGER PRIMARY KEY AUTO_INCREMENT NOT NULL,
     `companyName` VARCHAR(100),
-    `street` VARCHAR(100),
+    `street1` VARCHAR(100),
+    `street2` VARCHAR(100),
     `postalcode` VARCHAR(100),
     `city` VARCHAR(100),
     `state` VARCHAR(100),
@@ -73,15 +74,16 @@ VALUES
     'RDC - Contact Message'
 );
 
-INSERT INTO `contact_address`(companyName, street, postalcode, city, `state`, country, telephone, email)
+INSERT INTO `contact_address`(companyName, street1, street2, postalcode, city, `state`, country, telephone, email)
 VALUES (
-    'Red Diamond Coatings',
-    'Test Street 5',
-    '12345',
-    'TestCity',
-    'TestState',
+    'Red Diamond Coatings Inc.',
+    'NDSU Research & Technology Park',
+    '1854 NDSU Research Circle North',
+    '58102',
+    'Fargo',
+    'North Dakota',
     'USA',
-    '1-613-12345',
+    '1-123-12345',
     'info@rdc.com'
 );
 

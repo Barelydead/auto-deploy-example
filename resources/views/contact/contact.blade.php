@@ -59,10 +59,10 @@
         </div>
         <div id="contact-address" class="col-md-4">
             <b>Address:</b><br>
-            {{ $address["street"] }}<br>
-            {{ $address["postalcode"] }}<br>
-            {{ $address["state"] }}<br>
-            {{ $address["country"] }}<br>
+            {{ $address["companyName"] }}<br>
+            {{ $address["street1"] }}<br>
+            {{ $address["street2"] }}<br>
+            {{ $address["postalcode"] }}, {{ $address["state"] }}, {{ $address["country"] }}<br>
             <b>Telephone:</b><br>
             {{ $address["telephone"] }}<br>
             <b>Email:</b><br>
