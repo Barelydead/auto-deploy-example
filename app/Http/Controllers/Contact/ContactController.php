@@ -37,12 +37,13 @@ class ContactController extends Controller
     public function postContactForm(Request $request)
     {
         $contact = new MailConfig();
+        $contact = $contact->first();
 
         $data['firstname'] = $request->get('firstname');
         $data['lastname'] = $request->get('lastname');
         $data['email'] = $request->get('email');
-        $data['phonenumber'] = $request->get('phonenumber');
-        $data['companyname'] = $request->get('companyname');
+        $data['phoneNumber'] = $request->get('phoneNumber');
+        $data['companyName'] = $request->get('companyName');
         $data['title'] = $request->get('title');
         $data['message'] = $request->get('message');
 

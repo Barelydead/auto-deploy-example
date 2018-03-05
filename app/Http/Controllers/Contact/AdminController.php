@@ -122,6 +122,10 @@ class AdminController extends Controller
 
     public function getMessages()
     {
-        return view('contact.admin.messages');
+        $message = new Message();
+        $messages = $message->getMessages();
+        return view('contact.admin.messages', [
+            "messages" => $messages
+        ]);
     }
 }

@@ -40,15 +40,17 @@ CREATE TABLE contact_messages (
     `id` INTEGER PRIMARY KEY AUTO_INCREMENT NOT NULL,
     `sender` VARCHAR(100),
     `reciever` VARCHAR(100),
-    `name` VARCHAR(100),
-    `adress` VARCHAR(100),
-    `title` CHAR(50),
-    `phoneNumber` VARCHAR(100),
-    `company` CHAR(100),
     `subject` VARCHAR(255),
+    `firstname` VARCHAR(100),
+    `lastname` VARCHAR(100),
+    `email` VARCHAR(100),
+    `title` VARCHAR(50),
+    `phoneNumber` VARCHAR(100),
+    `companyName` VARCHAR(100),
     `message` TEXT,
     `created_at` DATETIME DEFAULT CURRENT_TIMESTAMP,
-    `deleted_at` DATETIME
+    `deleted_at` DATETIME,
+    `updated_at` DATETIME
 );
 
 DROP TABLE IF EXISTS content;
@@ -87,11 +89,12 @@ VALUES (
     'info@rdc.com'
 );
 
-INSERT INTO `contact_messages`(sender, reciever, `name`, title, phoneNumber, company, `subject`, message)
+INSERT INTO `contact_messages`(sender, reciever, firstname, lastname, title, phoneNumber, companyName, `subject`, message)
 VALUES
     ('sender@test.se',
     'reciever@test.se',
-    'John Snow',
+    'John',
+    'Snow',
     'Doc',
     '073-3322444',
     'The awesome comp crop',

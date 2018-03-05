@@ -30,4 +30,34 @@ class Message extends Model
         $this->save();
         return $this;
     }
+
+
+
+    /**
+     * Get all stored messages from DB.
+     *
+     * @return messages
+     */
+    public function getMessages()
+    {
+        $messages = [];
+        $messagesDB = $this::all();
+        foreach ($messagesDB as $message) {
+            $messageArr['id'] = $message->id;
+            $messageArr['sender'] = $message->sender;
+            $messageArr['reciever'] = $message->id;
+            $messageArr['subject'] = $message->subject;
+            $messageArr['firstname'] = $message->firstname;
+            $messageArr['lastname'] = $message->lastname;
+            $messageArr['email'] = $message->email;
+            $messageArr['title'] = $message->title;
+            $messageArr['phoneNumber'] = $message->phoneNumber;
+            $messageArr['companyName'] = $message->companyName;
+            $messageArr['message'] = $message->message;
+            $messageArr['created_at'] = $message->created_at;
+            $messageArr['deleted_at'] = $message->deleted_at;
+            array_push($messages, $messageArr);
+        }
+        return $messages;
+    }
 }
