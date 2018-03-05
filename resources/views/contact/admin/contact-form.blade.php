@@ -8,6 +8,13 @@
         <div class="col-md-12">
             <h1>Edit Contact Form Config</h1>
         </div>
+        <div class="col-md-12">
+            @if ($result === true)
+                <div class="alert alert-success">
+                    {!! $resultMsg !!}
+                </div>
+            @endif
+        </div>
         <div id="contact-form" class="col-md-8">
             <!-- <form method="post"> -->
             {!! Form::open(['route' => 'admin.contact.contact-form.post']) !!}
