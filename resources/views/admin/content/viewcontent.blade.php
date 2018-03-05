@@ -20,6 +20,7 @@
 
             <div class="row">
                 <div class="col-md-12">
+
                     <table class='table'>
                         <thead>
                             <tr>
@@ -55,10 +56,11 @@
                                 @endforeach
                         </tbody>
                     </table>
+                    <?= $tableHTML['pgnctrl'] ?>
                 </div>
             </div>
             <!-- table row -->
-            <?= $tableHTML['pgnctrl'] ?>
+
         </div>
     </div>
 </div>

@@ -38,7 +38,7 @@ class AdminController extends Controller
         /*---------------------------------------------*/
 
         $tblprop = [
-            "pages"         => ($request->get('pages') != null) ? htmlentities($request->get('pages')) : 10,
+            "pages"         => ($request->get('pages') != null) ? htmlentities($request->get('pages')) : 2,
             "searchcolumn"  => ($request->get('searchcolumn') != null) ? htmlentities($request->get('searchcolumn')) : 'category',
             "search"        => ($request->get('search') != null) ? htmlentities($request->get('search')) : $category,
             "orderby"       => ($request->get('orderby') != null) ? htmlentities($request->get('orderby')) : 'id',
