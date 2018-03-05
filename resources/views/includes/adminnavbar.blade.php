@@ -32,9 +32,9 @@
                       </ul>
                     </li>
                     <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Edit Contact <span class="caret"></span></a>
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Contact <span class="caret"></span></a>
                         <ul class="dropdown-menu" role="menu">
-                            <li><a href="{{ URL::to('/admin/contact/contact-form') }}">Contact Form Config</a></li>
+                            <li><a href="{{ URL::to('/admin/contact/contact-form') }}">Configuration</a></li>
                             <li><a href="{{ URL::to('/admin/contact/address') }}">Address</a></li>
                             <li><a href="{{ URL::to('/admin/contact/messages') }}">Messages</a></li>
                         </ul>
