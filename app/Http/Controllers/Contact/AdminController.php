@@ -120,12 +120,33 @@ class AdminController extends Controller
 
 
 
+    /**
+     * GET all messages stored.
+     *
+     * @return void
+     */
     public function getMessages()
     {
         $message = new Message();
-        $messages = $message->getMessages();
+        $messages = $message->getMessages("desc");
         return view('contact.admin.messages', [
             "messages" => $messages
+        ]);
+    }
+
+
+    /**
+     * GET message by id.
+     *
+     * @param int $messageId
+     * @return void
+     */
+    public function getMessage($messageId)
+    {
+        $message = new Message();
+        $message = $message->find($messageId);
+        return view('contact.admin.message', [
+            "message" => $message
         ]);
     }
 }

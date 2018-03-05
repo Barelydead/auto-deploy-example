@@ -2,6 +2,7 @@
 
 namespace App\Contact;
 
+use Illuminate\Support\Facades\DB;
 use Illuminate\Database\Eloquent\Model;
 
 class Message extends Model
@@ -38,10 +39,10 @@ class Message extends Model
      *
      * @return messages
      */
-    public function getMessages()
+    public function getMessages($order = "asc")
     {
         $messages = [];
-        $messagesDB = $this::all();
+        $messagesDB = $this::orderBy('id', $order)->get();
         foreach ($messagesDB as $message) {
             $messageArr['id'] = $message->id;
             $messageArr['sender'] = $message->sender;

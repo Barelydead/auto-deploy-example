@@ -21,7 +21,7 @@
             <tbody>
                 @foreach ($messages as $message)
                     <tr>
-                        <td>{{ $message['id'] }}</td>
+                        <td><a href="<?= url('admin/contact/message', ['id' => $message['id']]); ?>">{{ $message['id'] }}</a></td>
                         <td>{{ $message['email'] }}</td>
                         <td>{{ $message['firstname'] }}</td>
                         <td>{{ $message['lastname'] }}</td>
