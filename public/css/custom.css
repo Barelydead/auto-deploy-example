@@ -300,12 +300,6 @@ body {
     margin-left: -1em;
 }
 
-/* ----------------- PAGINATOR -----------------*/
-.pagination > li > a.paginatoractive {
-    background-color: #333;
-    color: white;
-}
-
 /* ----------------- CONTACT PAGE -----------------*/
 #contact-form {
     padding: 0;

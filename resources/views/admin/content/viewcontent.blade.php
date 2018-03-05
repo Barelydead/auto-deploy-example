@@ -60,7 +60,7 @@
                 </div>
             </div>
             <!-- table row -->
-            <?= $tableHTML['pgnctrl'] ?>
+
         </div>
     </div>
 </div>
