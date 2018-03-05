@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Http\Request;
 use Illuminate\Http\RedirectResponse;
+use App\Paginator\Paginator as Paginator;
 
 class AdminController extends Controller
 {
@@ -24,10 +25,39 @@ class AdminController extends Controller
         return view("Admin/index");
     }
 
-    public function getContent($category)
+    // public function getContent($category)
+    // {
+    //     $content = DB::select('select * from content WHERE category LIKE ?', [$category]);
+    //     return view("Admin/content/viewcontent", ["content" => $content, "category" => $category]);
+    // }
+
+    public function getContent(Request $request, $category)
     {
-        $content = DB::select('select * from content WHERE category LIKE ?', [$category]);
-        return view("Admin/content/viewcontent", ["content" => $content, "category" => $category]);
+        $paginator = new Paginator();
+
+        /*---------------------------------------------*/
+
+        $tblprop = [
+            "pages"         => ($request->get('pages') != null) ? htmlentities($request->get('pages')) : 10,
+            "searchcolumn"  => ($request->get('searchcolumn') != null) ? htmlentities($request->get('searchcolumn')) : 'category',
+            "search"        => ($request->get('search') != null) ? htmlentities($request->get('search')) : $category,
+            "orderby"       => ($request->get('orderby') != null) ? htmlentities($request->get('orderby')) : 'id',
+            "orderas"       => ($request->get('orderas') != null) ? htmlentities($request->get('orderas')) : 'ASC',
+        ];
+        $pagenum            = ($request->get('pn')) ? preg_replace('#[^0-9]#', '', $request->get('pn')) : 1;
+
+        /*---------------------------------------------*/
+
+        $tableHTML    = $paginator->paginator('content', $tblprop, $pagenum);
+
+        /*---------------------------------------------*/
+
+        $data = [
+            "tableHTML"     => $tableHTML,
+            "category"      => $category
+        ];
+
+        return view("Admin/content/viewcontent", $data);
     }
 
     public function editContent($id)
