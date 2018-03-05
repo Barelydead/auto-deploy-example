@@ -38,6 +38,15 @@ body {
     height: 50px;
 }
 
+/* ----------------- SPACING ----------------- */
+.m-0 {
+    margin: 0 !important;
+}
+
+.p-0 {
+    padding: 0 !important;
+}
+
 /* ----------------- NAVBAR SPECIFIC STYLING ----------------- */
 
 .navbar-wrap {
@@ -162,6 +171,10 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
     height: 600px;
+}
+
+.full-width {
+    width: 100%;
 }
 
 /* --------------- PARALLAX CLASSES ---------------*/
