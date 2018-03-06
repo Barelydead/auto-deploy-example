@@ -31,14 +31,21 @@ class AdminController extends Controller
     }
 
 
-
     public function getUsers() {
+        if (!Auth::user()->admin) {
+            return redirect()->intended('/admin');
+        }
+
         $users = DB::table('users')->get();
 
         return view('admin/user/edit-users', ["users" => $users]);
     }
 
     public function editUser($id) {
+        if (!Auth::user()->admin) {
+            return redirect()->intended('/admin');
+        }
+
         $user = DB::table('users')->Where('id', $id)->first();
 
         return view('admin/user/edit-user-form', ["user" => $user]);
@@ -52,13 +59,15 @@ class AdminController extends Controller
 
         $post['name'] = $request->post('name');
         $post['email'] = $request->post('email');
+        $post['admin'] = $request->post('admin');
         $post['id'] = $request->post('id');
 
         DB::table('users')
             ->Where('id', $post['id'])
             ->update([
                 'name' => $post['name'],
-                'email' => $post['email']
+                'email' => $post['email'],
+                'admin' => $post['admin']
             ]);
 
         return back()->with('status', 'Profile updated!');

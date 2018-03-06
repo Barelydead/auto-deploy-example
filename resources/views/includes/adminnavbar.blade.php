@@ -31,8 +31,9 @@
                         <li><a href="{{ URL::to('/admin/content/research') }}">Research</a></li>
                       </ul>
                     </li>
-
-                    <li class="active"><a href="{{ URL::to('/admin/user/edit-users') }}">Edit users</a></li>
+                    @if (Auth::user()->admin)
+                        <li class="active"><a href="{{ URL::to('/admin/user/edit-users') }}">Edit users</a></li>
+                    @endif
                     <li class="active"><a href="{{ URL::to('/admin/user/changepassword') }}">Change password</a></li>
 
                     <li class="dropdown">
