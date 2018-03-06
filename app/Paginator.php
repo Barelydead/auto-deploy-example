@@ -3,6 +3,7 @@
 namespace App;
 
 use Illuminate\Support\Facades\DB;
+use Illuminate\Routing\UrlGenerator;
 
 /**
  * A controller for the Commentary.
@@ -140,7 +141,7 @@ class Paginator
     public function paginatorCtrl($pgnprop)
     {
         $textline1 = "Object (".$pgnprop['searchcount'].")";
-        $textline2 = "Sida ".$pgnprop['pagenum']." av ".$pgnprop['lastpage'];
+        $textline2 = "Page ".$pgnprop['pagenum']." out of ".$pgnprop['lastpage'];
 
         $paginatorctrl = "<ul class='pagination'>";
         if ($pgnprop['lastpage'] != 1) {
@@ -171,7 +172,8 @@ class Paginator
     {
         if ($pagenum > 1) {
             $previous = $pagenum - 1;
-            $url = $_SERVER['PHP_SELF'].'?pn='.$previous;
+            // $url = $_SERVER['PHP_SELF'].'?pn='.$previous;
+            $url = url()->current().'?pn='.$previous;
             $paginatorctrl .= "<li><a href='$url'>" .htmlspecialchars("<<"). "</a></li>";
 
             if ($pagenum-4 > 0) {
@@ -179,7 +181,8 @@ class Paginator
             }
             for ($i = $pagenum-3; $i < $pagenum; $i += 1) {
                 if ($i > 0) {
-                    $url = $_SERVER['PHP_SELF'].'?pn='.$i;
+                    // $url = $_SERVER['PHP_SELF'].'?pn='.$i;
+                    $url = url()->current().'?pn='.$i;
                     $paginatorctrl .= "<li><a href='$url'>".$i."</a></li>";
                 }
             }
@@ -199,7 +202,8 @@ class Paginator
     {
         for ($i = $pagenum+1; $i <= $lastpage; $i += 1) {
             if ($i < $pagenum+4) {
-                $url = $_SERVER['PHP_SELF'].'?pn='.$i;
+                // $url = $_SERVER['PHP_SELF'].'?pn='.$i;
+                $url = url()->current().'?pn='.$i;
                 $paginatorctrl .= "<li><a href='$url'>".$i."</a></li>";
             } else if ($i == $pagenum+4) {
                 $paginatorctrl .= '<li><a>...</a></li>';
@@ -210,7 +214,8 @@ class Paginator
         if ($pagenum != $lastpage) {
             // var_dump($pagenum);
             $next = $pagenum + 1;
-            $paginatorctrl .= '<li><a href="'.$_SERVER['PHP_SELF'].'?pn='.$next.'#objrefpoint"> ' .htmlspecialchars(">>"). ' </a></li>';
+            // $paginatorctrl .= '<li><a href="'.$_SERVER['PHP_SELF'].'?pn='.$next."> ' .htmlspecialchars(">>"). ' </a></li>';
+            $paginatorctrl .= '<li><a href="'.url()->current().'?pn='.$next.'"> ' .htmlspecialchars(">>"). ' </a></li>';
         }
         return $paginatorctrl;
     }

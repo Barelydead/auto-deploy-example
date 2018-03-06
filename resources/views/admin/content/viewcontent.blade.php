@@ -13,7 +13,8 @@
                     <h4><?= ucfirst($category) ?> page</h4>
                 </div>
                 <div class="col-md-1 col-md-offset-8">
-                    <a class='btn btn-primary' href="{{ URL::to('/admin/content/add') }}">+ Add</a>
+                    <?php $addurl = '/admin/content/add?category='.$category; ?>
+                    <a class='btn btn-primary' href="{{ URL::to($addurl) }}">+ Add</a>
                 </div>
             </div>
             <!-- headline row -->
@@ -56,7 +57,10 @@
                                 @endforeach
                         </tbody>
                     </table>
-                    <?= $tableHTML['pgnctrl'] ?>
+                    <center>
+                        <?= $tableHTML['pgnctrl'] ?>
+                    </center>
+
                 </div>
             </div>
             <!-- table row -->
