@@ -25,7 +25,7 @@ class AdminController extends Controller
 
     public function getIndex()
     {
-        return view("Admin/index");
+        return view("admin/index");
     }
 
 
@@ -82,6 +82,10 @@ class AdminController extends Controller
 
         return back()->with('status', 'Password updated.');
     }
+    // 
+    // public function getPasswordForm() {
+    //     return view('admin/admin')
+    // }
 
     public function addUserProcess(Request $request) {
         $request->validate([
@@ -111,12 +115,12 @@ class AdminController extends Controller
         return back()->with('status', 'New user was created');
     }
 
-    public function getContent($category)
+    // public function getContent($category)
 
     // public function getContent($category)
     // {
     //     $content = DB::select('select * from content WHERE category LIKE ?', [$category]);
-    //     return view("Admin/content/viewcontent", ["content" => $content, "category" => $category]);
+    //     return view("admin/content/viewcontent", ["content" => $content, "category" => $category]);
     // }
 
     public function getContent(Request $request, $category)
@@ -145,13 +149,13 @@ class AdminController extends Controller
             "category"      => $category
         ];
 
-        return view("Admin/content/viewcontent", $data);
+        return view("admin/content/viewcontent", $data);
     }
 
     public function editContent($id)
     {
         $content = DB::select('select * from content WHERE id LIKE ?', [$id]);
-        return view("Admin/content/edit", ["content" => $content]);
+        return view("admin/content/edit", ["content" => $content]);
     }
 
     public function editContentProcess(Request $request)
