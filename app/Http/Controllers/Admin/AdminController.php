@@ -6,6 +6,8 @@ use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Http\Request;
 use Illuminate\Http\RedirectResponse;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Hash;
 
 use App\User;
 use App\Paginator as Paginator;
@@ -82,10 +84,43 @@ class AdminController extends Controller
 
         return back()->with('status', 'Password updated.');
     }
-    // 
-    // public function getPasswordForm() {
-    //     return view('admin/admin')
-    // }
+
+    public function getPasswordForm() {
+        $id = Auth::user()->id;
+
+        return view('admin/user/change-password', ['id' => $id]);
+    }
+
+    public function changePasswordProccess(Request $request) {
+        $request->validate([
+            'password' => 'required|string|min:6',
+            're-password' => 'required|same:password',
+            'old-password' => 'required|string',
+        ]);
+
+        $post['password'] = $request->post('password');
+        $post['re-password'] = $request->post('re-password');
+        $post['old-password'] = $request->post('old-password');
+        $post['id'] = $request->post('id');
+
+        // Get old password and check match
+        $user = DB::table('users')->Where('id', $post['id'])->first();
+        if (Hash::check($post['old-password'], $user->password)) {
+            // insert new hashed pass to DB
+            $newHash = bcrypt($post['password']);
+
+            DB::table('users')
+                ->Where('id', $post['id'])
+                ->Update([
+                    'password' => $newHash
+                ]);
+
+            return back()->with('status', 'Password updated.');
+        } else {
+            return back()->withErrors('The old password does not match');
+        }
+    }
+
 
     public function addUserProcess(Request $request) {
         $request->validate([
