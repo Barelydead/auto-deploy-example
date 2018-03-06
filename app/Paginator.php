@@ -4,7 +4,10 @@ namespace App;
 
 use Illuminate\Support\Facades\DB;
 use Illuminate\Routing\UrlGenerator;
+<<<<<<< 132d060e3308e8685cf69d87e3d18e1d73918300
 use Illuminate\Http\Request;
+=======
+>>>>>>> Paginator url correction and select category when adding
 
 /**
  * A controller for the Commentary.
