@@ -31,7 +31,7 @@
                     </li>
                     <li class=""><a href="{{ URL::to('/future-products') }}">Future Products</a></li>
                     <li class="dropdown">
-                      <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">User/Applications <span class="caret"></span></a>
+                      <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Uses/Applications <span class="caret"></span></a>
                       <ul class="dropdown-menu" role="menu">
                         <li><a href="#">drop link 1</a></li>
                         <li><a href="#">drop link 2</a></li>

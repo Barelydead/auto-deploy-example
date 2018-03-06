@@ -58,3 +58,6 @@ Route::post('/admin/content/addcontentprocess', 'Admin\AdminController@addConten
 Route::get('/admin/contact/contact-form', 'Contact\AdminController@getContactForm');
 Route::get('/admin/contact/address', 'Contact\AdminController@getAddress');
 Route::get('/admin/contact/messages', 'Contact\AdminController@getMessages');
+Route::post('/admin/contact/contact-form', 'Contact\AdminController@postContactForm')->name('admin.contact.contact-form.post');
+Route::post('/admin/contact/address', 'Contact\AdminController@postAddress')->name('admin.contact.address.post');
+Route::get('/admin/contact/message/{id}', 'Contact\AdminController@getMessage');

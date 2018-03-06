@@ -12,22 +12,27 @@ SET NAMES utf8;
 
 DROP TABLE IF EXISTS contact_address;
 CREATE TABLE contact_address (
+    `id` INTEGER PRIMARY KEY AUTO_INCREMENT NOT NULL,
     `companyName` VARCHAR(100),
-    `street` VARCHAR(100),
+    `street1` VARCHAR(100),
+    `street2` VARCHAR(100),
     `postalcode` VARCHAR(100),
     `city` VARCHAR(100),
     `state` VARCHAR(100),
     `country` VARCHAR(100),
     `telephone` VARCHAR(100),
-    `email` VARCHAR(100)
+    `email` VARCHAR(100),
+    `updated_at` DATETIME
 );
 
 DROP TABLE IF EXISTS contact_mail_config;
 CREATE TABLE contact_mail_config (
+    `id` INTEGER PRIMARY KEY AUTO_INCREMENT NOT NULL,
     `reciever` VARCHAR(100),
     `sender` VARCHAR(100),
     `sendername` VARCHAR(100),
-    `subject` VARCHAR(255)
+    `subject` VARCHAR(255),
+    `updated_at` DATETIME
 );
 
 DROP TABLE IF EXISTS contact_messages;
@@ -35,15 +40,17 @@ CREATE TABLE contact_messages (
     `id` INTEGER PRIMARY KEY AUTO_INCREMENT NOT NULL,
     `sender` VARCHAR(100),
     `reciever` VARCHAR(100),
-    `name` VARCHAR(100),
-    `adress` VARCHAR(100),
-    `title` CHAR(50),
-    `phoneNumber` VARCHAR(100),
-    `company` CHAR(100),
     `subject` VARCHAR(255),
+    `firstname` VARCHAR(100),
+    `lastname` VARCHAR(100),
+    `email` VARCHAR(100),
+    `title` VARCHAR(50),
+    `phoneNumber` VARCHAR(100),
+    `companyName` VARCHAR(100),
     `message` TEXT,
-    `created` DATETIME DEFAULT CURRENT_TIMESTAMP,
-    `deleted` DATETIME
+    `created_at` DATETIME DEFAULT CURRENT_TIMESTAMP,
+    `deleted_at` DATETIME,
+    `updated_at` DATETIME
 );
 
 DROP TABLE IF EXISTS content;
@@ -69,23 +76,25 @@ VALUES
     'RDC - Contact Message'
 );
 
-INSERT INTO `contact_address`(companyName, street, postalcode, city, `state`, country, telephone, email)
+INSERT INTO `contact_address`(companyName, street1, street2, postalcode, city, `state`, country, telephone, email)
 VALUES (
-    'Red Diamond Coatings',
-    'Test Street 5',
-    '12345',
-    'TestCity',
-    'TestState',
+    'Red Diamond Coatings Inc.',
+    'NDSU Research & Technology Park',
+    '1854 NDSU Research Circle North',
+    '58102',
+    'Fargo',
+    'North Dakota',
     'USA',
-    '1-613-12345',
+    '1-123-12345',
     'info@rdc.com'
 );
 
-INSERT INTO `contact_messages`(sender, reciever, `name`, title, phoneNumber, company, `subject`, message)
+INSERT INTO `contact_messages`(sender, reciever, firstname, lastname, title, phoneNumber, companyName, `subject`, message)
 VALUES
     ('sender@test.se',
     'reciever@test.se',
-    'John Snow',
+    'John',
+    'Snow',
     'Doc',
     '073-3322444',
     'The awesome comp crop',

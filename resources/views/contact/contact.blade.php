@@ -25,10 +25,10 @@
                     {!! Form::email('email', null, ['class' => 'form-control', 'placeholder' => 'Email Address*', 'required' => '']) !!}
                 </div>
                 <div class="form-group col-md-6">
-                    {!! Form::text('phonenumber', null, ['class' => 'form-control', 'placeholder' => 'Phone Number']) !!}
+                    {!! Form::text('phonenNumber', null, ['class' => 'form-control', 'placeholder' => 'Phone Number']) !!}
                 </div>
                 <div class="form-group col-md-6">
-                    {!! Form::text('companyname', null, ['class' => 'form-control', 'placeholder' => 'Company Name']) !!}
+                    {!! Form::text('companyName', null, ['class' => 'form-control', 'placeholder' => 'Company Name']) !!}
                 </div>
                 <div class="form-group col-md-6">
                     {!! Form::text('title', null, ['class' => 'form-control', 'placeholder' => 'Your Title']) !!}
@@ -59,10 +59,10 @@
         </div>
         <div id="contact-address" class="col-md-4">
             <b>Address:</b><br>
-            {{ $address["street"] }}<br>
-            {{ $address["postalcode"] }}<br>
-            {{ $address["state"] }}<br>
-            {{ $address["country"] }}<br>
+            {{ $address["companyName"] }}<br>
+            {{ $address["street1"] }}<br>
+            {{ $address["street2"] }}<br>
+            {{ $address["postalcode"] }}, {{ $address["state"] }}, {{ $address["country"] }}<br>
             <b>Telephone:</b><br>
             {{ $address["telephone"] }}<br>
             <b>Email:</b><br>

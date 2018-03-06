@@ -19,7 +19,7 @@ class PagesController extends Controller
 
     public function getProductsAmu()
     {
-        return view("products_amu");
+        return view("products_amu", ["flashImage" => 'product.png']);
     }
 
     public function getProductsRoof()

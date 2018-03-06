@@ -8,6 +8,6 @@
 
 **Authors**
 
-- Magnus Bredsjö
+- Magnus Andersson
 - Peder Tornberg
 - Christofer Jungberg
