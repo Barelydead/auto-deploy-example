@@ -287,6 +287,11 @@ body {
     list-style: none;
 }
 
+.pagination > li > a.paginatoractive {
+    background-color: #333;
+    color: white;
+}
+
 .redbulletlist > li::before {
     content: "\2022";
     color: #9c4a4a;

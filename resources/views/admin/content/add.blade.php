@@ -14,7 +14,14 @@
                 </div>
                 <div class="form-group">
                     <label for="title">Category</label>
-                    <input class='form-control' type="text" name="category" value="">
+                    <select class="form-control" name="category">
+                        <option value="home" <?= $selected['home'] ?>>Home</option>
+                        <option value="about" <?= $selected['about'] ?>>About us</option>
+                        <option value="applications" <?= $selected['applications'] ?>>Applications</option>
+                        <option value="future" <?= $selected['future'] ?>>Future</option>
+                        <option value="research" <?= $selected['research'] ?>>Research</option>
+                        <option value="products" <?= $selected['products'] ?>>Products</option>
+                    </select>
                 </div>
                 <div class="form-group">
                     <label for="title">Title</label>

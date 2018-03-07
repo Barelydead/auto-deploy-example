@@ -18,7 +18,7 @@
         <div class="row">
             <div class="navbar-wrap flex-row space-between main-nav">
                 <div class="logo-wrap">
-                    <a href="#"><img src="img/rdc_logo.png" alt="logo" class="contained-img"></a>
+                    <a href="#"><img src="{{asset('img/rdc_logo.png')}}" alt="logo" class="contained-img"></a>
                 </div>
                 <ul class="nav navbar-nav">
                     <li class="active"><a href="{{ URL::to('/') }}">Home</a></li>
@@ -31,6 +31,11 @@
                         <li><a href="{{ URL::to('/admin/content/research') }}">Research</a></li>
                       </ul>
                     </li>
+                    @if (Auth::user()->admin)
+                        <li class="active"><a href="{{ URL::to('/admin/user/edit-users') }}">Edit users</a></li>
+                    @endif
+                    <li class="active"><a href="{{ URL::to('/admin/user/changepassword') }}">Change password</a></li>
+
                     <li class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Contact <span class="caret"></span></a>
                         <ul class="dropdown-menu" role="menu">
@@ -39,7 +44,6 @@
                             <li><a href="{{ URL::to('/admin/contact/messages') }}">Messages</a></li>
                         </ul>
                     </li>
-                    <li class="active"><a href="#">Edit users</a></li>
                 </ul>
                 @if (Route::has('login'))
                 <div class="top-right links">
