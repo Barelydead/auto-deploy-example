@@ -60,8 +60,6 @@ class PagesController extends Controller
             ->Where('subcategory', "performance test")
             ->get();
 
-        var_dump($articles);
-
         return view("performance-test2", ["articles" => $articles]);
     }
 }
