@@ -53,4 +53,15 @@ class PagesController extends Controller
 
         return view("search_results", ["articles" => $articles, "query" => $searchQuery]);
     }
+
+    public function getPerformance()
+    {
+        $articles = DB::table('content')
+            ->Where('subcategory', "performance test")
+            ->get();
+
+        var_dump($articles);
+
+        return view("performance-test2", ["articles" => $articles]);
+    }
 }

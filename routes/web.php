@@ -30,6 +30,7 @@ Route::get('/future-products', 'PagesController@getFutureProducts');
 
 
 Route::get('/performance-test', 'PagesController@getPerformanceTest');
+Route::get('/performance-test2', 'PagesController@getPerformance');
 
 
 Route::get('/search', 'PagesController@getSearch');
