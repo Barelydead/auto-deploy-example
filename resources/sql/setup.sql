@@ -61,6 +61,7 @@ CREATE TABLE content (
     `subCategory` VARCHAR(100),
     `title` VARCHAR(100),
     `content` TEXT,
+    `path` VARCHAR(100)
     `author` VARCHAR(100),
     `created` DATETIME DEFAULT CURRENT_TIMESTAMP,
     `updated` DATETIME ON UPDATE CURRENT_TIMESTAMP,

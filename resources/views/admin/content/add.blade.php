@@ -40,6 +40,10 @@
                     <input class='form-control' type="text" name="author" value="">
                 </div>
                 <div class="form-group">
+                    <label for="title">Path</label>
+                    <input class='form-control' type="text" name="author" value="">
+                </div>
+                <div class="form-group">
                     <input class='btn btn-primary' type="submit" name="addbtn" value="Add">
                     <input class='btn btn-default' type="submit" name="cancelbtn" value="Cancel">
                 </div>

@@ -245,6 +245,7 @@ class AdminController extends Controller
         $data['title'] = $request->post('title');
         $data['content'] = $request->post('content');
         $data['author'] = $request->post('author');
+        $data['path'] = $request->post('path');
 
         /*--------------------------------------------*/
 
@@ -255,7 +256,8 @@ class AdminController extends Controller
                 'subcategory' => $data['subcategory'],
                 'title' => $data['title'],
                 'content' => $data['content'],
-                'author' => $data['author']
+                'author' => $data['author'],
+                'path' => $data['path']
             ]);
 
             $returnurl = "admin/content/".$data['category'];
