@@ -19,7 +19,14 @@ class PagesController extends Controller
 
     public function getProductsAmu()
     {
-        return view("products_amu", ["flashImage" => 'product.png']);
+        // Nytt
+        // Se till att lägga in imgurl i database och sätt subcategory till thumbnail för products
+        $thumbnails = DB::select('select * from content WHERE category LIKE ? AND subcategory LIKE ?', ["products", "thumbnail"]);
+
+        $data = [
+            'thumbnails'    => $thumbnails
+        ];
+        return view("products_amu2", ["flashImage" => 'product.png'], $data);
     }
 
     public function getProductsRoof()
