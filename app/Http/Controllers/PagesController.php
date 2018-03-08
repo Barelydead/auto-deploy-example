@@ -45,12 +45,28 @@ class PagesController extends Controller
 
     public function getSearch(Request $request)
     {
-        $searchQuery = $request->query("search");
+        $searchQuery = htmlentities($request->query("search"));
 
-        $articles = DB::select('select * from content WHERE content LIKE ?', ["%$searchQuery%", "%$searchQuery%", "%$searchQuery%"]);
+        $articles = DB::table('content')
+            ->whereRaw('content LIKE ?', ["%$searchQuery%"])
+            ->orWhereRaw('title LIKE ?', ["%$searchQuery%"])
+            ->orWhereRaw('category LIKE ?', ["%$searchQuery%"])
+            ->get();
 
-        $articles = isset($articles) ? $articles : [];
+        foreach ($articles as $val) {
+            $val->content = substr($val->content, 0, 250);
+        }
 
         return view("search_results", ["articles" => $articles, "query" => $searchQuery]);
+    }
+
+    public function getPerformance()
+    {
+        $articles = DB::table('content')
+            ->where('subcategory', "performance")
+            ->get();
+
+
+        return view("performance-test2", ["articles" => $articles]);
     }
 }
