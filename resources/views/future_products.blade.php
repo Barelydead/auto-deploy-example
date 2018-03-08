@@ -69,7 +69,7 @@
             <img src="img/future_products/tomorrow.jpg" class="contained-img full-width">
         </div>
     </div>
-    <div class="pillow-50"></div>
+    <div class="pillow-30"></div>
 </div>
 
 
