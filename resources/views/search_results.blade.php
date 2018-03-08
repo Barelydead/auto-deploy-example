@@ -9,7 +9,12 @@
 @section('content')
     <div class="container">
 
-        <h1>Search results</h1>
+        <div class="row rdcseablue rdcwhite-text center">
+            <div class="col-md-12">
+                <h1>Search results</h1>
+            </div>
+        </div>
+
         @if (count($articles) == 0)
             <div class="row">
                 <div class="col-md-12">
@@ -19,17 +24,19 @@
             </div>
         @endif
 
+        <div class="row">
         @foreach ($articles as $article)
-            <div class="row">
-                <div class="col-md-12">
-                    <h2>{{ $article->title }}</h2>
-                    <div class="content">
-                        {{ $article->content }}
-                    </div>
-                </div>
-            </div>
-        @endforeach
 
+            <div class="col-md-10 col-md-offset-1">
+                <h2><a href="{{ URL::to('/' . $article->path) }}">{{ $article->title }}</a></h2>
+                <div class="content">
+                    @markdown($article->content . "...")
+                </div>
+            <div class="pillow-30"></div>
+            </div>
+
+        @endforeach
+        </div>
     </div>
 
 @endsection
