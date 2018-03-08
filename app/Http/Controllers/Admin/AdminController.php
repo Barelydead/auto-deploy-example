@@ -238,7 +238,7 @@ class AdminController extends Controller
                 ->where('id', $data['id'])
                 ->update([
                     'title'     => $data['title'],
-                    'imgurl'    => $data['imgurl'],
+                    'imgurl'     => $data['imgurl'],
                     'content'   => $data['content']
                 ]);
         }
