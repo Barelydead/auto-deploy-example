@@ -227,7 +227,15 @@ class AdminController extends Controller
 
     public function editContentProcess(Request $request)
     {
+
         $image = $request->file('image');
+
+        $data['id'] = $request->post('id');
+        $data['category'] = $request->post('category');
+        $data['title'] = $request->post('title');
+        $data['imgurl'] = $request->post('imgurl');
+        $data['content'] = $request->post('content');
+
 
         $data['id']         = $request->post('id');
         $data['category']   = $request->post('category');
