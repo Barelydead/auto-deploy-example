@@ -207,6 +207,7 @@ class AdminController extends Controller
         $data['id'] = $request->post('id');
         $data['category'] = $request->post('category');
         $data['title'] = $request->post('title');
+        $data['imgurl'] = $request->post('imgurl');
         $data['content'] = $request->post('content');
 
         /*--------------------------------------------*/
@@ -216,6 +217,7 @@ class AdminController extends Controller
                 ->where('id', $data['id'])
                 ->update([
                     'title'     => $data['title'],
+                    'imgurl'     => $data['imgurl'],
                     'content'   => $data['content']
                 ]);
         }
