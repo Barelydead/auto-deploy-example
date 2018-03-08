@@ -29,7 +29,6 @@
             flammable.
             On the other hand, RDC’s future
             WeatherSEAL&#8482; UnderCoat:
-            Tomorrow...
             <ul>
                 <li>carries an A1 Fire Retardant Rating</li>
                 <li>is water-based/Green & protects the environment</li>
@@ -71,5 +70,63 @@
         </div>
     </div>
     <div class="pillow-50"></div>
+</div>
+
+
+
+<div class="rdc rdcseablue rdcwhite-text">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8">
+                <h2>PoxyGREEN&#8482; Coating</h2>
+                RDC is confident we can replace many existing harsh,
+                highly flammable epoxy applications with our up and
+                coming Green/water-based PoxyGREEN&#8482; Coating,
+                which our testing shows is actually stronger than most
+                epoxies, will carry an A1 Fire Retardant Rating and will
+                outlast and outperform most epoxies by many years.
+                RDC’s future PoxyGREEN&#8482; Coating:
+                <ul>
+                    <li>will be waterproof, yet breathable</li>
+                    <li>will hold thermal properties that save energy</li>
+                    <li>can be quickly applied by standard paint
+                    sprayer, roller or brush as simple 1-part system
+                    <li>will bridge over spaces up to 1/8” wide</li>
+                    <li>will not crack, blister or delaminate and will last
+                    and protect for the life of the substrate</li>
+                    <li>will cost much less than most epoxies</li>
+                </ul>
+            </div>
+            <div class="col-md-4">
+                <div class="pillow-30"></div>
+                <img src="img/future_products/today1.jpg" class="contained-img full-width">
+            </div>
+        </div>
+        <div class="pillow-30"></div>
+    </div>
+</div>
+
+
+<div class="rdc rdcdeepred rdcwhite-text">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4">
+                <div class="pillow-30"></div>
+                <img src="img/future_products/today1.jpg" class="contained-img full-width">
+            </div>
+            <div class="col-md-8">
+                <h2>ClearSEAL&#8482; Coating</h2>
+                With some modifications to our AMU Coating,
+                RDC plans to introduce a very durable/long
+                lasting, protective clear-coat product,
+                ClearSEAL&#8482; Coating, to compete against the
+                likes of Thompson’s Water-Seal. ClearSEAL&#8482;
+                Coating will be formulated to used on most
+                substrates, including, wood, metal, concrete,
+                tiles and more.
+            </div>
+        </div>
+        <div class="pillow-30"></div>
+    </div>
 </div>
 @endsection

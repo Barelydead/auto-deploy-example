@@ -174,7 +174,7 @@ class AdminController extends Controller
         /*---------------------------------------------*/
 
         $tblprop = [
-            "pages"         => ($request->get('pages') != null) ? htmlentities($request->get('pages')) : 2,
+            "pages"         => ($request->get('pages') != null) ? htmlentities($request->get('pages')) : 5,
             "searchcolumn"  => ($request->get('searchcolumn') != null) ? htmlentities($request->get('searchcolumn')) : 'category',
             "search"        => ($request->get('search') != null) ? htmlentities($request->get('search')) : $category,
             "orderby"       => ($request->get('orderby') != null) ? htmlentities($request->get('orderby')) : 'id',
@@ -224,9 +224,17 @@ class AdminController extends Controller
         return redirect($returnurl);
     }
 
-    public function addContent()
+    public function addContent(Request $request)
     {
-        return view("admin/content/add");
+        $selected = [
+            'home'          => ($request->get('category') == 'home') ? "selected" : "",
+            'about'         => ($request->get('category') == 'about') ? "selected" : "",
+            'applications'  => ($request->get('category') == 'applications') ? "selected" : "",
+            'future'        => ($request->get('category') == 'future') ? "selected" : "",
+            'research'      => ($request->get('category') == 'research') ? "selected" : "",
+            'products'      => ($request->get('category') == 'products') ? "selected" : ""
+        ];
+        return view("admin/content/add", ['selected' => $selected]);
     }
 
     public function addContentProcess(Request $request)
