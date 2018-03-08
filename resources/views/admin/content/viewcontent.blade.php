@@ -12,7 +12,7 @@
                 <div class="col-md-3">
                     <h4><?= ucfirst($category) ?> page</h4>
                 </div>
-<<<<<<< da0dbdc5bc4467c979ee7c038147b41a7b494d11
+
                 @if ($category == 'all')
                     <div class="col-md-6">
                         <form action="#" method="GET">
@@ -37,9 +37,9 @@
                 @endif
 
                 <div class="col-md-1 col-md-offset-2">
-=======
+
                 <div class="col-md-1 col-md-offset-8">
->>>>>>> Paginator url correction and select category when adding
+
                     <?php $addurl = '/admin/content/add?category='.$category; ?>
                     <a class='btn btn-primary' href="{{ URL::to($addurl) }}">+ Add</a>
                 </div>
