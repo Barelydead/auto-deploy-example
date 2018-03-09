@@ -12,7 +12,6 @@
                 <div class="col-md-3">
                     <h4><?= ucfirst($category) ?> page</h4>
                 </div>
-
                 @if ($category == 'all')
                     <div class="col-md-6">
                         <form action="#" method="GET">
@@ -37,9 +36,6 @@
                 @endif
 
                 <div class="col-md-1 col-md-offset-2">
-
-                <div class="col-md-1 col-md-offset-8">
-
                     <?php $addurl = '/admin/content/add?category='.$category; ?>
                     <a class='btn btn-primary' href="{{ URL::to($addurl) }}">+ Add</a>
                 </div>
