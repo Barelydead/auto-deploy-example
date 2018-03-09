@@ -9,8 +9,7 @@ use Illuminate\Http\Request;
 
 
 use Illuminate\Http\Request;
-=======
->>>>>>> Paginator url correction and select category when adding
+
 
 
 
