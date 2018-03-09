@@ -4,6 +4,7 @@ namespace App;
 
 use Illuminate\Support\Facades\DB;
 use Illuminate\Routing\UrlGenerator;
+use Illuminate\Http\Request;
 
 use Illuminate\Http\Request;
 
