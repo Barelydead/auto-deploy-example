@@ -4,6 +4,7 @@ namespace App;
 
 use Illuminate\Support\Facades\DB;
 use Illuminate\Routing\UrlGenerator;
+use Illuminate\Http\Request;
 
 /**
  * A controller for the Commentary.
@@ -89,7 +90,7 @@ class Paginator
         ];
 
         $paginatorsearch    = $this->paginatorSearch($table, $tblprop, $pgnprop);
-        $pgnctrl            = $this->paginatorCtrl($pgnprop);
+        $pgnctrl            = $this->paginatorCtrl($pgnprop, $tblprop);
 
         // array('res' => $res, 'max' =>  $textline1, 'current' => $textline2, 'ctrl' => $pagenationrow);
         $paginator = [
@@ -125,7 +126,7 @@ class Paginator
         //---------------------------------------------------------
 
         $sql = "SELECT * FROM $table $search $order $limit";
-        $params = [$tblprop['search']];
+        $params = ['%'.$tblprop['search'].'%'];
         $res = DB::select($sql, $params);
 
         return $res;
@@ -138,16 +139,16 @@ class Paginator
     *
     * @return string $paginatorctrl, kontrollern för att byta sida i paginerad tabell.
     */
-    public function paginatorCtrl($pgnprop)
+    public function paginatorCtrl($pgnprop, $tblprop)
     {
         $textline1 = "Object (".$pgnprop['searchcount'].")";
         $textline2 = "Page ".$pgnprop['pagenum']." out of ".$pgnprop['lastpage'];
 
         $paginatorctrl = "<ul class='pagination'>";
         if ($pgnprop['lastpage'] != 1) {
-            $paginatorctrl = $this->paginatorLeftCtrl($pgnprop['pagenum'], $paginatorctrl);
+            $paginatorctrl = $this->paginatorLeftCtrl($pgnprop['pagenum'], $paginatorctrl, $tblprop);
             $paginatorctrl .= "<li><a class='paginatoractive'>".$pgnprop['pagenum']."</a></li>";
-            $paginatorctrl = $this->paginatorRightCtrl($pgnprop['pagenum'], $pgnprop['lastpage'], $paginatorctrl);
+            $paginatorctrl = $this->paginatorRightCtrl($pgnprop['pagenum'], $pgnprop['lastpage'], $paginatorctrl, $tblprop);
         }
         $paginatorctrl .= "</ul>";
 
@@ -168,12 +169,13 @@ class Paginator
     *
     * @return string $pagenationrow first part of the paginator with added content
     */
-    private function paginatorLeftCtrl($pagenum, $paginatorctrl)
+    private function paginatorLeftCtrl($pagenum, $paginatorctrl, $tblprop)
     {
         if ($pagenum > 1) {
             $previous = $pagenum - 1;
             // $url = $_SERVER['PHP_SELF'].'?pn='.$previous;
-            $url = url()->current().'?pn='.$previous;
+            $url = url()->current().'?pn='.$previous.'&search='.$tblprop['search'].'&searchcolumn='.$tblprop['searchcolumn'].'&pages='.$tblprop['pages'].'&orderby='.$tblprop['orderby'].'&orderas='.$tblprop['orderas'];
+            // $url = $fullurl.'?pn='.$previous;
             $paginatorctrl .= "<li><a href='$url'>" .htmlspecialchars("<<"). "</a></li>";
 
             if ($pagenum-4 > 0) {
@@ -182,7 +184,7 @@ class Paginator
             for ($i = $pagenum-3; $i < $pagenum; $i += 1) {
                 if ($i > 0) {
                     // $url = $_SERVER['PHP_SELF'].'?pn='.$i;
-                    $url = url()->current().'?pn='.$i;
+                    $url = url()->current().'?pn='.$i.'&search='.$tblprop['search'].'&searchcolumn='.$tblprop['searchcolumn'].'&pages='.$tblprop['pages'].'&orderby='.$tblprop['orderby'].'&orderas='.$tblprop['orderas'];
                     $paginatorctrl .= "<li><a href='$url'>".$i."</a></li>";
                 }
             }
@@ -198,12 +200,12 @@ class Paginator
     * @param string $paginatorctrl first part of the paginator containing left side
     * @return string $paginationrow containing left side and now also right side of paginator
     */
-    private function paginatorRightCtrl($pagenum, $lastpage, $paginatorctrl)
+    private function paginatorRightCtrl($pagenum, $lastpage, $paginatorctrl, $tblprop)
     {
         for ($i = $pagenum+1; $i <= $lastpage; $i += 1) {
             if ($i < $pagenum+4) {
                 // $url = $_SERVER['PHP_SELF'].'?pn='.$i;
-                $url = url()->current().'?pn='.$i;
+                $url = url()->current().'?pn='.$i.'&search='.$tblprop['search'].'&searchcolumn='.$tblprop['searchcolumn'].'&pages='.$tblprop['pages'].'&orderby='.$tblprop['orderby'].'&orderas='.$tblprop['orderas'];
                 $paginatorctrl .= "<li><a href='$url'>".$i."</a></li>";
             } else if ($i == $pagenum+4) {
                 $paginatorctrl .= '<li><a>...</a></li>';
@@ -215,7 +217,7 @@ class Paginator
             // var_dump($pagenum);
             $next = $pagenum + 1;
             // $paginatorctrl .= '<li><a href="'.$_SERVER['PHP_SELF'].'?pn='.$next."> ' .htmlspecialchars(">>"). ' </a></li>';
-            $paginatorctrl .= '<li><a href="'.url()->current().'?pn='.$next.'"> ' .htmlspecialchars(">>"). ' </a></li>';
+            $paginatorctrl .= '<li><a href="'.url()->current().'?pn='.$next.'&search='.$tblprop['search'].'&searchcolumn='.$tblprop['searchcolumn'].'&pages='.$tblprop['pages'].'&orderby='.$tblprop['orderby'].'&orderas='.$tblprop['orderas'].'"> ' .htmlspecialchars(">>"). ' </a></li>';
         }
         return $paginatorctrl;
     }

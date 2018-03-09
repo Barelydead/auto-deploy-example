@@ -173,10 +173,18 @@ class AdminController extends Controller
 
         /*---------------------------------------------*/
 
+        // Link for all content convertet to wildcard search
+        $tablecategory = $category;
+        if ($category == 'all') {
+            $tablecategory = '%%';
+        }
+
+        /*---------------------------------------------*/
+
         $tblprop = [
             "pages"         => ($request->get('pages') != null) ? htmlentities($request->get('pages')) : 5,
             "searchcolumn"  => ($request->get('searchcolumn') != null) ? htmlentities($request->get('searchcolumn')) : 'category',
-            "search"        => ($request->get('search') != null) ? htmlentities($request->get('search')) : $category,
+            "search"        => ($request->get('search') != null) ? htmlentities($request->get('search')) : $tablecategory,
             "orderby"       => ($request->get('orderby') != null) ? htmlentities($request->get('orderby')) : 'id',
             "orderas"       => ($request->get('orderas') != null) ? htmlentities($request->get('orderas')) : 'ASC',
         ];
@@ -184,7 +192,20 @@ class AdminController extends Controller
 
         /*---------------------------------------------*/
 
-        $tableHTML    = $paginator->paginator('content', $tblprop, $pagenum);
+        // If resetbutton clicked -> reset $tblprop
+        if (isset($_POST['allbtn'])) {
+            $tblprop = [
+                "pages"         =>  5,
+                "searchcolumn"  =>  'category',
+                "search"        =>  $tablecategory,
+                "orderby"       =>  'id',
+                "orderas"       =>  'ASC',
+            ];
+        }
+
+        /*---------------------------------------------*/
+
+        $tableHTML = $paginator->paginator('content', $tblprop, $pagenum);
 
         /*---------------------------------------------*/
 
@@ -204,10 +225,11 @@ class AdminController extends Controller
 
     public function editContentProcess(Request $request)
     {
-        $data['id'] = $request->post('id');
-        $data['category'] = $request->post('category');
-        $data['title'] = $request->post('title');
-        $data['content'] = $request->post('content');
+        $data['id']         = $request->post('id');
+        $data['category']   = $request->post('category');
+        $data['title']      = $request->post('title');
+        $data['imgurl']     = $request->post('imgurl');
+        $data['content']    = $request->post('content');
 
         /*--------------------------------------------*/
 
@@ -216,6 +238,7 @@ class AdminController extends Controller
                 ->where('id', $data['id'])
                 ->update([
                     'title'     => $data['title'],
+                    'imgurl'    => $data['imgurl'],
                     'content'   => $data['content']
                 ]);
         }
