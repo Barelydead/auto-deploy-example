@@ -117,8 +117,9 @@ class Paginator
     */
     public function paginatorSearch($table, $tblprop, $pgnprop)
     {
+        $deleteColumn = (isset($tblprop['deleteColumn'])) ? $tblprop['deleteColumn'] : "deleted";
 
-        $search     = "WHERE deleted IS NULL AND ".$tblprop['searchcolumn']." LIKE ? ";
+        $search     = "WHERE " . $deleteColumn ." IS NULL AND ".$tblprop['searchcolumn']." LIKE ? ";
         $order      = 'ORDER BY '.$tblprop['orderby']." ".$tblprop['orderas']." ";
         $limit      = 'LIMIT '.($pgnprop['pagenum'] - 1 ) * $tblprop['pages'].', '.$tblprop['pages'];
 
@@ -127,7 +128,6 @@ class Paginator
         $sql = "SELECT * FROM $table $search $order $limit";
         $params = [$tblprop['search']];
         $res = DB::select($sql, $params);
-
         return $res;
     }
 
