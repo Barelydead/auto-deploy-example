@@ -6,6 +6,7 @@
                 <ul class="nav">
                     <li class="active"><a href="#">Home</a></li>
                     <li class=""><a href="#">Prodcuts</a></li>
+                    <li class=""><a href="#">Future Products</a></li>
                     <li class=""><a href="#">User/Applications</a></li>
                     <li class=""><a href="#">Research & Development</a></li>
                     <li class=""><a href="{{ URL::to('/about') }}">About Us</a></li>
@@ -20,6 +21,7 @@
                 <ul class="nav">
                     <li class="active"><a href="#">Home</a></li>
                     <li class=""><a href="#">Prodcuts</a></li>
+                    <li class=""><a href="#">Future Products</a></li>
                     <li class=""><a href="#">User/Applications</a></li>
                     <li class=""><a href="#">Research & Development</a></li>
                     <li class=""><a href="{{ URL::to('/about') }}">About Us</a></li>
