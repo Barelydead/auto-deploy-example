@@ -9,7 +9,7 @@
             <h1>Edit</h1>
 
             @foreach ($content as $row)
-                <form action="{{ URL::to('/admin/content/editcontentprocess') }}" method="post">
+                <form action="{{ URL::to('/admin/content/editcontentprocess') }}" method="post" enctype="multipart/form-data">
                     <div class="form-group">
                         <label for="title">Title</label>
                         <input class='form-control' type="text" name="title" value="{{$row->title}}">
@@ -22,6 +22,22 @@
                         <label for="content">Content</label>
                         <textarea id="form-element-data" class='form-control md-input' name="content" rows="8" cols="80" data-provide='markdown' style="resize: none;">{{$row->content}}</textarea>
                     </div>
+
+
+                    <div class="form-group">
+                        <input type="hidden" name="currentImage" value="{{ $row->imgurl }}">
+                        @if ($row->imgurl != null)
+                            <img src="{{ url('/img/upload') }}/{{ $row->imgurl }}" class="thumbnailimg"><br>
+                            <input type="checkbox" name="imageremove" value="remove"> Delete<br>
+                        @endif
+                    </div>
+                    <div class="form-group">
+                        <label for="image">Upload Image</label>
+                        <input class="form-control" type="file" name="image">
+                    </div>
+
+
+
                     <input type="hidden" name="id" value="{{$row->id}}">
                     <input type="hidden" name="category" value="{{$row->category}}">
                     <div class="form-group">

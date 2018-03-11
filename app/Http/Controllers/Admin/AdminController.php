@@ -11,6 +11,8 @@ use Illuminate\Support\Facades\Hash;
 
 use App\User;
 use App\Paginator as Paginator;
+use App\Form\UploadImage as UploadImage;
+
 
 
 class AdminController extends Controller
@@ -225,12 +227,26 @@ class AdminController extends Controller
 
     public function editContentProcess(Request $request)
     {
+        $image = $request->file('image');
+
         $data['id']         = $request->post('id');
         $data['category']   = $request->post('category');
         $data['title']      = $request->post('title');
         $data['imgurl']     = $request->post('imgurl');
         $data['content']    = $request->post('content');
+        $data['imgurl']     = $request->post('currentImage');
 
+        /*--------------------------------------------*/
+
+        $image = $request->file('image');
+        if ($image != null && $image->getClientOriginalName() != '') {
+            $uImage = new UploadImage($image, $data['category']);
+            $uImage->uploadImage();
+            $data['imgurl']     = $request->post('category') . "/" . $image->getClientOriginalName();
+        }
+        if ($request->has('imageremove')) {
+            $data['imgurl'] = null;
+        }
         /*--------------------------------------------*/
 
         if(isset($_POST['editbtn'])) {
@@ -262,14 +278,23 @@ class AdminController extends Controller
 
     public function addContentProcess(Request $request)
     {
-        $data['type'] = $request->post('type');
-        $data['category'] = $request->post('category');
-        $data['subcategory'] = $request->post('subcategory');
-        $data['title'] = $request->post('title');
-        $data['content'] = $request->post('content');
-        $data['author'] = $request->post('author');
-        $data['path'] = $request->post('path');
+        $data['type']           = $request->post('type');
+        $data['category']       = $request->post('category');
+        $data['subcategory']    = $request->post('subcategory');
+        $data['title']          = $request->post('title');
+        $data['content']        = $request->post('content');
+        $data['author']         = $request->post('author');
+        $data['path']           = $request->post('path');
+        $data['imgurl']         = $request->post('image');
 
+        /*--------------------------------------------*/
+
+        $image = $request->file('image');
+        if ($image->getClientOriginalName() != '') {
+            $uImage = new UploadImage($image, $data['category']);
+            $uImage->uploadImage();
+            $data['imgurl'] = $request->post('category') . "/" . $image->getClientOriginalName();
+        }
         /*--------------------------------------------*/
 
         DB::table('content')->insert(
@@ -280,8 +305,10 @@ class AdminController extends Controller
                 'title' => $data['title'],
                 'content' => $data['content'],
                 'author' => $data['author'],
-                'path' => $data['path']
-            ]);
+                'path' => $data['path'],
+                'imgurl' => $data['imgurl']
+            ]
+        );
 
             $returnurl = "admin/content/".$data['category'];
             return redirect($returnurl);
