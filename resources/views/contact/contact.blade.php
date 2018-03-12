@@ -15,6 +15,9 @@
         <div id="contact-form" class="col-md-8">
             <!-- <form method="post"> -->
             {!! Form::open(['route' => 'contact.post']) !!}
+                <div class="form-group col-md-6 hidden">
+                    {!! Form::email('emailtest', null, ['class' => 'form-control', 'placeholder' => 'Email Address']) !!}
+                </div>
                 <div class="form-group col-md-6">
                     {!! Form::text('firstname', null, ['class' => 'form-control', 'placeholder' => 'First Name*', 'required' => '']) !!}
                 </div>

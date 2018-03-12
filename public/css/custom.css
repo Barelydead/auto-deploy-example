@@ -23,6 +23,10 @@ body {
     justify-content: flex-end;
 }
 
+.hidden {
+    display: none;
+}
+
 /* ------- PILLOWS ------ */
 /* For vertical spacing */
 .pillow-10 {

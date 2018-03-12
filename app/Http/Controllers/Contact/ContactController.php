@@ -22,8 +22,8 @@ class ContactController extends Controller
         $addressObj = new Address;
         $address = $addressObj->getAddress();
         return view('contact.contact', [
-            "flashImage" => 'contact-us.jpg',
-            "address" => $address]);
+            "flashImage"    => 'contact-us.jpg',
+            "address"       => $address]);
     }
 
 
@@ -36,16 +36,21 @@ class ContactController extends Controller
      */
     public function postContactForm(Request $request)
     {
+        // Trick to avoid SPAM bots
+        if ($request->post('emailtest') != null) {
+            return redirect("contact");
+        }
+
         $contact = new MailConfig();
         $contact = $contact->first();
 
-        $data['firstname'] = $request->get('firstname');
-        $data['lastname'] = $request->get('lastname');
-        $data['email'] = $request->get('email');
-        $data['phoneNumber'] = $request->get('phoneNumber');
-        $data['companyName'] = $request->get('companyName');
-        $data['title'] = $request->get('title');
-        $data['message'] = $request->get('message');
+        $data['firstname']      = $request->post('firstname');
+        $data['lastname']       = $request->post('lastname');
+        $data['email']          = $request->post('email');
+        $data['phoneNumber']    = $request->post('phoneNumber');
+        $data['companyName']    = $request->post('companyName');
+        $data['title']          = $request->post('title');
+        $data['message']        = $request->post('message');
 
         Mail::to($contact->reciever)->send(new ContactMessage($data, $contact));
 
