@@ -25,7 +25,7 @@
                     {!! Form::email('email', null, ['class' => 'form-control', 'placeholder' => 'Email Address*', 'required' => '']) !!}
                 </div>
                 <div class="form-group col-md-6">
-                    {!! Form::text('phonenNumber', null, ['class' => 'form-control', 'placeholder' => 'Phone Number']) !!}
+                    {!! Form::text('phoneNumber', null, ['class' => 'form-control', 'placeholder' => 'Phone Number']) !!}
                 </div>
                 <div class="form-group col-md-6">
                     {!! Form::text('companyName', null, ['class' => 'form-control', 'placeholder' => 'Company Name']) !!}

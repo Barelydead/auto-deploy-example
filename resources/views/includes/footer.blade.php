@@ -4,11 +4,12 @@
         <div class="row">
             <div class="col-md-4">
                 <ul class="nav">
-                    <li class="active"><a href="#">Home</a></li>
-                    <li class=""><a href="#">Prodcuts</a></li>
-                    <li class=""><a href="#">User/Applications</a></li>
-                    <li class=""><a href="#">Research & Development</a></li>
-                    <li class=""><a href="{{ URL::to('/about') }}">About Us</a></li>
+                    <li class="active"><a href="#" title="Home">Home</a></li>
+                    <li class=""><a href="#" title="Products">Prodcuts</a></li>
+                    <li class=""><a href="{{ URL::to('/future-products') }}" title="Future Products">Future Products</a></li>
+                    <li class=""><a href="#" title="Uses/Applications">Uses/Applications</a></li>
+                    <li class=""><a href="#" title="Research & Development">Research & Development</a></li>
+                    <li class=""><a href="{{ URL::to('/about') }}" title="About Us">About Us</a></li>
                 </ul>
             </div>
             <div class="col-md-4">
@@ -18,11 +19,12 @@
             </div>
             <div class="col-md-4">
                 <ul class="nav">
-                    <li class="active"><a href="#">Home</a></li>
-                    <li class=""><a href="#">Prodcuts</a></li>
-                    <li class=""><a href="#">User/Applications</a></li>
-                    <li class=""><a href="#">Research & Development</a></li>
-                    <li class=""><a href="{{ URL::to('/about') }}">About Us</a></li>
+                    <li class="active"><a href="#" title="Home">Home</a></li>
+                    <li class=""><a href="#" title="Products">Prodcuts</a></li>
+                    <li class=""><a href="{{ URL::to('/future-products') }}" title="Future Products">Future Products</a></li>
+                    <li class=""><a href="#" title="Uses/Applications">Uses/Applications</a></li>
+                    <li class=""><a href="#" title="Research & Development">Research & Development</a></li>
+                    <li class=""><a href="{{ URL::to('/about') }}" title="About Us">About Us</a></li>
                 </ul>
             </div>
         </div>
