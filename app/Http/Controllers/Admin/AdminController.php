@@ -290,7 +290,7 @@ class AdminController extends Controller
         /*--------------------------------------------*/
 
         $image = $request->file('image');
-        if ($image->getClientOriginalName() != '') {
+        if ($request->hasFile('image')) {
             $uImage = new UploadImage($image, $data['category']);
             $uImage->uploadImage();
             $data['imgurl'] = $request->post('category') . "/" . $image->getClientOriginalName();

@@ -68,6 +68,20 @@ CREATE TABLE content (
     `deleted` DATETIME
 );
 
+DROP TABLE IF EXISTS content_images;
+CREATE TABLE content_images (
+    `id` INTEGER PRIMARY KEY AUTO_INCREMENT NOT NULL,
+    `filename` VARCHAR(100),
+    `contentId` INTEGER,
+
+    FOREIGN KEY (`contentId`) REFERENCES `content`(`id`)
+);
+
+INSERT INTO content_images(filename, contentId) VALUES
+	("this/img", 26);
+
+
+
 INSERT INTO `contact_mail_config`(reciever, sender, sendername, subject)
 VALUES
 (

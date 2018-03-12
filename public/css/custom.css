@@ -281,6 +281,32 @@ body {
     max-height: 500px
 }
 
+.article-thumb-wrap {
+    display: flex;
+    justify-content: left;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    margin-top: 20px;
+    border-top: 2px solid #eee;
+    border-bottom: 2px solid #eee;
+    padding: 10px 0;
+}
+
+.thumb-holder {
+    width: 170px;
+    margin: 0 10px 0 0;
+    transition: width 0.8s ease-in-out;
+}
+
+.large-thumb {
+    width: 400px;
+}
+
+.thumb-holder:hover {
+    cursor: pointer;
+}
+
+
 /* ----------------- TEXT CLASSES -----------------*/
 .bold {
     font-weight: bold;
