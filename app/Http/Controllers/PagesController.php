@@ -14,7 +14,14 @@ class PagesController extends Controller
 
     public function getAbout()
     {
-        return view("about");
+        $content = DB::table('content')
+                ->where('category', 'about')
+                ->first();
+
+        // break up paraghraps to enable layout
+        // $content->content = explode("\n", $content->content);
+
+        return view("about", ['content' => $content]);
     }
 
     public function getProductsAmu()
