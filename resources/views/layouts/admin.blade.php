@@ -17,7 +17,9 @@
         </div>
 
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/markdown-element/dist/markdown-element.min.js"></script>
         <script src="{{ asset('js/app.js') }}"></script>
+        <script src="{{ asset('js/markdownpreview.js') }}"></script>
         <script src="{{ asset('js/external/bootstrap-markdown.js') }}"></script>
     </body>
 </html>

@@ -1,3 +1,5 @@
+
+
 @extends('layouts.admin')
 
 @section('title', 'Admin | Products')
@@ -5,9 +7,10 @@
 @section('content')
 <div class="container">
     <div class="row">
-        <div class="col-md-12">
-            <h1>Edit</h1>
-
+        <h1>Edit</h1>
+    </div>
+    <div class="row">
+        <div class="col-md-6">
             @foreach ($content as $row)
                 <form action="{{ URL::to('/admin/content/editcontentprocess') }}" method="post" enctype="multipart/form-data">
                     <div class="form-group">
@@ -20,7 +23,7 @@
                     </div> -->
                     <div class="form-group">
                         <label for="content">Content</label>
-                        <textarea id="form-element-data" class='form-control md-input' name="content" rows="8" cols="80" data-provide='markdown' style="resize: none;">{{$row->content}}</textarea>
+                        <textarea id="form-element-data" class='form-control md-input' name="content" rows="8" cols="80" data-provide='markdown' style="resize: none;" onkeyup="previewFunction(event)" onfocus="previewFunction(event)">{{$row->content}}</textarea>
                     </div>
 
 
@@ -46,10 +49,16 @@
                     </div>
                 </form>
             @endforeach
+        </div> <!-- /first column md-6 -->
 
-        </div>
-    </div>
+        <div class='col-md-6'>
+            <h4 style='margin-top:110px;'>Preview</h4>
+            <div id='preview'>
 
-</div>
+            </div>
+        </div> <!-- second column md-6 -->
+
+    </div> <!-- /row -->
+</div> <!-- /container -->
 
 @endsection
