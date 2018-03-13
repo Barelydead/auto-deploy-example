@@ -31,4 +31,20 @@ class Content extends Model
 
         return $articles;
     }
+
+
+
+    /**
+     * Get articles by category.
+     *
+     * @param string $category
+     * @return array
+     */
+    public function getArticlesByCategory($category)
+    {
+        $articles = $this
+                ->where('category', $category)
+                ->get();
+        return $articles;
+    }
 }

@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
+use App\Content;
 
 class PagesController extends Controller
 {
@@ -43,7 +44,11 @@ class PagesController extends Controller
 
     public function getFutureProducts()
     {
-        return view("future_products");
+        $content = new Content();
+        $content = $content->getArticlesByCategory("future");
+        return view("future_products", [
+            "content" => $content
+        ]);
     }
 
 
