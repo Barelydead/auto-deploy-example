@@ -14,10 +14,10 @@
                         <label for="title">Title</label>
                         <input class='form-control' type="text" name="title" value="{{$row->title}}">
                     </div>
-                    <div class="form-group">
+                    <!-- <div class="form-group">
                         <label for="imgurl">imgurl</label>
                         <input class='form-control' type="text" name="imgurl" value="{{$row->imgurl}}">
-                    </div>
+                    </div> -->
                     <div class="form-group">
                         <label for="content">Content</label>
                         <textarea id="form-element-data" class='form-control md-input' name="content" rows="8" cols="80" data-provide='markdown' style="resize: none;">{{$row->content}}</textarea>

@@ -230,13 +230,10 @@ class AdminController extends Controller
 
         $image = $request->file('image');
 
-
-
-
         $data['id']         = $request->post('id');
         $data['category']   = $request->post('category');
         $data['title']      = $request->post('title');
-        $data['imgurl']     = $request->post('imgurl');
+        // $data['imgurl']     = $request->post('imgurl');
         $data['content']    = $request->post('content');
         $data['imgurl']     = $request->post('currentImage');
 
