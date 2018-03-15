@@ -4,6 +4,7 @@
         <title>Red Diamond Coatins - @yield('title')</title>
         <link href="{{ asset('css/custom.css') }}" rel="stylesheet">
         <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
     </head>
     <body>
         {{-- This is the main navbar --}}
