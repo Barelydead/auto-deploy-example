@@ -528,10 +528,18 @@ body {
     width: 100%;
     height: 400px;
 }
+@media (max-width: 1180px) {
+
+    .navbar-wrap {
+        height: 110px;
+    }
+}
 
 
+@media (max-width: 765px) {
 
-@media only screen and (max-width: 800px) {
+    /* FLASH RESPONSIVENESS */
+
     .flash-text {
         text-align: center;
         padding: 20px;
@@ -547,5 +555,26 @@ body {
 
     .flash-image {
         height: 150px;
+    }
+
+    /* NAVBAR RESPONSIVENESS */
+    .navbar-wrap {
+        height: auto;
+        text-align: center;
+    }
+
+    .main-nav.flex-row {
+        flex-direction: column-reverse;
+        padding-top: 20px;
+    }
+
+    .top-nav {
+        height: inherit;
+    }
+
+    .logo-wrap {
+        position: absolute;
+        left: 20px;
+        top: 107px;
     }
 }
