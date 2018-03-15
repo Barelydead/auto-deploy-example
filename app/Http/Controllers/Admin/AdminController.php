@@ -222,7 +222,10 @@ class AdminController extends Controller
     public function editContent($id)
     {
         $content = DB::select('select * from content WHERE id LIKE ?', [$id]);
-        return view("admin/content/edit", ["content" => $content]);
+        $images  = DB::select('SELECT * FROM content_images WHERE content_id LIKE ?', [$id]);
+        return view("admin/content/edit", [
+            "content"   => $content,
+            "images"    => $images]);
     }
 
     public function editContentProcess(Request $request)
@@ -233,7 +236,6 @@ class AdminController extends Controller
         $data['id']         = $request->post('id');
         $data['category']   = $request->post('category');
         $data['title']      = $request->post('title');
-        // $data['imgurl']     = $request->post('imgurl');
         $data['content']    = $request->post('content');
         $data['imgurl']     = $request->post('currentImage');
 

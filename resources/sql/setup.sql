@@ -74,13 +74,13 @@ CREATE TABLE content_images (
     `filename` VARCHAR(100),
     `title` VARCHAR(100),
     `contentId` INTEGER,
-    `region` VARCHAR(100),
+    `region` INTEGER,
 
     FOREIGN KEY (`contentId`) REFERENCES `content`(`id`)
 );
 
-INSERT INTO content_images(filename, contentId) VALUES
-	("this/img", 26, "left");
+INSERT INTO content_images(filename, title, contentId, region) VALUES
+	("this/img", "My Image", 26, "left");
 
 
 
