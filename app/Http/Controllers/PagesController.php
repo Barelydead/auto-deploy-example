@@ -47,9 +47,9 @@ class PagesController extends Controller
     {
         $content = new Content();
         $images = new Images();
-        
+
         return view("future_products", [
-            "content"   => $content->getArticlesByCategory("future"),
+            "content"   => $content->getContentByCategory("future"),
             "images"    => $images->getImagesByContentCategory("future")
         ]);
     }
