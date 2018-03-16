@@ -36,9 +36,23 @@ class Content extends Model
      * @param string $category
      * @return array
      */
-    public function getArticlesByCategory($category)
+    public function getContentByCategory($category)
     {
         return $this->where('category', 'LIKE', $category)
+                    ->get();
+    }
+
+
+
+    /**
+     * Get content by id.
+     *
+     * @param string $contentId
+     * @return array
+     */
+    public function getContentById($contentId)
+    {
+        return $this->where('id', 'LIKE', $contentId)
                     ->get();
     }
 }

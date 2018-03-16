@@ -15,7 +15,7 @@ class Images extends Model
 
     public function getImagesByContentId($contentId)
     {
-        return $this->where('content_id LIKE ?', $contentId)
+        return $this->where('content_id', 'LIKE', $contentId)
                     ->get();
     }
 

@@ -12,8 +12,8 @@ use Illuminate\Support\Facades\Hash;
 use App\User;
 use App\Paginator as Paginator;
 use App\Form\UploadImage as UploadImage;
-
-
+use App\Content\Images;
+use App\Content\Content;
 
 class AdminController extends Controller
 {
@@ -219,13 +219,13 @@ class AdminController extends Controller
         return view("admin/content/viewcontent", $data);
     }
 
-    public function editContent($id)
+    public function editContent($contentId)
     {
-        $content = DB::select('select * from content WHERE id LIKE ?', [$id]);
-        $images  = DB::select('SELECT * FROM content_images WHERE contentId LIKE ?', [$id]);
+        $content = new Content();
+        $images  = new Images();
         return view("admin/content/edit", [
-            "content"   => $content,
-            "images"    => $images]);
+            "content"   => $content->getContentById($contentId),
+            "images"    => $images->getImagesByContentId($contentId)]);
     }
 
     public function editContentProcess(Request $request)
