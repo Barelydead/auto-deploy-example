@@ -20,33 +20,40 @@
                 <div class="logo-wrap">
                     <a href="#"><img src="{{ asset('img/rdc_logo.png') }}" alt="logo" class="contained-img"></a>
                 </div>
-                <ul class="nav navbar-nav">
-                    <li class="active"><a href="{{ URL::to('/') }}">Home</a></li>
-                    <li class="dropdown">
-                      <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Products <span class="caret"></span></a>
-                      <ul class="dropdown-menu" role="menu">
-                        <li><a href="{{ URL::to('/products-amu-coating') }}">Architectural & Multi-Use (AMU) Coating</a></li>
-                        <li><a href="{{ URL::to('/products-roof-coating') }}">Roof Coating</a></li>
-                      </ul>
-                    </li>
-                    <li class=""><a href="{{ URL::to('/future-products') }}">Future Products</a></li>
-                    <li class="dropdown">
-                      <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Uses/Applications <span class="caret"></span></a>
-                      <ul class="dropdown-menu" role="menu">
-                        <li><a href="#">drop link 1</a></li>
-                        <li><a href="#">drop link 2</a></li>
-                      </ul>
-                    </li>
-                    <li class="dropdown">
-                      <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Research & Development <span class="caret"></span></a>
-                      <ul class="dropdown-menu" role="menu">
-                        <li><a href="{{ URL::to('/performance-test') }}">Performance tests</a></li>
-                        <li><a href="#">drop link 2</a></li>
-                      </ul>
-                    </li>
-                    <li class=""><a href="{{ URL::to('/about') }}">About Us</a></li>
-                    <li class=""><a href="{{ URL::to('/contact') }}">Contact</a></li>
-                </ul>
+                <div id="navbar" class="navbar-collapse collapse">
+
+                    <ul class="nav navbar-nav">
+                        <li class="active"><a href="{{ URL::to('/') }}">Home</a></li>
+                        <li class="dropdown">
+                          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Products <span class="caret"></span></a>
+                          <ul class="dropdown-menu" role="menu">
+                            <li><a href="{{ URL::to('/products-amu-coating') }}">Architectural & Multi-Use (AMU) Coating</a></li>
+                            <li><a href="{{ URL::to('/products-roof-coating') }}">Roof Coating</a></li>
+                          </ul>
+                        </li>
+                        <li class=""><a href="{{ URL::to('/future-products') }}">Future Products</a></li>
+                        <li class="dropdown">
+                          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Uses/Applications <span class="caret"></span></a>
+                          <ul class="dropdown-menu" role="menu">
+                            <li><a href="#">drop link 1</a></li>
+                            <li><a href="#">drop link 2</a></li>
+                          </ul>
+                        </li>
+                        <li class="dropdown">
+                          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Research & Development <span class="caret"></span></a>
+                          <ul class="dropdown-menu" role="menu">
+                            <li><a href="{{ URL::to('/performance-test') }}">Performance tests</a></li>
+                            <li><a href="#">drop link 2</a></li>
+                          </ul>
+                        </li>
+                        <li class=""><a href="{{ URL::to('/about') }}">About Us</a></li>
+                        <li class=""><a href="{{ URL::to('/contact') }}">Contact</a></li>
+                    </ul>
+                </div>
+
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                  <i class="glyphicon glyphicon-menu-hamburger"></i>
+                </button>
                 @if (Route::has('login'))
                 <div class="top-right links">
                     @auth
