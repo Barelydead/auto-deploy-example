@@ -222,7 +222,7 @@ class AdminController extends Controller
     public function editContent($id)
     {
         $content = DB::select('select * from content WHERE id LIKE ?', [$id]);
-        $images  = DB::select('SELECT * FROM content_images WHERE content_id LIKE ?', [$id]);
+        $images  = DB::select('SELECT * FROM content_images WHERE contentId LIKE ?', [$id]);
         return view("admin/content/edit", [
             "content"   => $content,
             "images"    => $images]);
