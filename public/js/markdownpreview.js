@@ -1,13 +1,16 @@
 let preview = document.getElementById('preview');
-preview.innerHTML = '';
-prevdiv = document.createElement("mark-down");
-prevdiv.innerHTML = document.getElementById("form-element-data").value;
-preview.appendChild(prevdiv);
 
-function previewFunction(event) {
-    let preview = document.getElementById('preview');
-    preview.innerHTML = '';
-    prevdiv = document.createElement("mark-down");
-    prevdiv.innerHTML = document.getElementById("form-element-data").value;
-    preview.appendChild(prevdiv);
+// SHOWDOWN MARKDOWN FILTER
+var converter = new showdown.Converter(),
+    text      = document.getElementById("form-element-data").value,
+    html      = converter.makeHtml(text);
+
+preview.innerHTML = html;
+
+function previewFunction(e) {
+    e.preventDefault();
+    text      = document.getElementById("form-element-data").value,
+    html      = converter.makeHtml(text);
+
+    preview.innerHTML = html;
 }

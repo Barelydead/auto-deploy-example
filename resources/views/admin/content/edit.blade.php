@@ -23,7 +23,7 @@
                     </div> -->
                     <div class="form-group">
                         <label for="content">Content</label>
-                        <textarea id="form-element-data" class='form-control md-input' name="content" rows="8" cols="80" data-provide='markdown' style="resize: none;" onkeyup="previewFunction(event)" onfocus="previewFunction(event)">{{$row->content}}</textarea>
+                        <textarea id="form-element-data" class='form-control md-input' name="content" rows="8" cols="80" data-provide='markdown' style="resize: none;" onkeyup="previewFunction(event)" onfocus='previewFunction(event)'>{{$row->content}}</textarea>
                     </div>
 
 
@@ -52,9 +52,15 @@
         </div> <!-- /first column md-6 -->
 
         <div class='col-md-6'>
-            <h4 style='margin-top:110px;'>Preview</h4>
-            <div id='preview'>
-
+            <div class="row">
+                <div class="col-md-12">
+                    <h4 style='margin-top:110px;'>Preview</h4>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <div id='preview'></div>
+                </div>
             </div>
         </div> <!-- second column md-6 -->
 
