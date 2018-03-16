@@ -12,4 +12,10 @@ class Images extends Model
      * @var string
      */
     protected $table = 'content_images';
+
+    public function getImagesByContentId($contentId)
+    {
+        return $this->where('content_id LIKE ?', $contentId)
+                    ->get();
+    }
 }
