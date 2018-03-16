@@ -17,15 +17,15 @@ class Address extends Model
     {
         $addressStored = $this->first();
         return [
-            "companyName" => $addressStored->companyName,
-            "street1" => $addressStored->street1,
-            "street2" => $addressStored->street2,
-            "postalcode" => $addressStored->postalcode,
-            "city" => $addressStored->city,
-            "state" => $addressStored->state,
-            "country" => $addressStored->country,
-            "telephone" => $addressStored->telephone,
-            "email" => $addressStored->email
+            "companyName"   => $addressStored->companyName,
+            "street1"       => $addressStored->street1,
+            "street2"       => $addressStored->street2,
+            "postalcode"    => $addressStored->postalcode,
+            "city"          => $addressStored->city,
+            "state"         => $addressStored->state,
+            "country"       => $addressStored->country,
+            "telephone"     => $addressStored->telephone,
+            "email"         => $addressStored->email
         ];
     }
 }

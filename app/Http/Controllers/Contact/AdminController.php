@@ -17,7 +17,7 @@ class AdminController extends Controller
      */
     public function __construct()
     {
-        // $this->middleware('auth');
+        $this->middleware('auth');
     }
 
 
@@ -78,7 +78,6 @@ class AdminController extends Controller
     {
         $address = new Address();
         $address = $address->getAddress();
-
         return view('contact.admin.address', [
             "result" => null,
             "address" => $address
@@ -106,7 +105,6 @@ class AdminController extends Controller
             $address->country       = $request->post('country');
             $address->telephone     = $request->post('telephone');
             $address->email         = $request->post('email');
-
             $address->save();
             $result = true;
             $resultMsg = "<strong>Success!</strong> Successfully updated.";
@@ -131,7 +129,6 @@ class AdminController extends Controller
     public function getMessages(Request $request)
     {
         $paginator = new Paginator();
-        $category = "contact_messages";
         $tblprop = [
             "deleteColumn"  => "deleted_at",
             "pages"         => ($request->get('pages') != null) ? htmlentities($request->get('pages')) : 5,
@@ -143,8 +140,8 @@ class AdminController extends Controller
         $pagenum    = ($request->get('pn')) ? preg_replace('#[^0-9]#', '', $request->get('pn')) : 1;
         $tableHTML  = $paginator->paginator('contact_messages', $tblprop, $pagenum);
 
-        $message = new Message();
-        $messages = $message->getMessages("desc");
+        $message    = new Message();
+        $messages   = $message->getMessages("desc");
         return view('contact.admin.messages', [
             "messages"  => $messages,
             "tableHTML" => $tableHTML

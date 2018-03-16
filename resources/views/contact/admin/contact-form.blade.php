@@ -18,7 +18,6 @@
                     @endif
                 </div>
                 <div id="contact-form" class="col-md-8">
-                    <!-- <form method="post"> -->
                     {!! Form::open(['route' => 'admin.contact.contact-form.post']) !!}
                         <div class="form-group col-md-6">
                             {!! Form::label('reciever', 'Reciever Email*') !!}
@@ -39,7 +38,6 @@
                         <div class="form-group col-md-12">
                             {!! Form::submit('Submit', ['class' => 'btn btn-primary']) !!}
                         </div>
-                    <!-- </form> -->
                     {!! Form::close() !!}
                 </div>
             </div>

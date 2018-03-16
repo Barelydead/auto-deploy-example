@@ -31,7 +31,7 @@ class Content extends Model
 
 
     /**
-     * Get articles by category.
+     * Get content by category.
      *
      * @param string $category
      * @return array
