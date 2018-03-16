@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="csrf-token" content="{{ csrf_token() }}">
         <title>Red Diamond Coatins - @yield('title')</title>
         <link href="{{ asset('css/custom.css') }}" rel="stylesheet">
         <link href="{{ asset('css/app.css') }}" rel="stylesheet">
@@ -17,7 +19,7 @@
         </div>
 
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-        <script src="https://cdn.jsdelivr.net/npm/markdown-element/dist/markdown-element.min.js"></script>
+        <script src="https://cdn.rawgit.com/showdownjs/showdown/1.8.6/dist/showdown.min.js"></script><!-- https://github.com/showdownjs/showdown markdown filter -->
         <script src="{{ asset('js/app.js') }}"></script>
         <script src="{{ asset('js/markdownpreview.js') }}"></script>
         <script src="{{ asset('js/external/bootstrap-markdown.js') }}"></script>

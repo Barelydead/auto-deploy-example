@@ -222,6 +222,7 @@ class AdminController extends Controller
     public function editContent($id)
     {
         $content = DB::select('select * from content WHERE id LIKE ?', [$id]);
+
         return view("admin/content/edit", ["content" => $content]);
     }
 

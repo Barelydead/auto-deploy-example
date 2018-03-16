@@ -207,7 +207,7 @@ body {
     width: 100%;
     height: 185px;
     margin-top: 10px;
-    border: 1px solid #e4e4e4;
+    /* border: 1px solid #e4e4e4; */
 }
 
 /* ----------------- LIST CLASSES -----------------*/
@@ -527,4 +527,11 @@ body {
 #map {
     width: 100%;
     height: 400px;
+}
+
+/*------------------ media-querys -----------------*/
+@media only screen and (max-width: 800px) {
+    #flash {
+        display: none;
+    }
 }
