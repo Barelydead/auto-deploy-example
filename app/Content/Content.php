@@ -20,15 +20,12 @@ class Content extends Model
      * @param string
      * @return array
      */
-    public function searchTable($search) {
-
-        $articles = $this
-                    ->whereRaw('content LIKE ?', ["%$search%"])
+    public function searchTable($search)
+    {
+        return $this->whereRaw('content LIKE ?', ["%$search%"])
                     ->orWhereRaw('title LIKE ?', ["%$search%"])
                     ->orWhereRaw('category LIKE ?', ["%$search%"])
                     ->get();
-
-        return $articles;
     }
 
 
@@ -41,9 +38,7 @@ class Content extends Model
      */
     public function getArticlesByCategory($category)
     {
-        $articles = $this
-                ->where('category', $category)
-                ->get();
-        return $articles;
+        return $this->where('category', 'LIKE', $category)
+                    ->get();
     }
 }

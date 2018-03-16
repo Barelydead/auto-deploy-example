@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use App\Content\Content;
+use App\Content\Images;
 
 class PagesController extends Controller
 {
@@ -45,9 +46,11 @@ class PagesController extends Controller
     public function getFutureProducts()
     {
         $content = new Content();
-        $content = $content->getArticlesByCategory("future");
+        $images = new Images();
+        
         return view("future_products", [
-            "content" => $content
+            "content"   => $content->getArticlesByCategory("future"),
+            "images"    => $images->getImagesByContentCategory("future")
         ]);
     }
 
