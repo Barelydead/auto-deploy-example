@@ -325,7 +325,16 @@ class AdminController extends Controller
             ]
         );
 
+        $id = DB::getPdo()->lastInsertId();;
+
+        DB::table('content_images')->insert(
+            [
+                "content_id" => $id,
+                "filename" => $data['category'] . "/" . $request->post('image')
+            ]
+        );
+
             $returnurl = "admin/content/".$data['category'];
-            return redirect($returnurl);
+            return back()->with('status', 'Content successfully added');
     }
 }

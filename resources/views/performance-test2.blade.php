@@ -13,12 +13,17 @@ counting.")
 
 @section('content')
 <div class="container">
-    @foreach ($articles as $article)
+    @foreach ($content as $article)
         <div class="row">
             <div class="col-md-12">
                 <h1>{{ $article->title }}</h1>
                 <div class="article-text">
                     @markdown( $article->content )
+                    @foreach ($images as $img)
+                        @if ($img->content_id == $article->id)
+                            <img src="{{asset("img/upload/" . $img->filename)}}" class="thumbnailimg">
+                        @endif
+                    @endforeach
                 </div>
 
             </div>

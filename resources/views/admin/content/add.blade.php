@@ -4,6 +4,13 @@
 
 @section('content')
 <div class="container">
+    <div class="pillow-30">
+    </div>
+    @if (session('status'))
+        <div class="alert alert-success">
+            {{ session('status') }}
+        </div>
+    @endif
     <div class="row">
         <div class="col-md-12">
             <h1>Add</h1>
@@ -45,7 +52,7 @@
                 </div>
                 <div class="form-group">
                     <label for="image">Image</label>
-                    <input class="form-control" type="file" name="image">
+                    <input class="" type="file" name="image">
                 </div>
                 <div class="form-group">
                     <input class='btn btn-primary' type="submit" name="addbtn" value="Add">

@@ -84,11 +84,12 @@ class PagesController extends Controller
 
     public function getPerformance()
     {
-        $articles = DB::table('content')
-            ->where('subcategory', "performance")
-            ->get();
+        $content = new Content();
+        $images = new Images();
 
-
-        return view("performance-test2", ["articles" => $articles]);
+        return view("performance-test2", [
+            "content"   => $content->getContentByCategory("research"),
+            "images"    => $images->getImagesByContentCategory("research")
+        ]);
     }
 }
