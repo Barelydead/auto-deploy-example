@@ -18,7 +18,7 @@
         <div class="row">
             <div class="navbar-wrap flex-row space-between main-nav">
                 <div class="logo-wrap">
-                    <a href="#"><img src="{{ asset('img/rdc_logo.png') }}" alt="logo" class="contained-img"></a>
+                    <a href="{{ URL::to('/') }}"><img src="{{ asset('img/rdc_logo.png') }}" alt="logo" class="contained-img"></a>
                 </div>
                 <div id="navbar" class="navbar-collapse collapse">
 
