@@ -50,7 +50,7 @@ counting.")
         <?php
             $i += 1;
 
-            if ($i > count($colors)) {
+            if ($i == count($colors)) {
                 $i = 0;
             }
         ?>
