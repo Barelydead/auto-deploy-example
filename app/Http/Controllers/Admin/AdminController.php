@@ -233,11 +233,12 @@ class AdminController extends Controller
 
         $image = $request->file('image');
 
-        $data['id']         = $request->post('id');
-        $data['category']   = $request->post('category');
-        $data['title']      = $request->post('title');
-        $data['content']    = $request->post('content');
-        $data['imgurl']     = $request->post('currentImage');
+        $data['id']             = $request->post('id');
+        $data['category']       = $request->post('category');
+        $data['subcategory']    = $request->post('subcategory');
+        $data['title']          = $request->post('title');
+        $data['content']        = $request->post('content');
+        $data['imgurl']         = $request->post('currentImage');
 
 
         /*--------------------------------------------*/
@@ -261,9 +262,10 @@ class AdminController extends Controller
             DB::table('content')
                 ->where('id', $data['id'])
                 ->update([
-                    'title'     => $data['title'],
-                    'imgurl'    => $data['imgurl'],
-                    'content'   => $data['content']
+                    'title'         => $data['title'],
+                    'subCategory'   => $data['subcategory'],
+                    'imgurl'        => $data['imgurl'],
+                    'content'       => $data['content']
                 ]);
 
             if ($request->hasFile("image"))
