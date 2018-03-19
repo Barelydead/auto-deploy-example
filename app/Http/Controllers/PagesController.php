@@ -16,14 +16,23 @@ class PagesController extends Controller
 
     public function getAbout()
     {
-        $content = DB::table('content')
-                ->where('category', 'about')
-                ->first();
+        $subcategory = [
+            'history',
+            'preformance',
+            'future'
+        ];
+
+        foreach($subcategory as $sub) {
+            $content[$sub]  = DB::table('content')
+                                ->where('category', 'about')
+                                ->where('subCategory', $sub)
+                                ->first();
+        }
 
         // break up paraghraps to enable layout
         // $content->content = explode("\n", $content->content);
 
-        return view("about", ['content' => $content]);
+        return view("about", ["flashImage" => 'about.png'], ['content' => $content]);
     }
 
     public function getProductsAmu()
