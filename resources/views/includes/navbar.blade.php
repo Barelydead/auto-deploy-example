@@ -53,7 +53,7 @@
                 </div>
 
                 <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-                  <i class="glyphicon glyphicon-menu-hamburger"></i>
+                  <img src="{{asset('img/hamburger.png')}}" class="img-responsive hamburger-icon">
                 </button>
                 @if (Route::has('login'))
                 <div class="top-right links">

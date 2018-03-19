@@ -53,6 +53,11 @@ body {
 
 /* ----------------- NAVBAR SPECIFIC STYLING ----------------- */
 
+.hamburger-icon {
+    width: 60px;
+    margin: -29px 0;
+}
+
 .navbar-wrap {
     height: 80px;
 }
