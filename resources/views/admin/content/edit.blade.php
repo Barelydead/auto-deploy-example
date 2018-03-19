@@ -6,6 +6,13 @@
 
 @section('content')
 <div class="container">
+    <div class="pillow-30"></div>
+    @if (session('status'))
+        <div class="alert alert-success">
+            {{ session('status') }}
+        </div>
+    @endif
+
     <div class="row">
         <h1>Edit</h1>
     </div>
@@ -27,19 +34,17 @@
                     </div>
 
 
-                    <div class="form-group">
-                        <input type="hidden" name="currentImage" value="{{ $row->imgurl }}">
-                        @if ($row->imgurl != null)
-                            <img src="{{ url('/img/upload') }}/{{ $row->imgurl }}" class="thumbnailimg"><br>
-                            <input type="checkbox" name="imageremove" value="remove"> Delete<br>
-                        @endif
-                    </div>
+                    @foreach ($images as $image)
+                        <div class="form-group">
+                            <img src="{{asset('img/upload/' . $image->filename)}}" class="thumbnailimg"><br>
+                            <input type="checkbox" name="imageremove[]" value="{{ $image->id }}"> Delete<br>
+                        </div>
+                    @endforeach
+
                     <div class="form-group">
                         <label for="image">Upload Image</label>
-                        <input class="form-control" type="file" name="image">
+                        <input type="file" name="image">
                     </div>
-
-
 
                     <input type="hidden" name="id" value="{{$row->id}}">
                     <input type="hidden" name="category" value="{{$row->category}}">

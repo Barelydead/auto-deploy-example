@@ -239,6 +239,7 @@ class AdminController extends Controller
         $data['content']    = $request->post('content');
         $data['imgurl']     = $request->post('currentImage');
 
+
         /*--------------------------------------------*/
 
         $image = $request->file('image');
@@ -248,11 +249,15 @@ class AdminController extends Controller
             $data['imgurl']     = $request->post('category') . "/" . $image->getClientOriginalName();
         }
         if ($request->has('imageremove')) {
-            $data['imgurl'] = null;
+            foreach ($request->imageremove as $value) {
+                DB::table('content_images')
+                    ->where("id", $value)
+                    ->delete();
+            }
         }
         /*--------------------------------------------*/
 
-        if(isset($_POST['editbtn'])) {
+        if (isset($_POST['editbtn'])) {
             DB::table('content')
                 ->where('id', $data['id'])
                 ->update([
@@ -260,10 +265,17 @@ class AdminController extends Controller
                     'imgurl'    => $data['imgurl'],
                     'content'   => $data['content']
                 ]);
+
+            if ($request->hasFile("image"))
+            DB::table('content_images')
+                ->insert([
+                    "content_id" => $data['id'],
+                    "filename" => $data['imgurl']
+                ]);
         }
 
         $returnurl = "admin/content/".$data['category'];
-        return redirect($returnurl);
+        return back()->with('status', 'Content updated');
     }
 
     public function addContent(Request $request)
