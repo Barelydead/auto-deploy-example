@@ -304,33 +304,24 @@ body {
     max-width: 100%;
 }
 
-.img-h-200 {
-    max-height: 200px
-}
-
-.img-h-300 {
-    max-height: 300px
-}
-
-.img-h-500 {
-    max-height: 500px
-}
 
 .article-thumb-wrap {
     display: flex;
-    justify-content: left;
+    justify-content: center;
     flex-direction: row;
     flex-wrap: nowrap;
-    margin-top: 20px;
-    border-top: 2px solid #eee;
-    border-bottom: 2px solid #eee;
-    padding: 10px 0;
+    align-items: center;
+    background: rgba(192, 192, 192, 0.3);
 }
 
 .thumb-holder {
     width: 170px;
     margin: 0 10px 0 0;
     transition: width 0.8s ease-in-out;
+}
+
+.thumb-holder img {
+    margin: 10px 0;
 }
 
 .large-thumb {

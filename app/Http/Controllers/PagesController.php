@@ -63,12 +63,6 @@ class PagesController extends Controller
         ]);
     }
 
-
-    public function getPerformanceTest()
-    {
-        return view("performance-test", ["flashImage" => 'dumper-truck.jpg']);
-    }
-
     public function getLocation()
     {
         return view("location");
@@ -95,10 +89,13 @@ class PagesController extends Controller
     {
         $content = new Content();
         $images = new Images();
+        $colors = ["rdcseablue rdcwhite-text", "", "rdcsand", "", "rdcdeepred rdcwhite-text"];
 
         return view("performance-test2", [
             "content"   => $content->getContentByCategory("research"),
-            "images"    => $images->getImagesByContentCategory("research")
+            "images"    => $images->getImagesByContentCategory("research"),
+            "colors"    => $colors,
+            "flashImage" => 'dumper-truck.jpg'
         ]);
     }
 }
