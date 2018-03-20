@@ -64,10 +64,15 @@ body {
 }
 
 .main-nav .navbar-nav li a:hover,
-.main-nav .navbar-nav li a:active {
+.main-nav .navbar-nav li a:active,
+.main-nav .navbar-nav li a:focus {
     color: #9c4a4a;
     font-weight: bold;
-    background-color: inherit;
+    background-color: #ddd;
+}
+
+.nav .open > a, .main-nav .nav .open > a:focus, .nav .open > a:hover {
+    background-color: #ddd;
 }
 
 .top-nav .navbar-nav li a {
@@ -82,6 +87,9 @@ body {
     background-color: inherit;
 }
 
+.active a {
+    text-decoration: underline;
+}
 
 .navbar-wrap {
     height: 80px;
