@@ -80,6 +80,15 @@ body {
     font-weight: bold;
 }
 
+.dropdown-menu li a {
+    text-decoration: none;
+}
+
+.dropdown-menu li.active a {
+    text-decoration: underline;
+    background-color: inherit;
+}
+
 .top-nav .navbar-nav li a:hover,
 .top-nav .navbar-nav li a:active {
     color: lightgrey;
