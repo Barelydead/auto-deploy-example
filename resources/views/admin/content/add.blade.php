@@ -48,7 +48,7 @@
                 </div>
                 <div class="form-group">
                     <label for="title">Path</label>
-                    <input class='form-control' type="text" name="author" value="">
+                    <input class='form-control' type="text" name="path" value="">
                 </div>
                 <div class="form-group">
                     <label for="image">Image</label>
