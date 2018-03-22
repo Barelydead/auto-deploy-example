@@ -46,8 +46,8 @@
                         <li class="dropdown {{ Request::path() == "performance-test" ? 'active' : '' }}">
                           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Research & Development <span class="caret"></span></a>
                           <ul class="dropdown-menu" role="menu">
-                            <li {{ Request::path() == "/performance-test" ? 'class=active' : '' }}><a href="{{ URL::to('/performance-test') }}">Performance tests</a></li>
-                            <li><a href="#">drop link 2</a></li>
+                            <li {{ Request::path() == "/performance-test" ? 'class=active' : '' }}><a href="{{ URL::to('/research/performance-test') }}">Performance tests</a></li>
+                            <li {{ Request::path() == "/research" ? 'class=active' : '' }}><a href="{{ URL::to('/research/research') }}">Research results</a></li>
                           </ul>
                         </li>
                         <li {{ Request::path() == "about" ? 'class=active' : '' }}>

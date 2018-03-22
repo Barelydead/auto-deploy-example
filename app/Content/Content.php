@@ -43,6 +43,20 @@ class Content extends Model
     }
 
 
+    /**
+     * Get articles by category.
+     *
+     * @param string $category $sub
+     * @return array
+     */
+    public function getContentByCategoryAndSubcategory($category, $sub)
+    {
+        return $this->where('category', 'LIKE', $category)
+                    ->where('subCategory', 'LIKE', $sub)
+                    ->get();
+    }
+
+
 
     /**
      * Get content by id.

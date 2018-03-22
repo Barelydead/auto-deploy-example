@@ -115,9 +115,32 @@ body {
     background: #333;
 }
 
+
+
 .footer {
     padding: 38px 0;
+    border-top: 2px solid;
 }
+
+.copyright {
+    text-align: center;
+}
+
+.copyright img {
+    margin-bottom: 15px;
+    width: 225px;
+}
+
+.copyright p {
+    font-size: 12px;
+}
+
+.admin-login h2 {
+    border-bottom: 2px solid firebrick;
+    padding-bottom: 10px;
+}
+
+
 /* alignment */
 .center {
     text-align: center;

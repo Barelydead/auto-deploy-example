@@ -92,10 +92,16 @@ class PagesController extends Controller
         $colors = ["rdcseablue rdcwhite-text", "", "rdcsand", "", "rdcdeepred rdcwhite-text"];
 
         return view("performance-test2", [
-            "content"   => $content->getContentByCategory("research"),
+            "content"   => $content->getContentByCategoryAndSubcategory("research", "performance"),
             "images"    => $images->getImagesByContentCategory("research"),
             "colors"    => $colors,
             "flashImage" => 'dumper-truck.jpg'
         ]);
+    }
+
+
+    public function getResearch()
+    {
+        return view("research", ["flashImage" => 'research.jpeg']);
     }
 }
