@@ -36,13 +36,16 @@
                         </li> -->
                         <li {{ Request::path() == "future-products" ? 'class=active' : '' }}>
                             <a href="{{ URL::to('/future-products') }}">Future Products</a></li>
-                        <li class="dropdown {{ Request::path() == "uses-applications" ? 'active' : '' }}">
+                            <li {{ Request::path() == "/" ? 'class=active' : '' }}>
+                                <a href="{{ URL::to('/materials-applications') }}">Uses/Applications</a>
+                            </li>
+                        <!-- <li class="dropdown {{ Request::path() == "uses-applications" ? 'active' : '' }}">
                           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Uses/Applications <span class="caret"></span></a>
                           <ul class="dropdown-menu" role="menu">
                             <li><a href="{{ URL::to('/materials-applications') }}">Materials</a></li>
                             <li><a href="{{ URL::to('/commercial-applications') }}">Commercial applications</a></li>
                           </ul>
-                        </li>
+                        </li> -->
                         <li class="dropdown {{  Request::is('research/*') ? 'active' : '' }}">
                           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Research & Development <span class="caret"></span></a>
                           <ul class="dropdown-menu" role="menu">

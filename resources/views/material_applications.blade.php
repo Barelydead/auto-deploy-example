@@ -21,6 +21,7 @@
 <div class="row">
     <div class="container-flex">
         <div class="container">
+            <h3 class="text-danger">MATERIALS</h3>
             <div class="row">
                 <div class="col-md-3">
                     <div class="info-card">
@@ -93,10 +94,48 @@
                         <p></p>
                     </div>
                 </div>
-
             </div>
             <div class="pillow-30"></div>
+        </div>
+    </div>
+    <div class="container-flex rdc rdcseablue rdcwhite-text">
+        <div class="container">
+            <h3>COMMERCIAL APPLICATIONS</h3>
 
+            <div class="row">
+                <div class="col-md-3">
+                    <div class="info-card">
+                        <h4>HOUSES</h4>
+                        <img src="{{asset("img/commercials/commercial_houses.png")}}" alt="commericals houses" class="contained-img img-rounded">
+                        <div class="pillow-10"></div>
+                        <p></p>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="info-card">
+                        <h4>BRIDGES</h4>
+                        <img src="{{asset("img/commercials/commercial_bridges.png")}}" alt="commericals bridges" class="contained-img img-rounded">
+                        <div class="pillow-10"></div>
+                        <p></p>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="info-card">
+                        <h4>MILITARY</h4>
+                        <img src="{{asset("img/commercials/commercial_military.png")}}" alt="commericals military" class="contained-img img-rounded">
+                        <div class="pillow-10"></div>
+                        <p></p>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="info-card">
+                        <h4>STRIPING & MARKINGS</h4>
+                            <img src="{{asset("img/commercials/commercial_roads.png")}}" alt="commericals roads" class="contained-img img-rounded">
+                        <div class="pillow-10"></div>
+                        <p></p>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </div>
