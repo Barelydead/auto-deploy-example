@@ -63,6 +63,19 @@ class PagesController extends Controller
         ]);
     }
 
+    public function getMaterialsApplications()
+    {
+        // $content = new Content();
+        // $images = new Images();
+
+        // return view("future_products", [
+        //     "content"   => $content->getContentByCategory("future"),
+        //     "images"    => $images->getImagesByContentCategory("future")
+        // ]);
+
+        return view("material_applications", ["flashImage" => 'material.png']);
+    }
+
     public function getLocation()
     {
         return view("location");
