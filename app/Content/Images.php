@@ -27,6 +27,7 @@ class Images extends Model
     public function getImagesByContentId($contentId)
     {
         return $this->where('content_id', 'LIKE', $contentId)
+                    ->orderBy('region', 'asc')
                     ->get();
     }
 
@@ -46,6 +47,14 @@ class Images extends Model
                     ->get();
     }
 
+
+
+    /**
+     * Get image model
+     *
+     * @param integer $imageId
+     * @return void
+     */
     public function getImage($imageId)
     {
         return $this->find($imageId);

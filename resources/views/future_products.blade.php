@@ -1,4 +1,3 @@
-<?php var_dump($images); ?>
 @extends('layouts.standard')
 
 @section('title', 'Future Products')
@@ -24,19 +23,24 @@
             <div class="col-md-12">
                 <h3>Today...</h3>
             </div>
-
+            @if(isset($images[0]))
             <div class="col-md-6">
-                <img src="img/future_products/today1.jpg" class="contained-img full-width">
+                <img src="img/upload/{{ $images[0]->filename }}" title="{{ $images[0]->title }}" class="contained-img full-width">
             </div>
+            @endif
+            @if(isset($images[1]))
             <div class="col-md-6">
-                <img src="img/future_products/today2.jpg" class="contained-img full-width">
+                <img src="img/upload/{{ $images[1]->filename }}" title="{{ $images[1]->title }}" class="contained-img full-width">
             </div>
+            @endif
         </div>
         <div class="col-md-4">
             <div class="col-md-12">
                 <h3>Tomorrow...</h3>
             </div>
-            <img src="img/future_products/tomorrow.jpg" class="contained-img full-width">
+            @if(isset($images[2]))
+            <img src="img/upload/{{ $images[2]->filename }}" title="{{ $images[2]->title }}" class="contained-img full-width">
+            @endif
         </div>
     </div>
     <div class="pillow-30"></div>
@@ -51,10 +55,12 @@
                 <h2>@markdown($content[1]->title)</h2>
                 @markdown($content[1]->content)
             </div>
+            @if(isset($images[4]))
             <div class="col-md-4">
                 <div class="pillow-30"></div>
-                <img src="img/future_products/today1.jpg" class="contained-img full-width">
+                <img src="img/upload/{{ $images[3]->filename }}" title="{{ $images[3]->title }}" class="contained-img full-width">
             </div>
+            @endif
         </div>
         <div class="pillow-30"></div>
     </div>
@@ -65,10 +71,12 @@
 <div class="rdc rdcdeepred rdcwhite-text">
     <div class="container">
         <div class="row">
+            @if(isset($images[4]))
             <div class="col-md-4">
                 <div class="pillow-30"></div>
-                <img src="img/future_products/today1.jpg" class="contained-img full-width">
+                <img src="img/upload/{{ $images[4]->filename }}" title="{{ $images[4]->title }}" class="contained-img full-width">
             </div>
+            @endif
             <div class="col-md-8">
                 <h2>@markdown($content[2]->title)</h2>
                 @markdown($content[2]->content)
