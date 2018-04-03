@@ -33,19 +33,6 @@ class RouteTest extends TestCase
         $response->assertStatus(200);
     }
 
-    /**
-     * test search page with valid query
-     *
-     * @return void
-     */
-    public function testSearch()
-    {
-        $response = $this->get('/search?search=fire');
-
-        $response
-            ->assertStatus(200)
-            ->assertSeeText('FIRE RETARDANT');
-    }
 
     /**
      * test search page with invald query

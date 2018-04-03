@@ -1,3 +1,4 @@
+<?php var_dump($images); ?>
 @extends('layouts.standard')
 
 @section('title', 'Future Products')

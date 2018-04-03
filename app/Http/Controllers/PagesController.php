@@ -16,14 +16,23 @@ class PagesController extends Controller
 
     public function getAbout()
     {
-        $content = DB::table('content')
-                ->where('category', 'about')
-                ->first();
+        $subcategory = [
+            'history',
+            'preformance',
+            'future'
+        ];
+
+        foreach($subcategory as $sub) {
+            $content[$sub]  = DB::table('content')
+                                ->where('category', 'about')
+                                ->where('subCategory', $sub)
+                                ->first();
+        }
 
         // break up paraghraps to enable layout
         // $content->content = explode("\n", $content->content);
 
-        return view("about", ['content' => $content]);
+        return view("about", ["flashImage" => 'about.png'], ['content' => $content]);
     }
 
     public function getProductsAmu()
@@ -54,10 +63,17 @@ class PagesController extends Controller
         ]);
     }
 
-
-    public function getPerformanceTest()
+    public function getMaterialsApplications()
     {
-        return view("performance-test", ["flashImage" => 'dumper-truck.jpg']);
+        // $content = new Content();
+        // $images = new Images();
+
+        // return view("future_products", [
+        //     "content"   => $content->getContentByCategory("future"),
+        //     "images"    => $images->getImagesByContentCategory("future")
+        // ]);
+
+        return view("material_applications", ["flashImage" => 'material.png']);
     }
 
     public function getLocation()
@@ -84,11 +100,21 @@ class PagesController extends Controller
 
     public function getPerformance()
     {
-        $articles = DB::table('content')
-            ->where('subcategory', "performance")
-            ->get();
+        $content = new Content();
+        $images = new Images();
+        $colors = ["rdcseablue rdcwhite-text", "", "rdcsand", "", "rdcdeepred rdcwhite-text"];
+
+        return view("performance-test2", [
+            "content"   => $content->getContentByCategoryAndSubcategory("research", "performance"),
+            "images"    => $images->getImagesByContentCategory("research"),
+            "colors"    => $colors,
+            "flashImage" => 'dumper-truck.jpg'
+        ]);
+    }
 
 
-        return view("performance-test2", ["articles" => $articles]);
+    public function getResearch()
+    {
+        return view("research", ["flashImage" => 'research.jpeg']);
     }
 }

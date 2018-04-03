@@ -4,8 +4,8 @@
         <div class="row">
             <div class="top-nav flex-row space-end">
                 <ul class="nav navbar-nav">
-                    <li class="active"><a href="contact">Contact</a></li>
-                    <li class="active"><a href="{{ URL::to('/location') }}">Location</a></li>
+                    <li {{ Request::path() == "contact" ? 'class=active' : '' }}><a href="contact">Contact</a></li>
+                    <li {{ Request::path() == "location" ? 'class=active' : '' }}><a href="{{ URL::to('/location') }}">Location</a></li>
                 </ul>
                 <form class="form-inline" action="{{ URL::to('/search') }}">
                     <div class="form-group">
@@ -18,41 +18,50 @@
         <div class="row">
             <div class="navbar-wrap flex-row space-between main-nav">
                 <div class="logo-wrap">
-                    <a href="#"><img src="{{ asset('img/rdc_logo.png') }}" alt="logo" class="contained-img"></a>
+                    <a href="{{ URL::to('/') }}"><img src="{{ asset('img/rdc_logo.png') }}" alt="logo" class="contained-img"></a>
                 </div>
                 <div id="navbar" class="navbar-collapse collapse">
 
                     <ul class="nav navbar-nav">
-                        <li class="active"><a href="{{ URL::to('/') }}">Home</a></li>
-                        <li class="dropdown">
+                        <li {{ Request::path() == "/" ? 'class=active' : '' }}>
+                            <a href="{{ URL::to('/') }}">Home</a></li>
+                        <li {{ Request::path() == "products-amu-coating" ? 'class=active' : '' }}>
+                            <a href="{{ URL::to('/products-amu-coating') }}">Product</a></li>
+                        <!-- <li class="dropdown">
                           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Products <span class="caret"></span></a>
                           <ul class="dropdown-menu" role="menu">
                             <li><a href="{{ URL::to('/products-amu-coating') }}">Architectural & Multi-Use (AMU) Coating</a></li>
                             <li><a href="{{ URL::to('/products-roof-coating') }}">Roof Coating</a></li>
                           </ul>
-                        </li>
-                        <li class=""><a href="{{ URL::to('/future-products') }}">Future Products</a></li>
-                        <li class="dropdown">
+                        </li> -->
+                        <li {{ Request::path() == "future-products" ? 'class=active' : '' }}>
+                            <a href="{{ URL::to('/future-products') }}">Future Products</a></li>
+                            <li {{ Request::path() == "/" ? 'class=active' : '' }}>
+                                <a href="{{ URL::to('/materials-applications') }}">Uses/Applications</a>
+                            </li>
+                        <!-- <li class="dropdown {{ Request::path() == "uses-applications" ? 'active' : '' }}">
                           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Uses/Applications <span class="caret"></span></a>
                           <ul class="dropdown-menu" role="menu">
-                            <li><a href="#">drop link 1</a></li>
-                            <li><a href="#">drop link 2</a></li>
+                            <li><a href="{{ URL::to('/materials-applications') }}">Materials</a></li>
+                            <li><a href="{{ URL::to('/commercial-applications') }}">Commercial applications</a></li>
                           </ul>
-                        </li>
-                        <li class="dropdown">
+                        </li> -->
+                        <li class="dropdown {{  Request::is('research/*') ? 'active' : '' }}">
                           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Research & Development <span class="caret"></span></a>
                           <ul class="dropdown-menu" role="menu">
-                            <li><a href="{{ URL::to('/performance-test') }}">Performance tests</a></li>
-                            <li><a href="#">drop link 2</a></li>
+                            <li {{ Request::path() == "research/performance-test" ? 'class=active' : '' }}><a href="{{ URL::to('/research/performance-test') }}">Performance tests</a></li>
+                            <li {{ Request::path() == "research/research" ? 'class=active' : '' }}><a href="{{ URL::to('/research/research') }}">Research results</a></li>
                           </ul>
                         </li>
-                        <li class=""><a href="{{ URL::to('/about') }}">About Us</a></li>
-                        <li class=""><a href="{{ URL::to('/contact') }}">Contact</a></li>
+                        <li {{ Request::path() == "about" ? 'class=active' : '' }}>
+                            <a href="{{ URL::to('/about') }}">About Us</a></li>
+                        <li {{ Request::path() == "contact" ? 'class=active' : '' }}>
+                            <a href="{{ URL::to('/contact') }}">Contact</a></li>
                     </ul>
                 </div>
 
                 <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-                  <i class="glyphicon glyphicon-menu-hamburger"></i>
+                  <img src="{{asset('img/hamburger.png')}}" class="img-responsive hamburger-icon">
                 </button>
                 @if (Route::has('login'))
                 <div class="top-right links">

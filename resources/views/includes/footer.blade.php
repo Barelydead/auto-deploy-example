@@ -3,33 +3,44 @@
 
         <div class="row">
             <div class="col-md-4">
-                <ul class="nav">
-                    <li class="active"><a href="#" title="Home">Home</a></li>
-                    <li class=""><a href="#" title="Products">Prodcuts</a></li>
-                    <li class=""><a href="{{ URL::to('/future-products') }}" title="Future Products">Future Products</a></li>
-                    <li class=""><a href="#" title="Uses/Applications">Uses/Applications</a></li>
-                    <li class=""><a href="#" title="Research & Development">Research & Development</a></li>
-                    <li class=""><a href="{{ URL::to('/about') }}" title="About Us">About Us</a></li>
-                </ul>
+                <h2>Lifetime warrenty</h2>
+                <p>RDC carries a LIFETIME Warranty against paint failure related to the
+                properties and performance of the coating. Because RDC has such an
+                extraordinary product life, this will reduce the need for future recoats
+                preserving our precious natural recourses and lessening the burden on
+                our landfills due to less use and less disposal of plastic and metal paint
+                cans and lids.</p>
+            </div>
+            <div class="col-md-4 copyright">
+                <img src="{{asset("img/rdc_logo_fullsize_desat.png")}}" alt="logo">
+                <p class="text-small">Copyright ©Red Diamond Coatings, Inc.</p>
+                <p>All Rights Reserved</p>
             </div>
             <div class="col-md-4">
-                <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed massa est, viverra vitae ligula ut, euismod commodo nisl. Quisque ut tortor viverra, bibendum nunc in, varius magna. Donec facilisis auctor tellus, sed ornare est vehicula sed. Sed cursus lacus ut nisl ultrices aliquam. Nullam a ante eget risus ullamcorper elementum non nec augue.
-                </p>
+                <h2>Lifetime warrenty</h2>
+                <p>RDC carries a LIFETIME Warranty against paint failure related to the
+                properties and performance of the coating. Because RDC has such an
+                extraordinary product life, this will reduce the need for future recoats
+                preserving our precious natural recourses and lessening the burden on
+                our landfills due to less use and less disposal of plastic and metal paint
+                cans and lids.</p>
+                {{-- <div class="admin-login">
+                    <h2>Administator login</h2>
+                    <form class="" action="" method="">
+                        <div class="form-group">
+                            <label for="username">Username:</label>
+                            <input type="text" class="form-control" name="username" value="">
+                        </div>
+                        <div class="form-group">
+                            <label for="password">Password:</label>
+                            <input type="password" class="form-control" name="password" value="">
+                        </div>
+                        <div class="form-group">
+                            <input type="submit" class="btn btn-defualt" name="login" value="login">
+                        </div>
+                    </form>
+                </div> --}}
             </div>
-            <div class="col-md-4">
-                <ul class="nav">
-                    <li class="active"><a href="#" title="Home">Home</a></li>
-                    <li class=""><a href="#" title="Products">Prodcuts</a></li>
-                    <li class=""><a href="{{ URL::to('/future-products') }}" title="Future Products">Future Products</a></li>
-                    <li class=""><a href="#" title="Uses/Applications">Uses/Applications</a></li>
-                    <li class=""><a href="#" title="Research & Development">Research & Development</a></li>
-                    <li class=""><a href="{{ URL::to('/about') }}" title="About Us">About Us</a></li>
-                </ul>
-            </div>
-        </div>
-        <div class="row">
-            <p>Copyright ©2018 Red Diamond Coatings. All Rights Reserved.</p>
         </div>
     </div>
 </footer>

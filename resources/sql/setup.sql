@@ -75,6 +75,9 @@ CREATE TABLE content_images (
     `title` VARCHAR(100),
     `content_id` INTEGER,
     `region` INTEGER,
+    `created_at` DATETIME DEFAULT CURRENT_TIMESTAMP,
+    `updated_at` DATETIME ON UPDATE CURRENT_TIMESTAMP,
+    `deleted_at` DATETIME,
 
     FOREIGN KEY (`content_id`) REFERENCES `content`(`id`)
 );

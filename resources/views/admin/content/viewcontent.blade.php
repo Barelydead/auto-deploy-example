@@ -51,6 +51,7 @@
                                 <th>ID</th>
                                 <th>TYPE</th>
                                 <th>CATEGORY</th>
+                                <th>SUBCATEGORY</th>
                                 <th>TITLE</th>
                                 <th>CONTENT</th>
                                 <th>ACTIONS</th>
@@ -65,6 +66,7 @@
                                         <td>{{ $row->id }}</td>
                                         <td>{{ $row->type }}</td>
                                         <td>{{ $row->category }}</td>
+                                        <td>{{ $row->subCategory }}</td>
                                         <td>
                                             <div id='firstname_{{$row->id}}_id' onclick="toForm('firstname_{{$row->id}}_id', '{{$row->id}}', '{{$row->title}}', 'title')">
                                                 {{ $row->title }}

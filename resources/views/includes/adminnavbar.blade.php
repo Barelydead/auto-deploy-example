@@ -4,8 +4,8 @@
         <div class="row">
             <div class="top-nav flex-row space-end">
                 <ul class="nav navbar-nav">
-                    <li class="active"><a href="contact">Contact</a></li>
-                    <li class="active"><a href="#">Location</a></li>
+                    <li><a href="contact">Contact</a></li>
+                    <li><a href="#">Location</a></li>
                 </ul>
                 <form class="form-inline" action="{{ URL::to('/search') }}">
                     <div class="form-group">
@@ -18,11 +18,11 @@
         <div class="row">
             <div class="navbar-wrap flex-row space-between main-nav">
                 <div class="logo-wrap">
-                    <a href="#"><img src="{{asset('img/rdc_logo.png')}}" alt="logo" class="contained-img"></a>
+                    <a href="{{ URL::to('/') }}"><img src="{{asset('img/rdc_logo.png')}}" alt="logo" class="contained-img"></a>
                 </div>
                 <ul class="nav navbar-nav">
-                    <li class="active"><a href="{{ URL::to('/') }}">Home</a></li>
-                    <li class="dropdown">
+                    <li><a href="{{ URL::to('/admin') }}">Home</a></li>
+                    <li class="dropdown {{ Request::is('admin/content/*') ? 'active' : '' }}">
                       <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Edit Content <span class="caret"></span></a>
                       <ul class="dropdown-menu" role="menu">
                         <li><a href="{{ URL::to('/admin/content/all') }}">All - Search field</a></li>
@@ -34,11 +34,13 @@
                       </ul>
                     </li>
                     @if (Auth::user()->admin)
-                        <li class="active"><a href="{{ URL::to('/admin/user/edit-users') }}">Edit users</a></li>
+                        <li {{ Request::path() == "admin/user/edit-users" ? 'class=active' : '' }}>
+                            <a href="{{ URL::to('/admin/user/edit-users') }}">Edit users</a></li>
                     @endif
-                    <li class="active"><a href="{{ URL::to('/admin/user/changepassword') }}">Change password</a></li>
+                    <li {{ Request::path() == "admin/user/changepassword" ? 'class=active' : '' }}>
+                        <a href="{{ URL::to('/admin/user/changepassword') }}">Change password</a></li>
 
-                    <li class="dropdown">
+                    <li class="dropdown {{ Request::is('admin/contact/*') ? 'active' : '' }}">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Contact <span class="caret"></span></a>
                         <ul class="dropdown-menu" role="menu">
                             <li><a href="{{ URL::to('/admin/contact/contact-form') }}">Configuration</a></li>
@@ -47,6 +49,7 @@
                         </ul>
                     </li>
                 </ul>
+
                 @if (Route::has('login'))
                 <div class="top-right links">
                     @auth

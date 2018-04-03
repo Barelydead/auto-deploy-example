@@ -230,14 +230,16 @@ class AdminController extends Controller
 
     public function editContentProcess(Request $request)
     {
-
+        $images = new Images();
         $image = $request->file('image');
 
-        $data['id']         = $request->post('id');
-        $data['category']   = $request->post('category');
-        $data['title']      = $request->post('title');
-        $data['content']    = $request->post('content');
-        $data['imgurl']     = $request->post('currentImage');
+        $data['id']             = $request->post('id');
+        $data['category']       = $request->post('category');
+        $data['subcategory']    = $request->post('subcategory');
+        $data['title']          = $request->post('title');
+        $data['content']        = $request->post('content');
+        $data['imgurl']         = $request->post('currentImage');
+
 
         /*--------------------------------------------*/
 
@@ -247,23 +249,42 @@ class AdminController extends Controller
             $uImage->uploadImage();
             $data['imgurl']     = $request->post('category') . "/" . $image->getClientOriginalName();
         }
+        if ($request->has('imageid')) {
+            foreach ($request->imageid as $key => $value) {
+                $imageObj = $images->getImage($value);
+                $imageObj->title = $request->imagetitle[$key];
+                $imageObj->region = $request->imageregion[$key];
+                $imageObj->save();
+            }
+        }
         if ($request->has('imageremove')) {
-            $data['imgurl'] = null;
+            foreach ($request->imageremove as $value) {
+                $imageObj = $images->getImage($value);
+                $imageObj->delete();
+            }
         }
         /*--------------------------------------------*/
 
-        if(isset($_POST['editbtn'])) {
+        if (isset($_POST['editbtn'])) {
             DB::table('content')
                 ->where('id', $data['id'])
                 ->update([
-                    'title'     => $data['title'],
-                    'imgurl'    => $data['imgurl'],
-                    'content'   => $data['content']
+                    'title'         => $data['title'],
+                    'subCategory'   => $data['subcategory'],
+                    'imgurl'        => $data['imgurl'],
+                    'content'       => $data['content']
                 ]);
+
+            if ($request->hasFile("image")) {
+                $newImage = new Images();
+                $newImage->content_id = $data['id'];
+                $newImage->filename = $data['imgurl'];
+                $newImage->save();
+            }
         }
 
         $returnurl = "admin/content/".$data['category'];
-        return redirect($returnurl);
+        return back()->with('status', 'Content updated');
     }
 
     public function addContent(Request $request)
@@ -313,7 +334,16 @@ class AdminController extends Controller
             ]
         );
 
+        $id = DB::getPdo()->lastInsertId();;
+
+        DB::table('content_images')->insert(
+            [
+                "content_id" => $id,
+                "filename" => $data['category'] . "/" . $request->post('image')
+            ]
+        );
+
             $returnurl = "admin/content/".$data['category'];
-            return redirect($returnurl);
+            return back()->with('status', 'Content successfully added');
     }
 }
