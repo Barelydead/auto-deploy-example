@@ -33,10 +33,15 @@
                         <textarea id="form-element-data" class='form-control md-input' name="content" rows="8" cols="80" data-provide='markdown' style="resize: none;" onkeyup="previewFunction(event)" onfocus='previewFunction(event)'>{{$row->content}}</textarea>
                     </div>
 
-
                     @foreach ($images as $image)
                         <div class="form-group">
+                            <input type="hidden" name="imageid[]" value="{{ $image->id }}">
                             <img src="{{asset('img/upload/' . $image->filename)}}" class="thumbnailimg"><br>
+                            <label for="imgurl">Title</label>
+                            <input class='form-control' type="text" name="imagetitle[]" value="{{$image->title}}">
+                            <label for="imgurl">Region</label>
+                            <input class='form-control' type="text" name="imageregion[]" value="{{$image->region}}">
+
                             <input type="checkbox" name="imageremove[]" value="{{ $image->id }}"> Delete<br>
                         </div>
                     @endforeach

@@ -230,7 +230,7 @@ class AdminController extends Controller
 
     public function editContentProcess(Request $request)
     {
-
+        $images = new Images();
         $image = $request->file('image');
 
         $data['id']             = $request->post('id');
@@ -249,11 +249,18 @@ class AdminController extends Controller
             $uImage->uploadImage();
             $data['imgurl']     = $request->post('category') . "/" . $image->getClientOriginalName();
         }
+        if ($request->has('imageid')) {
+            foreach ($request->imageid as $key => $value) {
+                $imageObj = $images->getImage($value);
+                $imageObj->title = $request->imagetitle[$key];
+                $imageObj->region = $request->imageregion[$key];
+                $imageObj->save();
+            }
+        }
         if ($request->has('imageremove')) {
             foreach ($request->imageremove as $value) {
-                DB::table('content_images')
-                    ->where("id", $value)
-                    ->delete();
+                $imageObj = $images->getImage($value);
+                $imageObj->delete();
             }
         }
         /*--------------------------------------------*/
@@ -268,12 +275,12 @@ class AdminController extends Controller
                     'content'       => $data['content']
                 ]);
 
-            if ($request->hasFile("image"))
-            DB::table('content_images')
-                ->insert([
-                    "content_id" => $data['id'],
-                    "filename" => $data['imgurl']
-                ]);
+            if ($request->hasFile("image")) {
+                $newImage = new Images();
+                $newImage->content_id = $data['id'];
+                $newImage->filename = $data['imgurl'];
+                $newImage->save();
+            }
         }
 
         $returnurl = "admin/content/".$data['category'];

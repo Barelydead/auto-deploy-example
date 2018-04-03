@@ -3,15 +3,18 @@
 namespace App\Content;
 
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\SoftDeletes;
 
 class Images extends Model
 {
+    use SoftDeletes;
     /**
      * Table name
      *
      * @var string
      */
     protected $table = 'content_images';
+    protected $dates = ['deleted_at'];
 
     public function getImagesByContentId($contentId)
     {
@@ -26,5 +29,10 @@ class Images extends Model
                     ->select('content_images.*', 'content.category')
                     ->where('content.category', 'LIKE', $category)
                     ->get();
+    }
+
+    public function getImage($imageId)
+    {
+        return $this->find($imageId);
     }
 }
