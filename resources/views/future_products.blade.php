@@ -4,7 +4,7 @@
 
 <!-- @section('flash_img', "future_products.jpg") -->
 @section('flash_title', "Future Products")
-@section('flash_text', "Our high quality products.")
+@section('flash_text', "Our high quality products for the future.")
 
 @section('content')
 @if(isset($content[0]))

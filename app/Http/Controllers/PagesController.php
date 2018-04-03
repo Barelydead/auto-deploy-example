@@ -58,8 +58,9 @@ class PagesController extends Controller
         $images = new Images();
 
         return view("future_products", [
-            "content"   => $content->getContentByCategory("future"),
-            "images"    => $images->getImagesByContentCategory("future")
+            "content"       => $content->getContentByCategory("future"),
+            "images"        => $images->getImagesByContentCategory("future"),
+            "flashImage"    => 'future-products.jpg'
         ]);
     }
 
