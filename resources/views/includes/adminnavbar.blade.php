@@ -60,8 +60,43 @@
 
                         <ul class="dropdown-menu">
                             <li>
-                                <a href="{{ route('adminindex') }}">
-                                    Admin
+                                <a href="{{ URL::to('/') }}">
+                                    Home
+                                </a>
+                            </li>
+                            <li>
+                                <a href="{{ URL::to('/products-amu-coating') }}">
+                                    Product
+                                </a>
+                            </li>
+                            <li>
+                                <a href="{{ URL::to('/future-products') }}">
+                                    Future Products
+                                </a>
+                            </li>
+                            <li>
+                                <a href="{{ URL::to('/materials-applications') }}">
+                                    Uses/Applications
+                                </a>
+                            </li>
+                            <li>
+                                <a href="{{ URL::to('/research/performance-test') }}">
+                                    R&D - preformance tests
+                                </a>
+                            </li>
+                            <li>
+                                <a href="{{ URL::to('/research/research') }}">
+                                    R&D - research results
+                                </a>
+                            </li>
+                            <li>
+                                <a href="{{ URL::to('/about') }}">
+                                    About Us
+                                </a>
+                            </li>
+                            <li>
+                                <a href="{{ URL::to('/contact') }}">
+                                    Contact
                                 </a>
                             </li>
                             <li>

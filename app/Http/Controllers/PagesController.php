@@ -39,12 +39,17 @@ class PagesController extends Controller
     {
         // Nytt
         // Se till att lägga in imgurl i database och sätt subcategory till thumbnail för products
-        $thumbnails = DB::select('select * from content WHERE category LIKE ? AND subcategory LIKE ?', ["products", "thumbnail"]);
+        // $thumbnails = DB::select('select * from content WHERE category LIKE ? AND subcategory LIKE ?', ["products", "thumbnail"]);
+
+        $content = new Content();
+        $images = new Images();
 
         $data = [
-            'thumbnails'    => $thumbnails
+            "content"       => $content->getContentByCategory("products"),
+            "images"        => $images->getImagesByContentCategory("products"),
+            "flashImage"    => 'product.png'
         ];
-        return view("products_amu2", ["flashImage" => 'product.png'], $data);
+        return view("products_amu2", $data);
     }
 
     public function getProductsRoof()

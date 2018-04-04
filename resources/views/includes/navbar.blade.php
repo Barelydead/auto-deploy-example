@@ -36,7 +36,7 @@
                         </li> -->
                         <li {{ Request::path() == "future-products" ? 'class=active' : '' }}>
                             <a href="{{ URL::to('/future-products') }}">Future Products</a></li>
-                            <li {{ Request::path() == "/" ? 'class=active' : '' }}>
+                            <li {{ Request::path() == "materials-applications" ? 'class=active' : '' }}>
                                 <a href="{{ URL::to('/materials-applications') }}">Uses/Applications</a>
                             </li>
                         <!-- <li class="dropdown {{ Request::path() == "uses-applications" ? 'active' : '' }}">
