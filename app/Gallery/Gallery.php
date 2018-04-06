@@ -30,7 +30,7 @@ class Gallery
      * @param Array $images
      * @return void
      */
-    public function init(Object $images) {
+    public function init($images) {
         foreach ($images as $img) {
             array_push($this->images, "/img/upload/" . $img->filename);
         }
