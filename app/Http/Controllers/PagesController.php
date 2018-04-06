@@ -71,15 +71,29 @@ class PagesController extends Controller
 
     public function getMaterialsApplications()
     {
-        // $content = new Content();
-        // $images = new Images();
+        $content = new Content();
 
-        // return view("future_products", [
-        //     "content"   => $content->getContentByCategory("future"),
-        //     "images"    => $images->getImagesByContentCategory("future")
-        // ]);
+        $data = [
+            "wood"          => $content->getContentById("49"),
+            "asphalt"       => $content->getContentById("50"),
+            "glass"         => $content->getContentById("51"),
+            "concrete"      => $content->getContentById("52"),
+            "vinyl"         => $content->getContentById("53"),
+            "steel"         => $content->getContentById("54"),
+            "plastic"       => $content->getContentById("55"),
+            "masonry"       => $content->getContentById("56"),
+            "houses"        => $content->getContentById("57"),
+            "military"      => $content->getContentById("58"),
+            "bridges"       => $content->getContentById("59"),
+            "stripings"      => $content->getContentById("60"),
+            "turbines"      => $content->getContentById("61"),
+            "roofs"         => $content->getContentById("62"),
+            "pipelines"     => $content->getContentById("63"),
+            "ports"         => $content->getContentById("64"),
+            "flashImage"    => 'material.png'
+        ];
 
-        return view("material_applications", ["flashImage" => 'material.png']);
+        return view("material_applications", $data);
     }
 
     public function getLocation()

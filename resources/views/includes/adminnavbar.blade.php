@@ -30,6 +30,7 @@
                         <li><a href="{{ URL::to('/admin/content/about') }}">About Us</a></li>
                         <li><a href="{{ URL::to('/admin/content/products') }}">Product</a></li>
                         <li><a href="{{ URL::to('/admin/content/future') }}">Future products</a></li>
+                        <li><a href="{{ URL::to('/admin/content/applications') }}">Uses/Applications</a></li>
                         <li><a href="{{ URL::to('/admin/content/research') }}">Research</a></li>
                       </ul>
                     </li>

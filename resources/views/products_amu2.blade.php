@@ -36,7 +36,6 @@ revolutionary, highly innovative coating products</p>
                                     <img class='contained-img img-rounded' src='{{asset($imageurl)}}' alt="prodamuimage">
                                     <h5 class="text-danger">@markdown($thumbnail->title)</h5>
                                     @markdown($thumbnail->content)
-
                                 </div>
                             </div>
                         @endif
