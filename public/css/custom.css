@@ -124,6 +124,10 @@ body {
     background: #333;
 }
 
+.no-margin {
+    margin: 0;
+}
+
 
 
 .footer {

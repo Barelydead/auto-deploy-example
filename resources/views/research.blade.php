@@ -23,53 +23,6 @@
                             <p>{{ $article->content }}</p>
                         </div>
                     @endforeach
-
-
-{{--
-                    <div class="col-md-3">
-                        <h4>Breathable Water Barrier</h4>
-                        <p>Most water barrier products do not breathe, trapping moisture within the
-                        substrate, causing delamination and degradation to the substrate and
-                        promotes the growth of mold and mildew. RDC does not allow water to
-                        Penetrate the coating and subsequent substrate, yet it allows any
-                        moisture vapor within the substrate to escape and evaporate. RDC was
-                        specifically engineered and formulated to achieve a perm rating of 12.
-                        This is because a 12-perm rating is precisely what makes RDC a
-                        perfectly balanced/formulated (breathable) water barrier coating.</p>
-                    </div>
-                    <div class="col-md-3">
-                        <h4>Breathable Water Barrier</h4>
-                        <p>Most water barrier products do not breathe, trapping moisture within the
-                        substrate, causing delamination and degradation to the substrate and
-                        promotes the growth of mold and mildew. RDC does not allow water to
-                        Penetrate the coating and subsequent substrate, yet it allows any
-                        moisture vapor within the substrate to escape and evaporate. RDC was
-                        specifically engineered and formulated to achieve a perm rating of 12.
-                        This is because a 12-perm rating is precisely what makes RDC a
-                        perfectly balanced/formulated (breathable) water barrier coating.</p>
-                    </div>
-                    <div class="col-md-3">
-                        <h4>Low Volatile Organic Compound (VOC)Content</h4>
-                        <p>Most water barrier products do not breathe, trapping moisture within the
-                        substrate, causing delamination and degradation to the substrate and
-                        promotes the growth of mold and mildew. RDC does not allow water to
-                        Penetrate the coating and subsequent substrate, yet it allows any
-                        moisture vapor within the substrate to escape and evaporate. RDC was
-                        specifically engineered and formulated to achieve a perm rating of 12.
-                        This is because a 12-perm rating is precisely what makes RDC a
-                        perfectly balanced/formulated (breathable) water barrier coating.</p>
-                    </div>
-                    <div class="col-md-3">
-                        <h4>Breathable Water Barrier</h4>
-                        <p>Most water barrier products do not breathe, trapping moisture within the
-                        substrate, causing delamination and degradation to the substrate and
-                        promotes the growth of mold and mildew. RDC does not allow water to
-                        Penetrate the coating and subsequent substrate, yet it allows any
-                        moisture vapor within the substrate to escape and evaporate. RDC was
-                        specifically engineered and formulated to achieve a perm rating of 12.
-                        This is because a 12-perm rating is precisely what makes RDC a
-                        perfectly balanced/formulated (breathable) water barrier coating.</p>
-                    </div> --}}
                 </div>
             </article>
         </div>

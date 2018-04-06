@@ -7,7 +7,7 @@
                     <li {{ Request::path() == "contact" ? 'class=active' : '' }}><a href="contact">Contact</a></li>
                     <li {{ Request::path() == "location" ? 'class=active' : '' }}><a href="{{ URL::to('/location') }}">Location</a></li>
                 </ul>
-                <form class="form-inline" action="{{ URL::to('/search') }}">
+                <form class="form-inline no-margin" action="{{ URL::to('/search') }}">
                     <div class="form-group">
                         <input type="text" name="search" class="form-control" placeholder="search page content">
                     </div>
