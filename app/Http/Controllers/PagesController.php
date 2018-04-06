@@ -14,7 +14,7 @@ class PagesController extends Controller
     {
         $gallery = new Gallery();
 
-        $gallery->init(["/img/upload/research/paint.jpg", "/img/upload/research/paint.jpg", "/img/upload/research/paint.jpg", "/img/upload/research/paint.jpg", "/img/upload/research/jars.jpg", "/img/upload/research/jars.jpg", "/img/upload/research/jars.jpg", "/img/upload/research/jars.jpg", "/img/upload/research/jars.jpg", "/img/upload/research/jars.jpg", "/img/upload/research/jars.jpg", "/img/upload/research/jar2.jpg", "/img/upload/research/jar2.jpg", "/img/upload/research/jar2.jpg", "/img/upload/research/jar2.jpg", "/img/upload/research/jars.jpg", "/img/upload/research/jars.jpg", "/img/upload/research/jars.jpg", "/img/upload/research/jars.jpg", "/img/upload/research/jars.jpg", "/img/upload/research/jars.jpg", "/img/upload/research/jars.jpg", "/img/upload/research/jars.jpg", "/img/upload/research/jars.jpg"]);
+        $gallery->init(["/img/upload/home/home01.jpg", "/img/upload/home/home02.jpg", "/img/upload/home/home03.jpg", "/img/upload/home/home04.jpg", "/img/upload/home/home05.jpg", "/img/upload/home/home06.jpg", "/img/upload/home/home07.png", "/img/upload/home/home08.jpg", "/img/upload/home/home09.jpg", "/img/upload/home/home10.jpg", "/img/upload/home/home11.jpg", "/img/upload/home/home12.jpg", "/img/upload/home/home13.jpg", "/img/upload/home/home21.jpg", "/img/upload/home/home15.jpg", "/img/upload/home/home16.jpg", "/img/upload/home/home17.jpg", "/img/upload/home/home22.jpg", "/img/upload/home/home27.jpg", "/img/upload/home/home20.jpg"]);
 
         return view("home2", [
                 "gallery" => $gallery->getHtmlGrid()

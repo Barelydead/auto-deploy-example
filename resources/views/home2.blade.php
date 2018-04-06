@@ -14,7 +14,6 @@
                 <div class="row">
                     <div class="col-md-12">
                         <h1>Welcome</h1>
-                        <div class="pillow-20"></div>
                     </div>
                 </div>
 
@@ -30,11 +29,10 @@
         </div>
     </div>
 
-
-    <div class="pillow-50"></div>
-
     <div class="container-flex">
         <div class="masonry">
+            <div id="image-viewer" class="gallery-overlay">
+            </div>
             {!! $gallery !!}
         </div>
     </div>

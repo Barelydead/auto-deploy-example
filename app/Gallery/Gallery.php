@@ -2,7 +2,10 @@
 
 namespace App\Gallery;
 
-
+/**
+ * Gallery class to generate HTML for pictures
+ *
+ */
 class Gallery
 {
 
@@ -61,7 +64,7 @@ class Gallery
 
             $html .= "<div class='item'>
                 <div class='mason-content " . $this->sizes[$index] . "'>
-                    <img src='$image'>
+                    <img src='$image' class='gallery-thumb img-responsive'>
                 </div>
             </div>";
         }
