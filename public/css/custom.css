@@ -129,6 +129,44 @@ body {
 }
 
 
+/* image-collage frontpage */
+
+.masonry {
+    overflow: auto;
+}
+
+.mrow {
+    margin: 0 auto;
+    width: 23%;
+    display: flex;
+    flex-direction: column;
+    float: left;
+}
+
+.item {
+    overflow: hidden;
+    box-sizing: border-box;
+    margin-top: 10px;
+}
+
+.mason-content img {
+    width: inherit;
+}
+
+.content-small {
+    height: 80px;
+}
+
+.content-medium {
+    height: 140px
+}
+
+.content-large {
+    height: 200px;
+}
+
+/* image-collage front */
+
 
 .footer {
     padding: 38px 0;

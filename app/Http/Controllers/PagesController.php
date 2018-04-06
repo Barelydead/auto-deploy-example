@@ -6,12 +6,20 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use App\Content\Content;
 use App\Content\Images;
+use App\Gallery\Gallery as Gallery;
 
 class PagesController extends Controller
 {
     public function getHome()
     {
-        return view("home");
+        $gallery = new Gallery();
+
+        $gallery->init(["/img/upload/research/paint.jpg", "/img/upload/research/paint.jpg", "/img/upload/research/paint.jpg", "/img/upload/research/paint.jpg", "/img/upload/research/jars.jpg", "/img/upload/research/jars.jpg", "/img/upload/research/jars.jpg", "/img/upload/research/jars.jpg", "/img/upload/research/jars.jpg", "/img/upload/research/jars.jpg", "/img/upload/research/jars.jpg", "/img/upload/research/jar2.jpg", "/img/upload/research/jar2.jpg", "/img/upload/research/jar2.jpg", "/img/upload/research/jar2.jpg", "/img/upload/research/jars.jpg", "/img/upload/research/jars.jpg", "/img/upload/research/jars.jpg", "/img/upload/research/jars.jpg", "/img/upload/research/jars.jpg", "/img/upload/research/jars.jpg", "/img/upload/research/jars.jpg", "/img/upload/research/jars.jpg", "/img/upload/research/jars.jpg"]);
+
+        return view("home2", [
+                "gallery" => $gallery->getHtmlGrid()
+            ]
+        );
     }
 
     public function getAbout()
