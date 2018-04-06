@@ -92,7 +92,7 @@ deploy-staging:
 	@./vendor/deployer/dist/dep deploy
 
 
-# target: mock-db      	- Fill database with test data
-.PHONY:  mock-db
-mock-db:
-	@./vendor/deployer/dist/dep deploy
+# target: deploy-prod      	- Run deploy script to deploy to prod server
+.PHONY:  deploy-prod
+deploy-prod:
+	@./vendor/deployer/dist/dep deploy production -vvv

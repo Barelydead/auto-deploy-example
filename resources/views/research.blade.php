@@ -13,10 +13,19 @@
                 <div class="row">
                     <div class="col-md-12">
                         <h1 class="text-success">Environmental efforts</h1>
-                        <p class="text-success">We strive to make the most cost effective and clean paint and coatings possible</p>
+                        <p class="text-success">We strive to make the most cost effective and clean paint and coatings possible. </p>
                     </div>
                 </div>
                 <div class="row">
+                    @foreach ($articles as $article)
+                        <div class="col-md-3">
+                            <h4>{{ $article->title }}</h4>
+                            <p>{{ $article->content }}</p>
+                        </div>
+                    @endforeach
+
+
+{{--
                     <div class="col-md-3">
                         <h4>Breathable Water Barrier</h4>
                         <p>Most water barrier products do not breathe, trapping moisture within the
@@ -60,7 +69,7 @@
                         specifically engineered and formulated to achieve a perm rating of 12.
                         This is because a 12-perm rating is precisely what makes RDC a
                         perfectly balanced/formulated (breathable) water barrier coating.</p>
-                    </div>
+                    </div> --}}
                 </div>
             </article>
         </div>

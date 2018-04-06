@@ -135,6 +135,12 @@ class PagesController extends Controller
 
     public function getResearch()
     {
-        return view("research", ["flashImage" => 'research.jpeg']);
+        $content = new Content();
+        $images = new Images();
+
+        return view("research", [
+            "flashImage" => 'research.jpeg',
+            'articles' => $content->getContentByCategoryAndSubcategory("research", "research")
+        ]);
     }
 }
