@@ -170,9 +170,6 @@ body {
     margin-top: 10px;
 }
 
-.mason-content img {
-    width: inherit;
-}
 
 .content-small {
     height: 100px;
@@ -184,6 +181,11 @@ body {
 
 .content-large {
     height: 200px;
+}
+
+.gallery-overlay img {
+    max-width: 1400px;
+    max-height: 500px;
 }
 
 /* image-collage front */
@@ -659,6 +661,10 @@ body {
     .navbar-wrap {
         height: 110px;
     }
+
+    .mrow {
+        width: 49%;
+    }
 }
 
 
@@ -713,5 +719,8 @@ body {
     .logo-wrap {
         height: 65px;
         top: 115px;
+    }
+    .mrow {
+        width: 99%;
     }
 }
