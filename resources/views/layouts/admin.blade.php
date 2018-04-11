@@ -3,7 +3,7 @@
     <head>
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="csrf-token" content="{{ csrf_token() }}">
-        <title>Red Diamond Coatins - @yield('title')</title>
+        <title>Red Diamond Coatings - @yield('title')</title>
         <link href="{{ asset('css/custom.css') }}" rel="stylesheet">
         <link href="{{ asset('css/app.css') }}" rel="stylesheet">
         <!-- Latest compiled and minified CSS -->
