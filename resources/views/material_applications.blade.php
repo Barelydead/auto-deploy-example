@@ -7,17 +7,19 @@
 
 
 @section('content')
-<div class="row">
-    {{-- vertical spacer --}}
-    <div class="pillow-50">
+<div class="container">
+    <div class="row">
+        {{-- vertical spacer --}}
+        <div class="pillow-50">
+        </div>
+        <div class="col-md-12 col-md-offset-3">
+            <p class="rdcorange-text bold">
+                Highlighted below are the more common construction materials that can be coated/painted with RDC products, again, without primers.
+            </p>
+        </div>
     </div>
-    <div class="col-md-12 col-md-offset-3">
-        <p class="rdcorange-text bold">
-            Highlighted below are the more common construction materials that can be coated/painted with RDC products, again, without primers.
-        </p>
-    </div>
-
 </div>
+
 <div class="row">
     <div class="container-flex">
         <div class="container">
