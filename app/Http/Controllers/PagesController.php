@@ -4,27 +4,33 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\View;
 use App\Content\Content;
 use App\Content\Images;
 use App\Gallery\Gallery as Gallery;
+use App\Contact\Address as Address;
 
 class PagesController extends Controller
 {
+
+    public function __construct()
+    {
+        $addressObj = new Address;
+        $address = $addressObj->getAddress();
+        View::share('address', $address);
+    }
+
     public function getHome()
     {
         $gallery = new Gallery();
         $images = new Images();
 
         $pictures = $images->getImagesByContentCategory('home');
-        // var_dump($pictures);
-        // return;
-
         $gallery->init($pictures);
 
         return view("home2", [
-                "gallery" => $gallery->getHtmlGrid()
-            ]
-        );
+            "gallery" => $gallery->getHtmlGrid()
+        ]);
     }
 
     public function getAbout()
@@ -35,8 +41,8 @@ class PagesController extends Controller
             'future'
         ];
 
-        foreach($subcategory as $sub) {
-            $content[$sub]  = DB::table('content')
+        foreach ($subcategory as $sub) {
+            $content[$sub] = DB::table('content')
                                 ->where('category', 'about')
                                 ->where('subCategory', $sub)
                                 ->first();
@@ -98,7 +104,7 @@ class PagesController extends Controller
             "houses"        => $content->getContentById("57"),
             "military"      => $content->getContentById("58"),
             "bridges"       => $content->getContentById("59"),
-            "stripings"      => $content->getContentById("60"),
+            "stripings"     => $content->getContentById("60"),
             "turbines"      => $content->getContentById("61"),
             "roofs"         => $content->getContentById("62"),
             "pipelines"     => $content->getContentById("63"),
