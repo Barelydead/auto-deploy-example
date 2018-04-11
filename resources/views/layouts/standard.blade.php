@@ -2,9 +2,10 @@
 <html>
     <head>
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>Red Diamond Coatins - @yield('title')</title>
+        <title>Red Diamond Coatings - @yield('title')</title>
         <link href="{{ asset('css/custom.css') }}" rel="stylesheet">
         <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+        <link rel="shortcut icon" href="{{{ asset('favicon.ico') }}}">
         <meta name="viewport" content="width=device-width, initial-scale=1">
     </head>
     <body>
