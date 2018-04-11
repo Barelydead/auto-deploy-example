@@ -19,10 +19,10 @@
         <div class="col-md-3">
             <h2>Adress</h2>
             <ul class="nav">
-                <li>Red Diamond Coatings, Inc.</li>
-                <li>NDSU Research & Technology Park</li>
-                <li>1854 NDSU Research Circle North</li>
-                <li>Fargo, ND 58102 USA</li>
+                <li>{{ $address["companyName"] }}</li>
+                <li>{{ $address["street1"] }}</li>
+                <li>{{ $address["street2"] }}</li>
+                <li>{{ $address["city"] }}, {{ $address["state"] }} {{ $address["postalcode"] }}, {{ $address["country"] }}</li>
             </ul>
             <div class="pillow-30"></div>
             <a href="{{ URL::to('/contact') }}" class="btn btn-primary btn-block">Contact us</a>

@@ -48,7 +48,7 @@
             {{ $address["companyName"] }}<br>
             {{ $address["street1"] }}<br>
             {{ $address["street2"] }}<br>
-            {{ $address["postalcode"] }}, {{ $address["state"] }}, {{ $address["country"] }}<br>
+            {{ $address["city"] }}, {{ $address["state"] }} {{ $address["postalcode"] }}, {{ $address["country"] }}<br>
             <b>Telephone:</b><br>
             {{ $address["telephone"] }}<br>
             <b>Email:</b><br>
