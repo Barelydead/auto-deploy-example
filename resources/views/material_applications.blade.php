@@ -17,10 +17,10 @@
                 Highlighted below are the more common construction materials that can be coated/painted with RDC products, again, without primers.
             </p>
         </div>
+
     </div>
 </div>
 
-<div class="row">
     <div class="container-flex">
         <div class="container">
             <h3 class="text-danger">MATERIALS</h3>
@@ -206,7 +206,7 @@
             </div>
         </div>
     </div>
-</div>
+
 
 
 @endsection

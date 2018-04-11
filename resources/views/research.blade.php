@@ -1,6 +1,6 @@
 @extends('layouts.standard')
 
-@section('title', 'Page Title')
+@section('title', 'Research')
 
 @section('flash_title', "Research")
 @section('flash_text', "research at red diamond coatings")
@@ -13,7 +13,7 @@
                 <div class="row">
                     <div class="col-md-12">
                         <h1 class="text-success">Environmental efforts</h1>
-                        <p class="text-success">We strive to make the most cost effective and clean paint and coatings possible. </p>
+                        <p class="text-success">We strive to make the most cost effective and clean paint and coatings possible. Here are some of the technologies we have developed through our research.  </p>
                     </div>
                 </div>
                 <div class="row">

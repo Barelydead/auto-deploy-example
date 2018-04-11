@@ -1,6 +1,6 @@
 @extends('layouts.standard')
 
-@section('title', 'Page Title')
+@section('title', 'Location')
 
 @section('flash_title', "Location")
 @section('flash_text', "Find your way.")
