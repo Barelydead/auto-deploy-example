@@ -363,6 +363,9 @@ body {
     margin-left: -1em;
 }
 
+.hidelogin {
+    color: #636b6f;
+}
 /* ----------------- FLASH SPECIFIC STYLING ----------------- */
 
 .flash-image {
