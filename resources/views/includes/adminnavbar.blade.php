@@ -4,8 +4,8 @@
         <div class="row">
             <div class="top-nav flex-row space-end">
                 <ul class="nav navbar-nav">
-                    <li><a href="contact">Contact</a></li>
-                    <li><a href="#">Location</a></li>
+                    <!-- <li><a href="contact">Contact</a></li> -->
+                    <!-- <li><a href="#">Location</a></li> -->
                 </ul>
                 <form class="form-inline" action="{{ URL::to('/search') }}">
                     <div class="form-group">
