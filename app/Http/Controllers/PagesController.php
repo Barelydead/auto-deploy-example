@@ -29,7 +29,8 @@ class PagesController extends Controller
         $gallery->init($pictures);
 
         return view("home2", [
-            "gallery" => $gallery->getHtmlGrid()
+            "gallery"       => $gallery->getHtmlGrid(),
+            'flashImage'    => 'home.jpg'
         ]);
     }
 
