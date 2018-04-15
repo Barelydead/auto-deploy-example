@@ -35,10 +35,10 @@
                     </div>
                 @endif
 
-                <div class="col-md-1 col-md-offset-2">
+                <!-- <div class="col-md-1 col-md-offset-2">
                     <?php $addurl = '/admin/content/add?category='.$category; ?>
                     <a class='btn btn-primary' href="{{ URL::to($addurl) }}">+ Add</a>
-                </div>
+                </div> -->
             </div>
             <!-- headline row -->
 

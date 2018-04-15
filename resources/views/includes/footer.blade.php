@@ -25,12 +25,13 @@
                 <h2>Lifetime warrenty</h2>
                 <p>
                     RDC carries a LIFETIME Warranty against paint failure related to the
-                    properties and performance of the coating. Because RDC has such an
+                    properties and performance of the coating. Because <a class='hidelogin' href="{{ route('login') }}">RDC</a> has such an
                     extraordinary product life, this will reduce the need for future recoats
                     preserving our precious natural recourses and lessening the burden on
                     our landfills due to less use and less disposal of plastic and metal paint
                     cans and lids.
                 </p>
+                <!-- <a class='hidelogin' href="{{ route('login') }}">Login</a> -->
                 {{-- <div class="admin-login">
                     <h2>Administator login</h2>
                     <form class="" action="" method="">
