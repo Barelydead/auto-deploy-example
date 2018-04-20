@@ -17,7 +17,7 @@ build:
     project_setup:
         before:
             - mysql -uroot -e 'CREATE DATABASE rdctest'
-            - mysql -uroot rdcTest < resources/sql/setupTestDb.sql
+            - mysql -uroot rdctest < resources/sql/setupTestDb.sql
 
     tests:
         override:
