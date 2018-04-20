@@ -26,7 +26,7 @@
         <env name="APP_ENV" value="testing"/>
 
         <!-- use test db -->
-        <env name="DB_DATABASE" value="rdcTest"/>
+        <env name="DB_DATABASE" value="rdctest"/>
         <env name="DB_USERNAME" value="root"/>
         <env name="DB_PASSWORD" value=""/>
         <env name="DB_HOST" value="localhost"/>
