@@ -15,8 +15,8 @@ build:
             - "mkdir build"
 
     project_setup:
-        before:
-            override:
+        override:
+            before:
                 - mysql -uroot -e 'CREATE DATABASE rdctest'
                 - mysql -uroot rdctest < resources/sql/setupTestDb.sql
 
