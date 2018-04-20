@@ -24,6 +24,13 @@
     </filter>
     <php>
         <env name="APP_ENV" value="testing"/>
+
+        <!-- use test db -->
+        <env name="DB_DATABASE" value="rdctest"/>
+        <env name="DB_USERNAME" value="root"/>
+        <env name="DB_PASSWORD" value=""/>
+        <env name="DB_HOST" value="localhost"/>
+
         <env name="CACHE_DRIVER" value="array"/>
         <env name="SESSION_DRIVER" value="array"/>
         <env name="QUEUE_DRIVER" value="sync"/>
