@@ -45,7 +45,7 @@
 
                 </div>
                 <div class="col-md-1" style='padding: 0 10px 20px 10px'>
-                    <img width='100%' src="img/about/hollywoodsign.jpg" alt="Hollywood sign">
+                    <img width='100%' src="img/about/hollywoodsign.jpg" alt="Hollywood sign with RDC coating">
                 </div>
                 <div class="col-md-1">
                     <img width='100%' src="img/about/global_entrepreneurship_summit.jpg" alt="Global Entreprenaurship Summit">

@@ -44,13 +44,13 @@ counting.")
                 <div class="col-md-12">
                     <div class="article-thumb-wrap">
                         <div class="thumb-holder">
-                            <img src="img/performance/paint.jpg" class="img-responsive img-thumbnail">
+                            <img src="img/performance/paint.jpg" class="img-responsive img-thumbnail" alt='Red Diamond Coatings - testing product'>
                         </div>
                         <div class="thumb-holder">
-                            <img src="img/performance/paint.jpg" class="img-responsive img-thumbnail">
+                            <img src="img/performance/paint.jpg" class="img-responsive img-thumbnail" alt='Red Diamond Coatings - testing product'>
                         </div>
                         <div class="thumb-holder">
-                            <img src="img/performance/paint.jpg" class="img-responsive img-thumbnail">
+                            <img src="img/performance/paint.jpg" class="img-responsive img-thumbnail" alt='Red Diamond Coatings - testing product'>
                         </div>
                     </div>
                 </div>
@@ -75,10 +75,10 @@ counting.")
                         <p>Images (RIGHT) depict RDC Roof Formulas R33 & R38 coated bare on two 1/8” thick asphalt roof coating samples in 2005.  Both samples experienced NO DELAMINATION,  NO COATING FAILURE whatsoever, even when bent at 180°—after 12+ years.  This discovery is highly remarkable, especially considering the coating remains like new and is fully pliable, even at a 180° bend, over 12 years after it was applied.</p>
                     </div>
                     <div class="col-md-3">
-                        <img src="img/performance/roof_slab1.jpg" class="contained-img img-h-200">
+                        <img src="img/performance/roof_slab1.jpg" class="contained-img img-h-200" alt='Red Diamond Coatings - testing product'>
                     </div>
                     <div class="col-md-4">
-                        <img src="img/performance/roof_slab1_bend.jpg" class="contained-img img-h-200">
+                        <img src="img/performance/roof_slab1_bend.jpg" class="contained-img img-h-200" alt='Red Diamond Coatings - testing product'>
                     </div>
                 </div>
             </article>

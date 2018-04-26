@@ -33,7 +33,7 @@ revolutionary, highly innovative coating products</p>
                             @endforeach
                             <div class="col-md-3">
                                 <div class="info-card">
-                                    <img class='contained-img img-rounded' src='{{asset($imageurl)}}' alt="prodamuimage">
+                                    <img class='contained-img img-rounded' src='{{asset($imageurl)}}' alt="Red Diamond Coatings - product">
                                     <h5 class="text-danger">@markdown($thumbnail->title)</h5>
                                     @markdown($thumbnail->content)
                                 </div>
@@ -60,7 +60,7 @@ revolutionary, highly innovative coating products</p>
                             @endforeach
                             <div class="col-md-3">
                                 <div class="info-card">
-                                    <img class='contained-img img-rounded' src='{{asset($imageurl)}}' alt="prodamuimage">
+                                    <img class='contained-img img-rounded' src='{{asset($imageurl)}}' alt="Red Diamond Coatings - product">
                                     <h5 class="text-danger">@markdown($thumbnail->title)</h5>
                                     @markdown($thumbnail->content)
                                 </div>
@@ -85,7 +85,7 @@ revolutionary, highly innovative coating products</p>
                             @endif
                         @endforeach
                         <div class="col-md-2">
-                            <img class='contained-img img-rounded' src='{{asset($imageurl)}}' alt="prodamuimage">
+                            <img class='contained-img img-rounded' src='{{asset($imageurl)}}' alt="Red Diamond Coatings - fire retardant">
                         </div>
                         <div class="col-md-3">
                             <div class="info-card">

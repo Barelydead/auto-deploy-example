@@ -1,6 +1,6 @@
 @extends('layouts.standard')
 
-@section('title', 'performance')
+@section('title', 'Performance')
 
 
 @section('flash_img', "dumper-truck.jpg")
@@ -32,7 +32,7 @@ counting.")
                             @foreach ($images as $img)
                                 @if ($img->content_id == $article->id)
                                     <div class="thumb-holder">
-                                        <img src="{{asset("img/upload/" . $img->filename)}}" class="img-responsive img-thumbnail">
+                                        <img src="{{asset("img/upload/" . $img->filename)}}" class="img-responsive img-thumbnail" alt='Red Diamond Coatings - testing product'>
                                     </div>
                                 @endif
                             @endforeach

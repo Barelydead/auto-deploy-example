@@ -25,12 +25,12 @@
             </div>
             @if(isset($images[0]))
             <div class="col-md-6">
-                <img src="img/upload/{{ $images[0]->filename }}" title="{{ $images[0]->title }}" class="contained-img full-width">
+                <img src="img/upload/{{ $images[0]->filename }}" title="{{ $images[0]->title }}" class="contained-img full-width" alt='Today on roof without coating'>
             </div>
             @endif
             @if(isset($images[1]))
             <div class="col-md-6">
-                <img src="img/upload/{{ $images[1]->filename }}" title="{{ $images[1]->title }}" class="contained-img full-width">
+                <img src="img/upload/{{ $images[1]->filename }}" title="{{ $images[1]->title }}" class="contained-img full-width" alt='Today on wall without coating'>
             </div>
             @endif
         </div>
@@ -39,7 +39,7 @@
                 <h3>Tomorrow...</h3>
             </div>
             @if(isset($images[2]))
-            <img src="img/upload/{{ $images[2]->filename }}" title="{{ $images[2]->title }}" class="contained-img full-width">
+            <img src="img/upload/{{ $images[2]->filename }}" title="{{ $images[2]->title }}" class="contained-img full-width" alt='Tomorrow protect with Red Diamond Coating'>
             @endif
         </div>
     </div>
@@ -58,7 +58,7 @@
             @if(isset($images[4]))
             <div class="col-md-4">
                 <div class="pillow-30"></div>
-                <img src="img/upload/{{ $images[3]->filename }}" title="{{ $images[3]->title }}" class="contained-img full-width">
+                <img src="img/upload/{{ $images[3]->filename }}" title="{{ $images[3]->title }}" class="contained-img full-width" alt='Floor with RDC’s future PoxyGREEN™ Coating'>
             </div>
             @endif
         </div>
@@ -74,7 +74,7 @@
             @if(isset($images[4]))
             <div class="col-md-4">
                 <div class="pillow-30"></div>
-                <img src="img/upload/{{ $images[4]->filename }}" title="{{ $images[4]->title }}" class="contained-img full-width">
+                <img src="img/upload/{{ $images[4]->filename }}" title="{{ $images[4]->title }}" class="contained-img full-width" alt='Floor with RDC’s future ClearSEAL™ Coating'>
             </div>
             @endif
             <div class="col-md-8">
