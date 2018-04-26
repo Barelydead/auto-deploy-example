@@ -14,7 +14,7 @@ class RouteTest extends TestCase
      *
      * @return void
      */
-    public function testHome()
+    public function testLocation()
     {
         $response = $this->get('/location');
 
