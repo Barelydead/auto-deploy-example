@@ -16,7 +16,7 @@ class RouteTest extends TestCase
      */
     public function testLocation()
     {
-        $response = $this->get('/location');
+        var_dump(env("DB_DATABASE"));
 
         $response->assertStatus(200);
     }
