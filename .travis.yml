@@ -15,5 +15,5 @@ notifications:
 before_script:
     - make install
     - make prepare
-    - mysql -e 'CREATE DATABASE rdcTest;'
-    - mysql -uroot rdcTest < resources/sql/setupTestDb.sql
+    - mysql -e 'CREATE DATABASE rdctest;'
+    - mysql -uroot rdctest < resources/sql/setupTestDb.sql

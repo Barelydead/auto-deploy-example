@@ -9,15 +9,17 @@ build:
         mysql: 5.5
         php: 7.1.12
 
-    dependencies:
-        before:
-            - "make prepare"
-            - "mkdir build"
+        variables:
+            APP_ENV: 'testing'
+            DB_DATABASE: 'rdctest'
+
 
     project_setup:
         before:
-            - mysql -uroot -e 'CREATE DATABASE rdcTest'
-            - mysql -uroot rdcTest < resources/sql/setupTestDb.sql
+            - "make prepare"
+            - "mkdir build"
+            - mysql -uroot -e 'CREATE DATABASE rdctest'
+            - mysql -uroot rdctest < resources/sql/setupTestDb.sql
 
     tests:
         override:

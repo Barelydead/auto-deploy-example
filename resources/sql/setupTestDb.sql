@@ -1,8 +1,8 @@
 -- Database setup
 SET sql_mode = '';
 
-CREATE DATABASE IF NOT EXISTS rdcTest;
-USE rdcTest;
+CREATE DATABASE IF NOT EXISTS rdctest;
+USE rdctest;
 
 SET NAMES utf8;
 
