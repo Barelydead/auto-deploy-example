@@ -75,7 +75,7 @@ install:
 # target: prepare               - prepare repo with essentials.
 .PHONY:  prepare
 prepare:
-	@cp public/.env_dummy .env
+	@cp public/.env_dummy .env.testing
 	@php artisan key:generate
 
 

@@ -17,8 +17,6 @@ class RouteTest extends TestCase
     public function testLocation()
     {
         var_dump(env("DB_DATABASE"));
-
-        $response->assertStatus(200);
     }
     //
     // /**
