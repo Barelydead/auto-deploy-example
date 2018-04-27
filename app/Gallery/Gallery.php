@@ -9,11 +9,11 @@ namespace App\Gallery;
 class Gallery
 {
 
-    private $rows;
-    private $columns;
-    private $sizes = ["content-small", "content-medium", "content-large"];
-    private $images = [];
-    private $sizeIndex = [];
+    public $rows;
+    public $columns;
+    public $sizes = ["content-small", "content-medium", "content-large"];
+    public $images = [];
+    public $sizeIndex = [];
 
     public function __construct(Int $rows = 4, Int $columns = 5)
     {
