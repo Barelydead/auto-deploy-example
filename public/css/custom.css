@@ -668,6 +668,23 @@ body {
     .mrow {
         width: 49%;
     }
+
+    .footer {
+        text-align: center;
+    }
+
+    .col-md-1 img {
+        width: 100px;
+    }
+
+
+    .flash-text p {
+        display: none;
+    }
+
+    .flash-text h1 {
+        font-size: 1.5em;
+    }
 }
 
 
@@ -680,18 +697,17 @@ body {
         padding: 20px;
     }
 
-    .flash-text p {
-        display: none;
-    }
-
-    .flash-text h1 {
-        font-size: 1.5em;
-    }
-
     .flash-image {
         height: 150px;
     }
 
+    .col-md-3 .info-card {
+        text-align: center;
+    }
+
+    .col-md-4 .info-card {
+        text-align: center;
+    }
     /* NAVBAR RESPONSIVENESS */
     .navbar-wrap {
         height: auto;
