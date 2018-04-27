@@ -66,7 +66,7 @@ class Gallery
 
             $html .= "<div class='item'>
                 <div class='mason-content " . $this->sizes[$index] . "'>
-                    <img src='$image' class='gallery-thumb img-responsive'>
+                    <img src='$image' class='gallery-thumb img-responsive' alt='Red Diamond Coatings many different application possibilities'>
                 </div>
             </div>";
         }
